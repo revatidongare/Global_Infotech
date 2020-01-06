@@ -1,0 +1,184 @@
+        <footer>
+            <div class="footer">
+                
+
+                <div class="footer-bottom pd-top-bottom">
+                    <div class="container full-mobile">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-sm-6 mg-bottom-30">
+                                <div class="item contact-us">
+                                    <div class="item-content">
+                                        <div class="sub-title">
+                                            <h4 class="title-black">Contact Us</h4>
+                                        </div>
+                                    </div>
+
+                                    <div class="content">
+                                        <ul>
+                                            <li class="d-flex bg-icon">
+                                                <span>
+                                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                </span>
+                                                <span>Sahayadri heights office no. 3 , opp ram mandir , Bhangarwadi , Lonavala , 410401</span>
+                                            </li>
+                                            <li class="d-flex bg-icon">
+                                                <span>
+                                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                                </span>
+                                                <span>+91 9823475566</span>
+                                            </li>
+                                            <li class="d-flex bg-icon">
+                                                <span>
+                                                    <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                                                </span>
+                                                <span>contact@vinnovatetechnologies.com</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 col-md-6 col-sm-6 mg-bottom-30">
+                                <div class="item">
+                                    <div class="item-content">
+                                        <div class="sub-title">
+                                            <h4 class="title-black">Follow Me</h4>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <ul>
+                                            <li class="d-flex">
+                                                <a href="#" title="Terms & Conditions">
+                                                    <span>
+                                                        <i class="fa fa-facebook"></i>
+                                                    </span>
+                                                    <span style="color: #000;" >Facebook</span>
+                                                </a>
+                                            </li>
+                                            <li class="d-flex">
+                                                <a href="#" title="Return Policy">
+                                                    <span>
+                                                        <i class="fa fa-twitter"></i>
+                                                    </span>
+                                                    <span style="color: #000;" >Twitter</span>
+                                                </a>
+                                            </li>
+                                           
+                                            <li class="d-flex">
+                                                <a href="#" title="Return Policy">
+                                                    <span>
+                                                        <i class="fa fa-instagram"></i>
+                                                    </span>
+                                                    <span style="color: #000;" >Instagram</span>
+                                                </a>
+                                            </li>
+                                            <li class="d-flex">
+                                                <a href="#" title="Refund Policy">
+                                                    <span>
+                                                        <i class="fa fa-youtube-play"></i>
+                                                    </span>
+                                                    <span style="color: #000;" >Youtube</span>
+                                                </a>
+                                            </li>
+                                           
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 col-md-6 col-sm-6 mg-bottom-30">
+                                <div class="item">
+                                    <div class="item-content">
+                                        <div class="sub-title">
+                                            <h4 class="title-black">Useful Links</h4>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <ul>
+                                            <li class="m-bottom-0">
+                                                <a href="index.php"  style="color: #000;" title="Return Policy">Home</a>
+                                            </li>
+                                            <li class="m-bottom-0">
+                                                <a href="about-us.php"  style="color: #000;" title="Terms & Conditions">About Us</a>
+                                            </li>
+                                            <li class="m-bottom-0">
+                                                <a href="contact-us.php"  style="color: #000;" title="Refund Policy">Contact Us </a>
+                                            </li>
+                                            <li class="m-bottom-0">
+                                                <a href="courses.php"  style="color: #000;" title="Refund Policy">Courses</a>
+                                            </li>
+                                            <li class="m-bottom-0">
+                                                <a href="gallery.php"  style="color: #000;" title="Refund Policy">Gallery </a>
+                                            </li>
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="about-layout">
+                                    <div class="group">
+                                        <div class="group-inner  text-center">
+                                            <!-- <div class="about-logo">
+                                                <a href="#" title="">
+                                                    <img class="img-fluid" src="img/augfood.png" alt>
+                                                </a>
+                                            </div> -->
+                                            <div class="about-content">
+                                                <p>Global Infotech has always been in the quest of building a technical edifice for the students with its underlying values and core competencies in technical excellence, quality training and innovative concepts. Our Institute is been authorised center of MKCL (Maharashtra Knowledge Corporation Ltd) and ETH (Education at Home) from last 12 years.</p>
+                                            </div>
+                                            <div class="widget-social">
+                                                <ul class="d-flex justify-content-center">
+                                                    <li class="social-facebook">
+                                                        <a class="gsf-link" title="Facebook" href="#">
+                                                            <i class="fa fa-facebook" style="color: #27418E;" ></i>
+                                                        </a>
+                                                    </li>
+                                                    <li class="social-twitter">
+                                                        <a class="gsf-link" title="Twitter" href="#">
+                                                            <i class="fa fa-twitter" style="color: #27418E;" ></i>
+                                                        </a>
+                                                    </li>
+                                                    <li class="social-youtube">
+                                                        <a class="gsf-link" title="Youtube" href="#">
+                                                            <i class="fa fa-youtube-play" style="color: #27418E;" ></i>
+                                                        </a>
+                                                    </li>
+                                                    
+                                                    <li class="social-instagram">
+                                                        <a class="gsf-link" title="Instagram" href="#">
+                                                            <i class="fa fa-instagram" style="color: #27418E;" ></i>
+                                                        </a>
+                                                    </li>
+                                                    <!-- <li class="social-google-plus">
+                                                        <a class="gsf-link" title="Google+" href="#">
+                                                            <i class="fa fa-google-plus"></i>
+                                                        </a>
+                                                    </li> -->
+                                                    <!-- <li class="social-pinterest">
+                                                        <a class="gsf-link" title="Pinterest" href="#">
+                                                            <i class="fa fa-pinterest"></i>
+                                                        </a>
+                                                    </li> -->
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-copyright text-center">
+                    <div class="container">
+                        <div class="content">
+                            Copyright © 2019 |
+                             All Rights Reserved. Design by
+                            <span class="tranform-none">vInnovate Technologies</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
