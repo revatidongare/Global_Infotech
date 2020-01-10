@@ -1,7 +1,5 @@
         <footer>
-            <div class="footer">
-                
-
+            <div class="footer" style="background-image: url(img/footer-bg.jpg);">
                 <div class="footer-bottom pd-top-bottom">
                     <div class="container full-mobile">
                         <div class="row">
@@ -19,27 +17,41 @@
                                                 <span>
                                                     <i class="fa fa-map-marker" aria-hidden="true"></i>
                                                 </span>
-                                                <span>Sahayadri heights office no. 3 , opp ram mandir , Bhangarwadi , Lonavala , 410401</span>
+                                                <span style="color: #fff;">Sahayadri heights office no. 3 , opp ram mandir , Bhangarwadi , Lonavala , 410401</span>
                                             </li>
                                             <li class="d-flex bg-icon">
                                                 <span>
                                                     <i class="fa fa-phone" aria-hidden="true"></i>
                                                 </span>
-                                                <span>+91 9823475566</span>
+                                                <span style="color: #fff;">+91 9823475566</span>
                                             </li>
                                             <li class="d-flex bg-icon">
                                                 <span>
                                                     <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
                                                 </span>
-                                                <span>contact@vinnovatetechnologies.com</span>
+                                                <span style="color: #fff;">contact@vinnovatetechnologies.com</span>
                                             </li>
+                                            <!-- <li class=" social-container d-flex bg-icon">
+                                                <span>
+                                                        <i class="fa fa-facebook"></i>
+                                                </span>
+                                                <span>
+                                                        <i class="fa fa-instagram"></i>
+                                                    </span>
+                                                <span>
+                                                        <i class="fa fa-youtube-play"></i>
+                                                </span>
+                                                <span>
+                                                        <i class="fa fa-twitter"></i>
+                                                </span>
+                                            </li> -->
                                         </ul>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-lg-2 col-md-6 col-sm-6 mg-bottom-30">
-                                <div class="item">
+                            <div class="col-lg-1 col-md-6 col-sm-6 mg-bottom-30">
+                                <!-- <div class="item">
                                     <div class="item-content">
                                         <div class="sub-title">
                                             <h4 class="title-black">Follow Me</h4>
@@ -83,11 +95,11 @@
                                            
                                         </ul>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
 
-                            <div class="col-lg-2 col-md-6 col-sm-6 mg-bottom-30">
-                                <div class="item">
+                            <div class="col-lg-1 col-md-6 col-sm-6 mg-bottom-30">
+                               <!--  <div class="item">
                                     <div class="item-content">
                                         <div class="sub-title">
                                             <h4 class="title-black">Useful Links</h4>
@@ -113,18 +125,48 @@
                                             
                                         </ul>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
 
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="about-layout">
+                            <div class="col-lg-6 col-md-6 col-sm-6 mg-bottom-30">
+                                <div class="item contact-us">
+                                    <div class="item-content">
+                                        <div class="sub-title">
+                                            <h4 class="title-black">About Us</h4>
+                                        </div>
+                                    </div>
+
+                                    <div class="content">
+                                        <ul>
+                                            <li >
+                                                <span>
+                                                    <!-- <i class="fa fa-map-marker" aria-hidden="true"></i> -->
+                                                </span>
+                                                <span style="color: #fff;" >Global Infotech has always been in the quest of building a technical edifice for the students with its underlying values and core competencies in technical excellence, quality training and innovative concepts. Our Institute is been authorised center of MKCL (Maharashtra Knowledge Corporation Ltd) and ETH (Education at Home) from last 12 years.</span>
+                                            </li>
+                                            <!-- <li class="d-flex bg-icon">
+                                                <span>
+                                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                                </span>
+                                                <span>+91 9823475566</span>
+                                            </li>
+                                            <li class="d-flex bg-icon">
+                                                <span>
+                                                    <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                                                </span>
+                                                <span>contact@vinnovatetechnologies.com</span>
+                                            </li> -->
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- <div class="about-layout">
                                     <div class="group">
                                         <div class="group-inner  text-center">
-                                            <!-- <div class="about-logo">
+                                            <div class="about-logo">
                                                 <a href="#" title="">
                                                     <img class="img-fluid" src="img/augfood.png" alt>
                                                 </a>
-                                            </div> -->
+                                            </div>
                                             <div class="about-content">
                                                 <p>Global Infotech has always been in the quest of building a technical edifice for the students with its underlying values and core competencies in technical excellence, quality training and innovative concepts. Our Institute is been authorised center of MKCL (Maharashtra Knowledge Corporation Ltd) and ETH (Education at Home) from last 12 years.</p>
                                             </div>
@@ -151,21 +193,11 @@
                                                             <i class="fa fa-instagram" style="color: #27418E;" ></i>
                                                         </a>
                                                     </li>
-                                                    <!-- <li class="social-google-plus">
-                                                        <a class="gsf-link" title="Google+" href="#">
-                                                            <i class="fa fa-google-plus"></i>
-                                                        </a>
-                                                    </li> -->
-                                                    <!-- <li class="social-pinterest">
-                                                        <a class="gsf-link" title="Pinterest" href="#">
-                                                            <i class="fa fa-pinterest"></i>
-                                                        </a>
-                                                    </li> -->
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>

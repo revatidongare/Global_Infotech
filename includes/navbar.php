@@ -90,8 +90,8 @@
                         <div class="row">
                             <div class="col-lg-2 col-5">
                                 <div class="index-logo">
-                                    <a href="index.php" title="Oars">
-                                        <img src="img/global.png" alt="img">
+                                    <a href="index.php" title="Global InfoTech">
+                                        <img src="img/Global.png" alt="img">
                                     </a>
                                 </div>
                             </div>

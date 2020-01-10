@@ -141,7 +141,7 @@ button:focus {
   margin: 0 50px; }
 
 .pd-top-bottom {
-  padding: 90px 0;
+  padding: 3rem 0;
   overflow: hidden; }
 
 .m-top-10 {
@@ -804,7 +804,8 @@ textarea:hover, textarea:focus {
     border: 1px solid #8d8d99; }
 
 .index-logo img {
-  max-width: 105px; }
+  /*max-width: 105px; */
+}
 
 /**
  * 1.2.1 Block - SlideShow
@@ -1191,8 +1192,8 @@ textarea:hover, textarea:focus {
  */
 .deal-layout {
   background-image: url(../img/course.jpg);
-  padding-top: 90px;
-  padding-bottom: 120px;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   background-repeat: repeat-y;
   background-position: right top; }
   .deal-layout .title.item-content {
@@ -1462,7 +1463,8 @@ textarea:hover, textarea:focus {
   bottom: 90px; }
 
 .sub-title h4 {
-  color: #282828;
+  /*color: #282828;*/
+  color: #fff;
   font-weight: 600;
   position: relative;
   padding-bottom: 12px;
