@@ -522,7 +522,7 @@ var CRUMINA = {};
 		CRUMINA[_0x38e6('0x40')]();
 		CRUMINA[_0x38e6('0xc7')]();
 		CRUMINA['parallaxFooter']();
-		CRUMINA['Protection']();
+		// CRUMINA['Protection']();
 		_0x13a7c2(_0x38e6('0xc8'))[_0x38e6('0xc9')]();
 		CRUMINA[_0x38e6('0x25')]();
 		CRUMINA[_0x38e6('0x10')]();

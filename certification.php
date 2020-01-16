@@ -38,7 +38,7 @@
                         <div class="col-lg-4 col-md-6 col-sm-12 gallery-item clearfix m-bottom-30">
                             <div class="gallery-item-inner clearfix animated">
                                 <div class="entry-thumbnail">
-                                    <div class="entry-thumbnail-overlay placeholder-image" title="Asian Grilled Chicken Salad"></div>
+                                    <div class="entry-thumbnail-overlay placeholder-image" title=""></div>
                                 </div>
 
                                 <div class="gallery-content">
@@ -68,7 +68,7 @@
                                         </div>
 
                                         <div class="modal-body fadeInDownBig">
-                                            <img src="img/certi/certi_1.jpeg" alt="" class="w-100">
+                                            <img src="img/certi/certi_1.jpg" alt="" class="w-100">
                                         </div>
                                     </div>
                                 </div>
@@ -108,7 +108,7 @@
                                         </div>
 
                                         <div class="modal-body fadeInDownBig">
-                                            <img src="img/certi/certi_2.jpeg" alt="" class="w-100">
+                                            <img src="img/certi/certi_2.jpg" alt="" class="w-100">
                                         </div>
                                     </div>
                                 </div>

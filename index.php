@@ -177,7 +177,7 @@
 
                                 <!-- Slider -->
 
-    <div class="crumina-grid crumina-module crumina-module-slider navigation-center-both-sides slider-3-items medium-padding100">
+    <section class="crumina-grid crumina-module crumina-module-slider navigation-center-both-sides slider-3-items medium-padding100">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-12 col-xs-12">
@@ -229,7 +229,7 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 
     <!-- .... end Slider -->
 

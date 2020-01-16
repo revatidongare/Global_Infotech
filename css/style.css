@@ -5396,7 +5396,7 @@ textarea:hover, textarea:focus {
         transition: all .5s; }
       .gallery-wrap .gallery-item .gallery-item-inner .entry-thumbnail .entry-thumbnail-overlay {
         border: 10px solid #fff;
-        background: url("../img/certi/certi_1.jpeg");
+        background: url("../img/certi/certi_1.jpg");
         background-color: #E0E8EE;
         background-repeat: no-repeat;
         background-position: center center;
@@ -5430,7 +5430,7 @@ textarea:hover, textarea:focus {
           -o-transition: opacity .3s;
           transition: opacity .3s; }
         .gallery-wrap .gallery-item .gallery-item-inner .entry-thumbnail .entry-thumbnail-overlay.img2 {
-          background: url("../img/certi/certi_2.jpeg"); }
+          background: url("../img/certi/certi_2.jpg"); }
         .gallery-wrap .gallery-item .gallery-item-inner .entry-thumbnail .entry-thumbnail-overlay.img3 {
           background: url("../img/certi/certi3.jpeg"); }
         .gallery-wrap .gallery-item .gallery-item-inner .entry-thumbnail .entry-thumbnail-overlay.img4 {
@@ -5444,7 +5444,7 @@ textarea:hover, textarea:focus {
         .gallery-wrap .gallery-item .gallery-item-inner .entry-thumbnail .entry-thumbnail-overlay.img8 {
           background: url("../img/awards/award4.jpeg"); }
         .gallery-wrap .gallery-item .gallery-item-inner .entry-thumbnail .entry-thumbnail-overlay.img9 {
-          background: url("../img/gallery/gallery18.png"); }
+          background: url("../img/mkcl.mp4"); }
     .gallery-wrap .gallery-item .gallery-item-inner .gallery-content {
       position: absolute;
       top: auto;
@@ -5763,3 +5763,36 @@ textarea:hover, textarea:focus {
       border-color: #27272f; }
 
 /*# sourceMappingURL=style.css.map */
+
+
+/*=======[ Indec Video Section Style ]========*/
+  
+  .video-main-area {
+      background: transparent url("../img/video-bg.jpg") no-repeat center center/cover;
+      padding: 60px 0;
+  }
+  .video-main-area .video-play-btn {
+      margin-bottom: 40px;
+      text-align: center;
+      z-index: 1;
+  }
+  .video-main-area .video-play-btn .video-iframe {
+      background: #fec722;
+      border-radius: 50%;
+      color: #ffffff;
+      display: inline-block;
+      font-size: 55px;
+      line-height: 100px;
+      text-align: center;
+      width: 100px;
+      outline: none;
+  }
+  .video-main-area .video-play-btn .video-iframe i {
+      height: 50px;
+      padding-left: 10px;
+      width: 50px;
+  }
+  .video-main-area .video-content h2 {
+      color: #ffffff;
+      padding-bottom: 0px;
+  }

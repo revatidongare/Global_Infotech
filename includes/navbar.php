@@ -48,7 +48,7 @@
                             <div class="col-md-6 col-sm-12 social-container">
                                 <div class="top-header-right float-right">
                                     <ul class="top-menu d-flex">
-                                        <li class="currency-group d-flex dropdown">
+                                        <!-- <li class="currency-group d-flex dropdown">
                                             <div class="icon-word d-flex align-items-center dropdown-toggle">
                                                 <i class="fa fa-globe" aria-hidden="true"></i>
                                                 <a href="#">Language</a>
@@ -67,7 +67,7 @@
                                                     <input type="hidden" value="EUR">
                                                 </li>
                                             </ul>
-                                        </li>
+                                        </li> -->
                                         <li class="toolbar-customer login-account">
                                             <a href="user-login.php">
                                                 <i class="fa fa-lock" aria-hidden="true"></i>Login
