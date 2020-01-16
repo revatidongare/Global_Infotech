@@ -29,7 +29,7 @@
                                                 <span>
                                                     <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
                                                 </span>
-                                                <span style="color: #fff;">contact@vinnovatetechnologies.com</span>
+                                                <span style="color: #fff;">yogesh@vinnovatetechnologies.com</span>
                                             </li>
                                             <!-- <li class=" social-container d-flex bg-icon">
                                                 <span>
@@ -138,11 +138,12 @@
 
                                     <div class="content">
                                         <ul>
-                                            <li >
+                                            <li class="d-flex bg-icon" align="justify">
                                                 <span>
-                                                    <!-- <i class="fa fa-map-marker" aria-hidden="true"></i> -->
+                                                    <i class="fa fa-desktop" aria-hidden="true"></i>
                                                 </span>
-                                                <span style="color: #fff;" >Global Infotech has always been in the quest of building a technical edifice for the students with its underlying values and core competencies in technical excellence, quality training and innovative concepts. Our Institute is been authorised center of MKCL (Maharashtra Knowledge Corporation Ltd) and ETH (Education at Home) from last 12 years.</span>
+                                                <span style="color: #fff;">
+                                                Global Infotech has always been in the quest of building a technical edifice for the students with its underlying values and core competencies in technical excellence, quality training and innovative concepts. Our Institute is been authorised center of MKCL (Maharashtra Knowledge Corporation Ltd) and ETH (Education at Home) from last 12 years.</span>
                                             </li>
                                             <!-- <li class="d-flex bg-icon">
                                                 <span>

@@ -43,9 +43,9 @@
 
 												<div class="col-lg-6 col-md-6 col-sm-12">
 													<div class="content-right">
-														<h2>
+														<h3>
 															<a>Maharashtra state certificate in information technology</a>
-														</h2>
+														</h3>
 
 														<div class="des">
 															The Maharashtra State Certificate in Information Technology (MSCIT) is a popular IT Literacy course in Maharashtra, India. MSCIT is an initiative of the Maharashtra Knowledge Corporation Ltd (MKCL).<br>Duration : 2/3 months
@@ -78,9 +78,9 @@
 
 												<div class="col-lg-6 col-md-6 col-sm-12">
 													<div class="content-right">
-														<h2>
+														<h3>
 															<a>COMPLETE MS-OFFICE</a>
-														</h2>
+														</h3>
 
 														<div class="des">
 															The Maharashtra State Certificate in Information Technology (MSCIT) is a popular IT Literacy course in Maharashtra, India. MSCIT is an initiative of the Maharashtra Knowledge Corporation Ltd (MKCL).<br>Duration : 2 months
@@ -113,9 +113,9 @@
 
 												<div class="col-lg-6 col-md-6 col-sm-12">
 													<div class="content-right">
-														<h2>
+														<h3>
 															<a>Financial accounting</a>
-														</h2>
+														</h3>
 
 														<div class="des">
 															Financial accounting is a specialized branch of accounting that keeps track of a company's financial transactions. Using standardized guidelines, the transactions are recorded, summarized, and presented in a financial report or financial statement such as an income statement or a balance sheet.<br>Duration : 3 months
@@ -148,9 +148,9 @@
 
 												<div class="col-lg-6 col-md-6 col-sm-12">
 													<div class="content-right">
-														<h2>
+														<h3>
 															<a>Desktop publishing</a>
-														</h2>
+														</h3>
 
 														<div class="des">
 															Desktop publishing programs can be used to create books, magazines, newspapers, flyers, pamphlets, and many other kinds of printed documents.<br>Duration : 3 months
@@ -183,9 +183,9 @@
 
 												<div class="col-lg-6 col-md-6 col-sm-12">
 													<div class="content-right">
-														<h2>
+														<h3>
 															<a>Web designing</a>
-														</h2>
+														</h3>
 
 														<div class="des">
 															Web design encompasses many different skills and disciplines in the production and maintenance of websites. The different areas of web design include web graphic design; interface design; authoring, including standardised code and proprietary software; user experience design; and search engine optimization.<br>
@@ -220,9 +220,9 @@ Duration : 3 months
 
 												<div class="col-lg-6 col-md-6 col-sm-12">
 													<div class="content-right">
-														<h2>
+														<h3>
 															<a>AUTOCAD</a>
-														</h2>
+														</h3>
 
 														<div class="des">
 															AutoCAD is a commercial computer-aided design and drafting software application. Developed and marketed by Autodesk, AutoCAD was first released in December 1989 as a desktop app running on microcomputers with internal graphics controllers.<br>
@@ -257,9 +257,9 @@ Duration : 2 months
 
 												<div class="col-lg-6 col-md-6 col-sm-12">
 													<div class="content-right">
-														<h2>
+														<h3>
 															<a>Advance MS-EXCEL</a>
-														</h2>
+														</h3>
 
 														<div class="des">
 															
@@ -295,9 +295,9 @@ Duration : 1 months
 
 												<div class="col-lg-6 col-md-6 col-sm-12">
 													<div class="content-right">
-														<h2>
+														<h3>
 															<a>Financial accounting with MS-OFFICE</a>
-														</h2>
+														</h3>
 
 														<div class="des">
 															Microsoft Office Accounting (formerly Small Business Accounting) is a discontinued accounting software application from Microsoft targeted towards small businesses that had between 1 and 25 employees. BizSight 365 running on Microsoft Azure was designed to replace Microsoft Office Accounting after it was discontinued. A free data migration utility included preserves all key data
@@ -333,9 +333,9 @@ Duration : 1 months
 
 												<div class="col-lg-6 col-md-6 col-sm-12">
 													<div class="content-right">
-														<h2>
+														<h3>
 															<a>Desktop publishing with MS-OFFICE</a>
-														</h2>
+														</h3>
 
 														<div class="des">
 															Desktop publishing with MS-OFFICE is a specialized branch of accounting that keeps track of a company's financial transactions. Using standardized guidelines, the transactions are recorded, summarized, and presented in a financial report or financial statement such as an income statement or a balance sheet.<br>Duration : 2/3 months
@@ -369,9 +369,9 @@ Duration : 1 months
 
 												<div class="col-lg-6 col-md-6 col-sm-12">
 													<div class="content-right">
-														<h2>
+														<h3>
 															<a>C language</a>
-														</h2>
+														</h3>
 														<div class="des">
 															C is a general-purpose, procedural computer programming language supporting structured programming, lexical variable scope, and recursion, while a static type system prevents unintended operations.<br>
 
@@ -406,9 +406,9 @@ Duration : 2 months
 
 												<div class="col-lg-6 col-md-6 col-sm-12">
 													<div class="content-right">
-														<h2>
+														<h3>
 															<a>C++ language</a>
-														</h2>
+														</h3>
 
 														<div class="des">
 															C++ is a general-purpose programming language created by Bjarne Stroustrup as an extension of the C programming language, or "C with Classes".<br>Duration : 3 months
@@ -442,9 +442,9 @@ Duration : 2 months
 
 												<div class="col-lg-6 col-md-6 col-sm-12">
 													<div class="content-right">
-														<h2>
+														<h3>
 															<a>Data structures</a>
-														</h2>
+														</h3>
 
 														<div class="des">
 															In computer science, a data structure is a data organization, management, and storage format that enables efficient access and modification. More precisely, a data structure is a collection of data values, the relationships among them, and the functions or operations that can be applied to the data.
@@ -479,9 +479,9 @@ Duration : 2 months
 
 												<div class="col-lg-6 col-md-6 col-sm-12">
 													<div class="content-right">
-														<h2>
+														<h3>
 															<a>JAVA core</a>
-														</h2>
+														</h3>
 
 														<div class="des">
 															Java is a general-purpose programming language that is class-based, object-oriented, and designed to have as few implementation dependencies as possible.<br>
@@ -517,9 +517,9 @@ Duration : 2 months
 
 												<div class="col-lg-6 col-md-6 col-sm-12">
 													<div class="content-right">
-														<h2>
+														<h3>
 															<a>Advance JAVA</a>
-														</h2>
+														</h3>
 
 														<div class="des">
 															The 'Advanced Java' comprises the very complex advanced programming. The advanced java programming covers the Swings, Socket Programming, AWT, Thread Concepts as well as the Collection objects and classes. "Advanced Java" is nothing but specialization in domains such as web, networking, data base handling.<br>
@@ -556,9 +556,9 @@ Duration : 3 months
 
 												<div class="col-lg-6 col-md-6 col-sm-12">
 													<div class="content-right">
-														<h2>
+														<h3>
 															<a>VB .NET</a>
-														</h2>
+														</h3>
 
 														<div class="des">
 															Visual Basic .NET is a multi-paradigm, object-oriented programming language, implemented on the .NET Framework. Microsoft launched VB.NET in 2002 as the successor to its original Visual Basic language.<br>
@@ -594,9 +594,9 @@ Duration : 2 months
 
 												<div class="col-lg-6 col-md-6 col-sm-12">
 													<div class="content-right">
-														<h2>
+														<h3>
 															<a  >Dot net Technology</a>
-														</h2>
+														</h3>
 														<div class="des">
 															Dotnet Framework is a software framework developed by Microsoft that runs primarily on Microsoft Windows. It includes a large class library named as Framework Class Library and provides language interoperability across several programming languages..<br>
 
@@ -631,9 +631,9 @@ Duration : 4 months
 
 												<div class="col-lg-6 col-md-6 col-sm-12">
 													<div class="content-right">
-														<h2>
+														<h3>
 															<a  >Certificate in Information Technology(CIT)</a>
-														</h2>
+														</h3>
 
 														<div class="des">
 															The course is designed to introduce students to basic software, hardware, Internet and multimedia technologies. ... The course might also include a computer lab course. The duration of the course is six months which will be offered through the distance learning mode.<br>Duration : 3 months
@@ -667,9 +667,9 @@ Duration : 4 months
 
 												<div class="col-lg-6 col-md-6 col-sm-12">
 													<div class="content-right">
-														<h2>
+														<h3>
 															<a  >Advance certificate in Information Technology(CIT)</a>
-														</h2>
+														</h3>
 														<div class="des">
 															The course is designed to introduce students to basic software, hardware, Internet and multimedia technologies. ... The course might also include a computer lab course. The duration of the course is six months which will be offered through the distance learning mode.
 															<br>Duration : 6 months
@@ -703,9 +703,9 @@ Duration : 4 months
 
 												<div class="col-lg-6 col-md-6 col-sm-12">
 													<div class="content-right m-b-0">
-														<h2><a>
+														<h3><a>
 															Advance diploma course in software technology</a>
-														</h2>
+														</h3>
 
 														<div class="des">
 															Advance Diploma in Software Technology (DAST) is Diploma level Information course. Software System is a system based on software forming part of a computer system (a combination of hardware and software). The term 'software system' is often used as a synonym of computer program or software.

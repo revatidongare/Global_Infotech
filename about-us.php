@@ -63,8 +63,10 @@ Our missions is to provide best in class education, meeting the requirements of 
                             
                             <div class="title title-icon">
                                 <h2 class="title-h2">Aim & Objective</h2>
-                                <p class="description" align="justify">Since its inception in 1997, Global To build a comprehensive approach towards knowledge acquisition in our students. To instigate an application oriented approach by providing exposure to latest trends in the industries.
-
+                                <p class="description" align="justify">The purpose of computer education is to provide young people with a greater awareness of computers in their lives enabling them to hold an informed opinion of the uses of computers in whatever context they meet them. This may be in their work, domestic life or from reports in newspapers or on television.
+understand the fundamental principles of computer science, and continue to develop their technical competencies. Pursue advanced education, research and development, and other creative efforts in science and technology.
+To build a comprehensive approach towards knowledge acquisition in our students.
+To instigate an application oriented approach by providing exposure to latest trends in the industries.
 Equip our students with pertinent know-how of market trends and build confidence to maintain their competitive edge.</p>
                             </div>
                         

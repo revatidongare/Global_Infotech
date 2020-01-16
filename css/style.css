@@ -388,6 +388,7 @@ textarea:hover, textarea:focus {
       /* dropdown-menu level 2 */
       /* dropdown-menu level 3 */ }
       #top-header .main-header .main-nav > ul {
+        padding-top: 5px;
         text-align: center;
         float: none; }
         #top-header .main-header .main-nav > ul > li {
@@ -400,6 +401,7 @@ textarea:hover, textarea:focus {
           text-transform: uppercase; }
           #top-header .main-header .main-nav > ul > li > a {
             display: block;
+            font-size: 11px;
             color: #27272f;
             padding: 0 15px;
             line-height: 70px;}
@@ -804,7 +806,7 @@ textarea:hover, textarea:focus {
     border: 1px solid #8d8d99; }
 
 .index-logo img {
-  /*max-width: 105px; */
+  max-width: 105px; 
 }
 
 /**
@@ -1401,7 +1403,7 @@ textarea:hover, textarea:focus {
         opacity: 0;
         font-size: 25px; }
     .testimonials .item .item-content {
-      width: 70%;
+      /*width: 70%;*/
       float: left;
       padding-left: 20px;
       padding-right: 20px;
@@ -2733,7 +2735,7 @@ textarea:hover, textarea:focus {
   .home-3 .best-store .group .home-core-group .core-item .core-caption-group .core-caption {
     margin-bottom: 0; }
 .home-3 .oars-store {
-  background: url("../img/home3-product-bg.jpg") no-repeat; }
+  background: url("../img/abt.jpg") no-repeat; }
   .home-3 .oars-store .img-left:hover img {
     transform: scale(1.1); }
   .home-3 .oars-store .img-left img {
@@ -5394,7 +5396,7 @@ textarea:hover, textarea:focus {
         transition: all .5s; }
       .gallery-wrap .gallery-item .gallery-item-inner .entry-thumbnail .entry-thumbnail-overlay {
         border: 10px solid #fff;
-        background: url("../img/gallery/gallery7.jpg");
+        background: url("../img/certi/certi_1.jpeg");
         background-color: #E0E8EE;
         background-repeat: no-repeat;
         background-position: center center;
@@ -5428,19 +5430,19 @@ textarea:hover, textarea:focus {
           -o-transition: opacity .3s;
           transition: opacity .3s; }
         .gallery-wrap .gallery-item .gallery-item-inner .entry-thumbnail .entry-thumbnail-overlay.img2 {
-          background: url("../img/gallery/gallery8.jpg"); }
+          background: url("../img/certi/certi_2.jpeg"); }
         .gallery-wrap .gallery-item .gallery-item-inner .entry-thumbnail .entry-thumbnail-overlay.img3 {
-          background: url("../img/gallery/gallery9.jpg"); }
+          background: url("../img/certi/certi3.jpeg"); }
         .gallery-wrap .gallery-item .gallery-item-inner .entry-thumbnail .entry-thumbnail-overlay.img4 {
-          background: url("../img/gallery/gallery10.jpg"); }
+          background: url("../img/certi/certi4.jpeg"); }
         .gallery-wrap .gallery-item .gallery-item-inner .entry-thumbnail .entry-thumbnail-overlay.img5 {
-          background: url("../img/gallery/gallery11.jpg"); }
+          background: url("../img/awards/award1.jpeg"); }
         .gallery-wrap .gallery-item .gallery-item-inner .entry-thumbnail .entry-thumbnail-overlay.img6 {
-          background: url("../img/gallery/gallery12.jpg"); }
+          background: url("../img/awards/award2.jpeg"); }
         .gallery-wrap .gallery-item .gallery-item-inner .entry-thumbnail .entry-thumbnail-overlay.img7 {
-          background: url("../img/gallery/gallery13.jpg"); }
+          background: url("../img/awards/award3.jpeg"); }
         .gallery-wrap .gallery-item .gallery-item-inner .entry-thumbnail .entry-thumbnail-overlay.img8 {
-          background: url("../img/gallery/gallery14.jpg"); }
+          background: url("../img/awards/award4.jpeg"); }
         .gallery-wrap .gallery-item .gallery-item-inner .entry-thumbnail .entry-thumbnail-overlay.img9 {
           background: url("../img/gallery/gallery18.png"); }
     .gallery-wrap .gallery-item .gallery-item-inner .gallery-content {

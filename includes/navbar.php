@@ -91,7 +91,7 @@
                             <div class="col-lg-2 col-5">
                                 <div class="index-logo">
                                     <a href="index.php" title="Global InfoTech">
-                                        <img src="img/Global.png" alt="img">
+                                        <img src="img/global.png" alt="img">
                                     </a>
                                 </div>
                             </div>
@@ -128,15 +128,41 @@
                                                 <a href="certification.php">Certification</a>
                                             </li>
 
+                                            <li class="dropdown">
+                                                <a href="exam.php">Exam
+                                                    <i class="fa fa-angle-down d-xs-none"></i>
+                                                </a>  
+                                                <div class="dropdown-menu">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="">C programming</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">C++ programming</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Tally</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href=""></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <a href="events.php">Events & Awards</a>
+                                            </li>
+
                                             <li>
                                                 <a href="placement.php">Placement</a>
                                             </li>
+
                                           <li >
                                                 <a href="contact-us.php">Contact Us
                                                     <!-- <i class="fa fa-angle-down d-xs-none"></i> -->
                                                 </a>
-                                                
-                                            </li>
+                                        </li>
                                         </ul>
                                     </nav>
                                 </div>

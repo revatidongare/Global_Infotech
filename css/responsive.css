@@ -1,4 +1,8 @@
 @media (min-width: 992px) {
+  .col-md-offset-3 {
+    margin-left: 25%; }
+    .col-lg-offset-1 {
+    margin-left: 8.33333333%; }
   .dropdown-menu,
   .dropdown-content {
     animation: animationmenus ease 0.5s;
@@ -81,7 +85,7 @@
   #top-header .main-header .header-block {
     padding: 0px 12px; }
   #top-header .main-header .main-nav > ul > li > a {
-    padding: 0 12px; }
+    padding-left: 5px; }
 
   .product-category-slider .item-hover-view-cart:hover .product-cart-icon {
     bottom: 15px; }
