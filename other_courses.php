@@ -116,32 +116,76 @@
 										
 										<div class="item">
 											<div class="row">
-												<!-- <div class="col-lg-6 col-md-6 col-sm-12">
+												<div class="col-lg-6 col-md-6 col-sm-12">
 													<div class="product-thumb">
 														<div class="product-container item-img">
 															<div class="product-image-container">
 																<a class="product-img-link" title="">
-																	<img class="w-100" src="img/course/tally.jpeg" alt="img">
+																	<img class="w-100" src="img/course/eng_typing.png" alt="img">
 																</a>
 															</div>
 														</div>
 													</div>											
-												</div> -->
+												</div>
 
-												<div class="col-lg-12 col-md-6 col-sm-12">
-													<div class="content-right" style="padding-left: 5rem;">
+												<div class="col-lg-6 col-md-6 col-sm-12">
+													<div class="content-right">
 														<h2>
 															<a> 1. English Typing Course</a><br><br>
+															
+															
+														</h2>													
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="item">
+											<div class="row">
+												<div class="col-lg-6 col-md-6 col-sm-12">
+													<div class="product-thumb">
+														<div class="product-container item-img">
+															<div class="product-image-container">
+																<a class="product-img-link" title="">
+																	<img class="w-100" src="img/course/marathityping.jpg" alt="img">
+																</a>
+															</div>
+														</div>
+													</div>											
+												</div>
+
+												<div class="col-lg-6 col-md-6 col-sm-12">
+													<div class="content-right">
+														<h2>
+															
 															<a> 2. Marathi Typing Course</a><br><br>
+															
+															
+														</h2>													
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="item">
+											<div class="row">
+												<div class="col-lg-6 col-md-6 col-sm-12">
+													<div class="product-thumb">
+														<div class="product-container item-img">
+															<div class="product-image-container">
+																<a class="product-img-link" title="">
+																	<img class="w-100" src="img/course/eng_speaking.png" alt="img">
+																</a>
+															</div>
+														</div>
+													</div>											
+												</div>
+
+												<div class="col-lg-6 col-md-6 col-sm-12">
+													<div class="content-right">
+														<h2>
 															<a> 3. English Speaking Course</a><br><br>
 															
-														</h2>
-														
-														<!-- <div class="des">
-															Microsoft Office Accounting (formerly Small Business Accounting) is a discontinued accounting software application from Microsoft targeted towards small businesses that had between 1 and 25 employees. BizSight 365 running on Microsoft Azure was designed to replace Microsoft Office Accounting after it was discontinued. A free data migration utility included preserves all key data
-														</div> -->
-
-														
+														</h2>													
 													</div>
 												</div>
 											</div>

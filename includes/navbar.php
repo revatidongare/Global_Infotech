@@ -7,12 +7,12 @@
                                 <aside class="social-profile">
                                     <ul class="social-icon d-flex">
                                         <li class="social-facebook">
-                                            <a class="gsf-link" title="Facebook" href="#">
+                                            <a class="gsf-link" title="Facebook" href="https://www.facebook.com/globalinfotechlonavla">
                                                 <i class="fa fa-facebook"></i>
                                             </a>
                                         </li>
                                         <li class="social-twitter">
-                                            <a class="gsf-link" title="Twitter" href="#">
+                                            <a class="gsf-link" title="Twitter" href="https://twitter.com/pint75">
                                                 <i class="fa fa-twitter"></i>
                                             </a>
                                         </li>
@@ -23,7 +23,7 @@
                                             </a>
                                         </li> -->
                                         <li class="social-vimeo">
-                                            <a class="gsf-link" title="instagram" href="#">
+                                            <a class="gsf-link" title="instagram" href="https://www.instagram.com/global_infotech_98/">
                                                 <i class="fa fa-instagram"></i>
                                             </a>
                                         </li>

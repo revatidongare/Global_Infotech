@@ -116,37 +116,204 @@
 										
 										<div class="item">
 											<div class="row">
-												<!-- <div class="col-lg-6 col-md-6 col-sm-12">
+												<div class="col-lg-6 col-md-6 col-sm-12">
 													<div class="product-thumb">
 														<div class="product-container item-img">
 															<div class="product-image-container">
 																<a class="product-img-link" title="">
-																	<img class="w-100" src="img/course/tally.jpeg" alt="img">
+																	<img class="w-100" src="img/course/c.png" alt="img">
 																</a>
 															</div>
 														</div>
 													</div>											
-												</div> -->
+												</div>
 
-												<div class="col-lg-12 col-md-6 col-sm-12">
-													<div class="content-right" style="padding-left: 5rem;">
+												<div class="col-lg-6 col-md-6 col-sm-12">
+													<div class="content-right">
 														<h2>
-															<a data-toggle="modal" data-target="#myModalForC"> 1. C Programming</a><br><br>
-															<a data-toggle="modal" data-target="#myModalForCPlusPlus"> 2. C++ Programming</a><br><br>
-															<a data-toggle="modal" data-target="#myModalForDOTNET"> 3. VB .NET</a><br><br>
-															<a data-toggle="modal" data-target="#myModalForPHP"> 4. PHP</a><br><br>
-															<a data-toggle="modal" data-target="#myModalForDS"> 5. Data Structure</a><br><br>
-															<a data-toggle="modal" data-target="#myModalForPython"> 6. Python</a><br><br>
-															<a data-toggle="modal" data-target="#myModalForJAVA"> 7. Java</a><br><br>
-															<a data-toggle="modal" data-target="#myModalForVB"> 8. Visual Basic</a>
+															<a data-toggle="modal" data-target="#myModalForC"> C Programming</a><br><br>
+														</h2>													
+													</div>
+												</div>
+											</div>
+										</div>
 
-														</h2>
-														
-														<!-- <div class="des">
-															Microsoft Office Accounting (formerly Small Business Accounting) is a discontinued accounting software application from Microsoft targeted towards small businesses that had between 1 and 25 employees. BizSight 365 running on Microsoft Azure was designed to replace Microsoft Office Accounting after it was discontinued. A free data migration utility included preserves all key data
-														</div> -->
+											<div class="item">
+											<div class="row">
+												<div class="col-lg-6 col-md-6 col-sm-12">
+													<div class="product-thumb">
+														<div class="product-container item-img">
+															<div class="product-image-container">
+																<a class="product-img-link" title="">
+																	<img class="w-100" src="img/course/c++.png" alt="img">
+																</a>
+															</div>
+														</div>
+													</div>											
+												</div>
 
-														
+												<div class="col-lg-6 col-md-6 col-sm-12">
+													<div class="content-right">
+														<h2>
+															<a data-toggle="modal" data-target="#myModalForCPlusPlus"> C++ Programming</a><br><br>
+															
+														</h2>													
+													</div>
+												</div>
+											</div>
+										</div>
+
+											<div class="item">
+											<div class="row">
+												<div class="col-lg-6 col-md-6 col-sm-12">
+													<div class="product-thumb">
+														<div class="product-container item-img">
+															<div class="product-image-container">
+																<a class="product-img-link" title="">
+																	<img class="w-100" src="img/course/dotnet.jpg" alt="img">
+																</a>
+															</div>
+														</div>
+													</div>											
+												</div>
+
+												<div class="col-lg-6 col-md-6 col-sm-12">
+													<div class="content-right">
+														<h2>
+															
+															<a data-toggle="modal" data-target="#myModalForDOTNET"> VB .NET</a><br><br>
+															
+														</h2>													
+													</div>
+												</div>
+											</div>
+										</div>
+
+											<div class="item">
+											<div class="row">
+												<div class="col-lg-6 col-md-6 col-sm-12">
+													<div class="product-thumb">
+														<div class="product-container item-img">
+															<div class="product-image-container">
+																<a class="product-img-link" title="">
+																	<img class="w-100" src="img/course/php.jpg" alt="img">
+																</a>
+															</div>
+														</div>
+													</div>											
+												</div>
+
+												<div class="col-lg-6 col-md-6 col-sm-12">
+													<div class="content-right">
+														<h2>
+															
+															<a data-toggle="modal" data-target="#myModalForPHP">  PHP</a><br><br>
+															
+														</h2>													
+													</div>
+												</div>
+											</div>
+										</div>
+
+											<div class="item">
+											<div class="row">
+												<div class="col-lg-6 col-md-6 col-sm-12">
+													<div class="product-thumb">
+														<div class="product-container item-img">
+															<div class="product-image-container">
+																<a class="product-img-link" title="">
+																	<img class="w-100" src="img/course/ds.png" alt="img">
+																</a>
+															</div>
+														</div>
+													</div>											
+												</div>
+
+												<div class="col-lg-6 col-md-6 col-sm-12">
+													<div class="content-right">
+														<h2>
+															
+															<a data-toggle="modal" data-target="#myModalForDS"> Data Structure</a><br><br>
+															
+														</h2>													
+													</div>
+												</div>
+											</div>
+										</div>
+
+
+											<div class="item">
+											<div class="row">
+												<div class="col-lg-6 col-md-6 col-sm-12">
+													<div class="product-thumb">
+														<div class="product-container item-img">
+															<div class="product-image-container">
+																<a class="product-img-link" title="">
+																	<img class="w-100" src="img/course/python.jpg" alt="img">
+																</a>
+															</div>
+														</div>
+													</div>											
+												</div>
+
+												<div class="col-lg-6 col-md-6 col-sm-12">
+													<div class="content-right">
+														<h2>
+															
+															<a data-toggle="modal" data-target="#myModalForPython">  Python</a><br><br>
+															
+
+														</h2>													
+													</div>
+												</div>
+											</div>
+										</div>
+
+											<div class="item">
+											<div class="row">
+												<div class="col-lg-6 col-md-6 col-sm-12">
+													<div class="product-thumb">
+														<div class="product-container item-img">
+															<div class="product-image-container">
+																<a class="product-img-link" title="">
+																	<img class="w-100" src="img/course/java.png" alt="img">
+																</a>
+															</div>
+														</div>
+													</div>											
+												</div>
+
+												<div class="col-lg-6 col-md-6 col-sm-12">
+													<div class="content-right">
+														<h2>													
+															<a data-toggle="modal" data-target="#myModalForJAVA"> Java</a><br><br>
+														</h2>													
+													</div>
+												</div>
+											</div>
+										</div>
+
+											<div class="item">
+											<div class="row">
+												<div class="col-lg-6 col-md-6 col-sm-12">
+													<div class="product-thumb">
+														<div class="product-container item-img">
+															<div class="product-image-container">
+																<a class="product-img-link" title="">
+																	<img class="w-100" src="img/course/vb.png" alt="img">
+																</a>
+															</div>
+														</div>
+													</div>											
+												</div>
+
+												<div class="col-lg-6 col-md-6 col-sm-12">
+													<div class="content-right">
+														<h2>
+															
+															<a data-toggle="modal" data-target="#myModalForVB"> Visual Basic</a>
+
+														</h2>													
 													</div>
 												</div>
 											</div>

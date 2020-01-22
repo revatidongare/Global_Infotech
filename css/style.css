@@ -5768,7 +5768,7 @@ textarea:hover, textarea:focus {
 /*=======[ Indec Video Section Style ]========*/
   
   .video-main-area {
-      background: transparent url("../img/mscit.jpg") no-repeat center center/cover;
+      /*background: transparent url("../img/mscit.jpg") no-repeat center center/cover;*/
       min-height: 290px;
       /*padding: 60px 0;*/
       text-align: center;
