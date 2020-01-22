@@ -14,6 +14,3 @@
 
     <!-- Template JS -->
     <script src="js/custom.js"></script>
-
-
-

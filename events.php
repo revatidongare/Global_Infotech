@@ -158,7 +158,7 @@
                         <div class="col-lg-4 col-md-6 col-sm-12 gallery-item clearfix m-bottom-30">
                             <div class="gallery-item-inner clearfix animated">
                                 <div class="entry-thumbnail">
-                                    <div class="entry-thumbnail-overlay placeholder-image img8" title="Roman Chicken Salad"></div>
+                                    <div class="entry-thumbnail-overlay placeholder-image img8"></div>
                                 </div>
 
                                 <div class="gallery-content">

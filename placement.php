@@ -42,6 +42,10 @@
                                     <a href="https://www.vinnovatetechnologies.com/vinnovate/job-career.php">
                                         <img src="img/vinnovate.png" width="60%">
                                     </a>
+                                    <br><br>
+                                   <h3 style="color: black;"> Address: </h3> Shop No 3, Sahyadri Heights, <br>
+                                            Bhangarwadi, Lonavla,<br>
+                                            Maharashtra 410401
                                 </p>
                             </div>
                         </div>

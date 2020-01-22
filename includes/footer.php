@@ -29,7 +29,7 @@
                                                 <span>
                                                     <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
                                                 </span>
-                                                <span style="color: #fff;">yogesh@vinnovatetechnologies.com</span>
+                                                <span style="color: #fff;">yogeshkhandelwal@yahoo.com</span>
                                             </li>
                                             <!-- <li class=" social-container d-flex bg-icon">
                                                 <span>

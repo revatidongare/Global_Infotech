@@ -4,7 +4,9 @@
 <?php include 'includes/head.php'; ?>
 
 <title>Global InfoTech : Home</title>
-
+<!-- <style>
+.mySlides {display: none;}
+</style> -->
 <body class="home-3">
     <div class="all">
 <?php include 'includes/navbar.php'; ?>
@@ -157,6 +159,7 @@
                     <div class="container" align="align-center">
                         <div class="inner">
                             <div class="row">
+
                                 <!-- <div class="col-lg-6 col-sm-12">
                                     <div class="title item-content clearfix">
                                         <div class=" page-title color">
@@ -174,96 +177,54 @@
                                         </div>
                                     </div>
                                 </div> -->
-
-                                <!-- Slider -->
-
-    <section class="crumina-grid crumina-module crumina-module-slider navigation-center-both-sides slider-3-items medium-padding100">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-12 col-xs-12">
-                    <div class="crumina-module crumina-heading">
-                        <h2 class="heading-title align-center">Our<span class="c-primary"> Popular Courses</span></h2>
-                        <h2 class="heading-title c-primary"></h2>
-                    </div>
-                </div>
-                <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
-                    <div class="swiper-container pagination-bottom" data-show-items="2" data-effect="coverflow" data-centered-slider="true" data-nospace="true" data-stretch="80" data-depth="250">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="img/mscit.jpg" width="20%" alt="image">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="img/webdesign.jpg" width="20%" alt="image">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="img/lang.png" width="20%" alt="image">
-                            </div>
-                            <!-- <div class="swiper-slide">
-                                <img src="img/gallery3.jpeg" alt="image">
-                            </div> -->
-                            <!-- <div class="swiper-slide">
-                                <img src="img/slides4.png" alt="image">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="img/slides4.png" alt="image">
-                            </div>
-                        </div> -->
-
-                        <!-- If we need pagination -->
-                        <div class="swiper-pagination"></div>
-
-                    </div>
-                </div>
-
-                <!--Prev next buttons-->
-
-                <div class="btn-prev" style="background-color: black;">
-                    <svg class="utouch-icon icon-hover utouch-icon-arrow-left-1"><use xlink:href="#utouch-icon-arrow-left-1"></use></svg>
-                    <svg class="utouch-icon utouch-icon-arrow-left1"><use xlink:href="#utouch-icon-arrow-left1" ></use></svg>
-                </div>
-
-                <div class="btn-next" style="background-color: black;">
-                    <svg class="utouch-icon icon-hover utouch-icon-arrow-right-1"><use xlink:href="#utouch-icon-arrow-right-1"></use></svg>
-                    <svg class="utouch-icon utouch-icon-arrow-right1"><use xlink:href="#utouch-icon-arrow-right1"></use></svg>
-                </div>
-            </div>
-        </div>
+ 
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-6 col-sm-12">
+                        <center><h2>Our Popular Courses</h2></center>
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="img/mscit.jpg" alt="First slide">
     </div>
-</section>
-
-    <!-- .... end Slider -->
-
-
-<!--                                 <div class="col-lg-6 col-sm-12">
+    <div class="carousel-item">
+      <img class="d-block w-100" src="img/webdesign.jpg" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="img/lang.png" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" style="color: black;" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" style="color: black;" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
+                                <!-- <div class="col-lg-6 col-sm-12">
                                     <div class="manufacturers-block">
                                         <div class="block-content">
+                                            <center>
+                                            <h2 class="title-h2">Our Popular Courses</h2>
+                                        </center>
                                             <ul class="deal-of-day-carousel">
                                                 <li>
-                                                    <img class="img-fluid" src="img/mscit.jpg" alt="img">
+                                                    <img class="img-fluid mySlides" src="img/mscit.jpg" alt="img">
                                                 </li>
                                                 <li>
-                                                    <img class="img-fluid" src="img/webdesign.jpg" alt="img">
+                                                    <img class="img-fluid mySlides" src="img/webdesign.jpg" alt="img">
                                                 </li>
                                                 <li>
-                                                    <img class="img-fluid" src="img/lang.png" alt="img">
-                                                </li> -->
-                                                <!-- <li>
-                                                    <img class="img-fluid" src="img/banner-promotion.png" alt="img">
-                                                </li> -->
-                                            <!-- </ul>
-                                        </div> -->
-                                        <!-- <div class="price d-flex justify-content-center align-items-center">
-                                            <div class="price-inner">
-                                                <span>Price Only</span>
-                                                <p>
-                                                    <span class="woocommerce-Price-amount amount">$12</span>
-                                                </p>
-                                            </div>
-                                        </div> -->
-                                    <!-- </div>
-                                </div> -->
+                                                    <img class="img-fluid mySlides" src="img/lang.png" alt="img">
+                                                </li>
+                                               
+                                            </ul>
+                                        </div>
+                                        
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </section>
@@ -282,7 +243,7 @@
                         </div>
 
                         <div class="row m-top text-center">
-                            <div class=" col-lg-3 col-sm-6">
+                            <div class=" col-lg-4 col-sm-6">
                                 <div class="item clearfix">
                                     <div class="item-img">
                                         <img class="img-fluid" src="img/skill-india.jpg" alt="img">
@@ -317,7 +278,7 @@
                                 </div>
                             </div>
 
-                            <div class=" col-lg-3 col-sm-6">
+                            <div class=" col-lg-4 col-sm-6">
                                 <div class="item clearfix">
                                     <div class="item-img">
                                         <img class="img-fluid" src="img/nulm.jpg" alt="img">
@@ -352,16 +313,16 @@
                                 </div>
                             </div>
 
-                            <div class=" col-lg-3 col-sm-6">
+                            <div class=" col-lg-4 col-sm-6">
                                 <div class="item clearfix">
                                     <div class="item-img">
-                                        <img class="img-fluid" src="img/ryewood.PNG" alt="img">
+                                        <img class="img-fluid" src="img/kvn.jpg" alt="img">
                                     </div>
 
                                     <div class="item-content">
                                         <div class="user-info">
                                             <h4 class="user-name">
-                                                <span class="title-black">Ryewood International School</span>
+                                                <span class="title-black">Kaivalya Vidya Niketan</span>
                                             </h4>
                                             <!-- <span class="job font-italic">Senior UI/UX Design</span> -->
                                         </div>
@@ -386,8 +347,45 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        
+<div class="row m-top text-center">
+                            <div class=" col-lg-6 col-sm-6">
+                                <div class="item clearfix">
+                                    <div class="item-img">
+                                        <img class="img-fluid" src="img/ryewood.PNG" alt="img">
+                                    </div>
 
-                            <div class=" col-lg-3 col-sm-6">
+                                    <div class="item-content">
+                                        <div class="user-info">
+                                            <h4 class="user-name">
+                                                <span class="title-black">Ryewood International School</span>
+                                            </h4>
+                                            <!-- <span class="job font-italic">Developer</span> -->
+                                        </div>
+                                    </div>
+
+                                    <div class="ourteam-social">
+                                        <a class="social-item" target="_self" href="#">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                        <a class="social-item" target="_self" href="#">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                        <a class="social-item" target="_self" href="#">
+                                            <i class="fa fa-pinterest-p"></i>
+                                        </a>
+                                        <a class="social-item" target="_self" href="#">
+                                            <i class="fa fa-behance"></i>
+                                        </a>
+                                        <a class="social-item" target="_self" href="#">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class=" col-lg-6 col-sm-6">
                                 <div class="item clearfix">
                                     <div class="item-img">
                                         <img class="img-fluid" src="img/todkar.PNG" alt="img">
@@ -421,6 +419,7 @@
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -434,8 +433,7 @@
                                 <h3 class="title-main">Testimonials</h3>
                                 <div class="title title-icon">
                                     <h2 class="title-h2">What Our Students Saying?</h2>
-                                    <!-- <p class="description">Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel
-                                        scelerisque nisl consectetur et.</p> -->
+                                    
                                 </div>
                             </div>
                         </div>
@@ -446,8 +444,8 @@
                                     <div class="row">
                                         <div class="col-lg-6 col-md-6 col-sm-12">
                                             <div class="item clearfix d-flex align-items-center">
-                                                <!-- <div class="item-img"> -->
-                                                    <div>
+                                                <div class="item-img">
+                                                    
                                                     <img class="img-fluid" src="img/divya.jpg" alt="img">
                                                 </div>
                                                 <div class="item-content">
@@ -462,7 +460,7 @@
 
                                         <div class="col-lg-6 col-md-6 col-sm-12">
                                             <div class="item clearfix d-flex align-items-center">
-                                                <div>
+                                                <div class="item-img">
                                                     <img class="img-fluid" src="img/ratnesh.jpg" alt="img">
                                                 </div>
                                                 <div class="item-content">
@@ -477,14 +475,14 @@
 
                                         <div class="col-lg-6 col-md-6 col-sm-12">
                                             <div class="item clearfix d-flex align-items-center">
-                                                <div>
+                                                <div class="item-img">
                                                     <img class="img-fluid" src="img/kirtana.jpeg" alt="img">
                                                 </div>
                                                 <div class="item-content">
                                                     <p>This institute provide latest industrial knowledge to its students. their teaching technique is also unique and friendly.</p>
                                                     <div class="user-info d-flex align-items-baseline">
                                                         <h4 class="user-name title-black"> Kirtana Mudaliar</h4>
-                                                        <span class="job font-italic">Sinhagad Institute Student</span>
+                                                        <span class="job font-italic"> Student</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -492,14 +490,14 @@
 
                                         <div class="col-lg-6 col-md-6 col-sm-12">
                                             <div class="item clearfix d-flex align-items-center">
-                                                <div>
+                                                <div class="item-img">
                                                     <img class="img-fluid" src="img/akshay.jpg" alt="img">
                                                 </div>
                                                 <div class="item-content">
                                                     <p>I did my training from here. I found the staff to be highly cooperative and friendly. I am pleased to recommend this institute to my friends.</p>
                                                     <div class="user-info d-flex align-items-baseline">
                                                         <h4 class="user-name title-black"> Akshay Auti</h4>
-                                                        <span class="job font-italic">Sinhagad Institute Student</span>
+                                                        <span class="job font-italic"> Student</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -511,14 +509,14 @@
                                     <div class="row">
                                         <div class="col-lg-6 col-md-6 col-sm-12">
                                             <div class="item clearfix d-flex align-items-center">
-                                                <div>
+                                                <div class="item-img">
                                                     <img class="img-fluid" src="img/niranjan.jpeg" alt="img">
                                                 </div>
                                                 <div class="item-content">
                                                     <p>I must say that they provide best industrial education to their students. we were not only given theoretical knowledge but also practical knowledge. I am pleased to be a part of this institute.</p>
                                                     <div class="user-info d-flex align-items-baseline">
                                                         <h4 class="user-name title-black"> Niranjan Waghmare</h4>
-                                                        <span class="job font-italic">Sinhagad Institute Student </span>
+                                                        <span class="job font-italic">Student </span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -526,14 +524,14 @@
 
                                         <div class="col-lg-6 col-md-6 col-sm-12">
                                             <div class="item clearfix d-flex align-items-center">
-                                                <div>
+                                                <div class="item-img">
                                                     <img class="img-fluid" src="img/vivek.jpg" alt="img">
                                                 </div>
                                                 <div class="item-content">
                                                     <p>I took my industrial training from this institute and my experience was amazing. I would highly recommend everyone to visit this institute for their industrial training.</p>
                                                     <div class="user-info d-flex align-items-baseline">
                                                         <h4 class="user-name title-black"> Vivek Yadav </h4>
-                                                        <span class="job font-italic"> Sinhagad Institute Student</span>
+                                                        <span class="job font-italic">  Student</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -541,14 +539,14 @@
 
                                         <div class="col-lg-6 col-md-6 col-sm-12">
                                             <div class="item clearfix d-flex align-items-center">
-                                                <div>
+                                                <div class="item-img">
                                                     <img class="img-fluid" src="img/akshay_k.jpg" alt="img">
                                                 </div>
                                                 <div class="item-content">
                                                     <p>A best institue for learning some thing different. Here are lots of best courses offered by an institute, which you can pursue and give your dreams a new wings. </p>
                                                     <div class="user-info d-flex align-items-baseline">
                                                         <h4 class="user-name title-black"> Akshay Kurhekar</h4>
-                                                        <span class="job font-italic">Sinhagad Institute Student</span>
+                                                        <span class="job font-italic">Student</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -556,7 +554,7 @@
 
                                         <div class="col-lg-6 col-md-6 col-sm-12">
                                             <div class="item clearfix d-flex align-items-center">
-                                                <div>
+                                                <div class="item-img">
                                                     <img class="img-fluid" src="img/rohan.jpg" alt="img">
                                                 </div>
                                                 <div class="item-content">
@@ -572,146 +570,12 @@
                                     </div>
                                 </div>
 
-                                <!-- <div class="testimonial-item">
-                                    <div class="row">
-                                        <div class="col-lg-6 col-md-6 col-sm-12">
-                                            <div class="item clearfix d-flex align-items-center">
-                                                <div>
-                                                    <img class="img-fluid" src="img/testimonial7.png" alt="img">
-                                                </div>
-                                                <div class="item-content">
-                                                    <p>It is a long established fact that a reader will be distracted by the
-                                                        readable content of a page when looking at its layout.</p>
-                                                    <div class="user-info d-flex align-items-baseline">
-                                                        <h4 class="user-name title-black"> Michael Walker</h4>
-                                                        <span class="job font-italic">Social Marketing</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-6 col-md-6 col-sm-12">
-                                            <div class="item clearfix d-flex align-items-center">
-                                                <div>
-                                                    <img class="img-fluid" src="img/testimonial5.png" alt="img">
-                                                </div>
-                                                <div class="item-content">
-                                                    <p>It is a long established fact that a reader will be distracted by the
-                                                        readable content of a page when looking at its layout.</p>
-                                                    <div class="user-info d-flex align-items-baseline">
-                                                        <h4 class="user-name title-black"> Michael Walker</h4>
-                                                        <span class="job font-italic">Social Marketing</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-6 col-md-6 col-sm-12">
-                                            <div class="item clearfix d-flex align-items-center">
-                                                <div>
-                                                    <img class="img-fluid" src="img/testimonial6.png" alt="img">
-                                                </div>
-                                                <div class="item-content">
-                                                    <p>It is a long established fact that a reader will be distracted by the
-                                                        readable content of a page when looking at its layout.</p>
-                                                    <div class="user-info d-flex align-items-baseline">
-                                                        <h4 class="user-name title-black"> Michael Walker</h4>
-                                                        <span class="job font-italic">Social Marketing</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-6 col-md-6 col-sm-12">
-                                            <div class="item clearfix d-flex align-items-center">
-                                                <div>
-                                                    <img class="img-fluid" src="img/testimonial8.png" alt="img">
-                                                </div>
-                                                <div class="item-content">
-                                                    <p>It is a long established fact that a reader will be distracted by the
-                                                        readable content of a page when looking at its layout.</p>
-                                                    <div class="user-info d-flex align-items-baseline">
-                                                        <h4 class="user-name title-black"> Michael Walker</h4>
-                                                        <span class="job font-italic">Social Marketing</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> -->
-
-                                <!-- <div class="testimonial-item">
-                                    <div class="row">
-                                        <div class="col-lg-6 col-md-6 col-sm-12">
-                                            <div class="item clearfix d-flex align-items-center">
-                                                <div>
-                                                    <img class="img-fluid" src="img/testimonial6.png" alt="img">
-                                                </div>
-                                                <div class="item-content">
-                                                    <p>It is a long established fact that a reader will be distracted by the
-                                                        readable content of a page when looking at its layout.</p>
-                                                    <div class="user-info d-flex align-items-baseline">
-                                                        <h4 class="user-name title-black"> Michael Walker</h4>
-                                                        <span class="job font-italic">Social Marketing</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-6 col-md-6 col-sm-12">
-                                            <div class="item clearfix d-flex align-items-center">
-                                                <div>
-                                                    <img class="img-fluid" src="img/testimonial7.png" alt="img">
-                                                </div>
-                                                <div class="item-content">
-                                                    <p>It is a long established fact that a reader will be distracted by the
-                                                        readable content of a page when looking at its layout.</p>
-                                                    <div class="user-info d-flex align-items-baseline">
-                                                        <h4 class="user-name title-black"> Michael Walker</h4>
-                                                        <span class="job font-italic">Social Marketing</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-6 col-md-6 col-sm-12">
-                                            <div class="item clearfix d-flex align-items-center">
-                                                <div>
-                                                    <img class="img-fluid" src="img/testimonial8.png" alt="img">
-                                                </div>
-                                                <div class="item-content">
-                                                    <p>It is a long established fact that a reader will be distracted by the
-                                                        readable content of a page when looking at its layout.</p>
-                                                    <div class="user-info d-flex align-items-baseline">
-                                                        <h4 class="user-name title-black"> Michael Walker</h4>
-                                                        <span class="job font-italic">Social Marketing</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-6 col-md-6 col-sm-12">
-                                            <div class="item clearfix d-flex align-items-center">
-                                                <div>
-                                                    <img class="img-fluid" src="img/testimonial5.png" alt="img">
-                                                </div>
-                                                <div class="item-content">
-                                                    <p>It is a long established fact that a reader will be distracted by the
-                                                        readable content of a page when looking at its layout.</p>
-                                                    <div class="user-info d-flex align-items-baseline">
-                                                        <h4 class="user-name title-black"> Michael Walker</h4>
-                                                        <span class="job font-italic">Social Marketing</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> -->
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+
 
         </main>
 <?php include 'includes/subscribe.php'; ?>
@@ -740,57 +604,23 @@
 
 <?php include 'includes/script.php'; ?>
 
+<!-- <script>
+var slideIndex = 0;
+carousel();
 
-
-
-
-<!-- Used SVG-icons --->
-
-<svg xmlns="http://www.w3.org/2000/svg" style="display: block; width: 1px; height: 1px; visibility: hidden; opacity: 0;">
-
-    <symbol id="utouch-icon-dot-arrow" viewBox="0 0 512 512">
-        <path d="m52 26c0 14-12 25-26 25-14 0-25-11-25-25 0-15 11-26 25-26 14 0 26 11 26 26z m76 77c0 14-12 25-26 25-14 0-25-11-25-25 0-14 11-26 25-26 14 0 26 12 26 26z m0-77c0 14-12 25-26 25-14 0-25-11-25-25 0-15 11-26 25-26 14 0 26 11 26 26z m77 77c0 14-12 25-26 25-14 0-25-11-25-25 0-14 11-26 25-26 14 0 26 12 26 26z m0 76c0 14-12 25-26 25-14 0-25-11-25-25 0-14 11-26 25-26 14 0 26 12 26 26z m0-153c0 14-12 25-26 25-14 0-25-11-25-25 0-15 11-26 25-26 14 0 26 11 26 26z m76 77c0 14-12 25-26 25-14 0-25-11-25-25 0-14 11-26 25-26 14 0 26 12 26 26z m0 76c0 14-12 25-26 25-14 0-25-11-25-25 0-14 11-26 25-26 14 0 26 12 26 26z m0-153c0 14-12 25-26 25-14 0-25-11-25-25 0-15 11-26 25-26 14 0 26 11 26 26z m75 77c0 14-11 25-25 25-14 0-26-11-26-25 0-14 12-26 26-26 14 0 25 12 25 26z m0 76c0 14-11 25-25 25-14 0-26-11-26-25 0-14 12-26 26-26 14 0 25 12 25 26z m-75 75c0 14-12 26-26 26-14 0-25-12-25-26 0-14 11-25 25-25 14 0 26 11 26 25z m75 0c0 14-11 26-25 26-14 0-26-12-26-26 0-14 12-25 26-25 14 0 25 11 25 25z m-151 78c0 14-12 25-26 25-14 0-25-11-25-25 0-14 11-26 25-26 14 0 26 12 26 26z m76 0c0 14-12 25-26 25-14 0-25-11-25-25 0-14 11-26 25-26 14 0 26 12 26 26z m75 0c0 14-11 25-25 25-14 0-26-11-26-25 0-14 12-26 26-26 14 0 25 12 25 26z m-228 76c0 14-12 25-26 25-14 0-25-11-25-25 0-15 11-26 25-26 14 0 26 11 26 26z m77 0c0 14-12 25-26 25-14 0-25-11-25-25 0-15 11-26 25-26 14 0 26 11 26 26z m76 0c0 14-12 25-26 25-14 0-25-11-25-25 0-15 11-26 25-26 14 0 26 11 26 26z m75 0c0 14-11 25-25 25-14 0-26-11-26-25 0-15 12-26 26-26 14 0 25 11 25 26z m79-229c0 14-11 25-25 25-14 0-26-11-26-25 0-14 12-26 26-26 14 0 25 12 25 26z m0 75c0 14-11 26-25 26-14 0-26-12-26-26 0-14 12-25 26-25 14 0 25 11 25 25z m0 78c0 14-11 25-25 25-14 0-26-11-26-25 0-14 12-26 26-26 14 0 25 12 25 26z m-383 154c0 15-12 26-26 26-14 0-25-11-25-26 0-14 11-25 25-25 14 0 26 11 26 25z m76 0c0 15-12 26-26 26-14 0-25-11-25-26 0-14 11-25 25-25 14 0 26 11 26 25z m77 0c0 15-12 26-26 26-14 0-25-11-25-26 0-14 11-25 25-25 14 0 26 11 26 25z m76 0c0 15-12 26-26 26-14 0-25-11-25-26 0-14 11-25 25-25 14 0 26 11 26 25z m230-232c0 14-11 26-25 26-14 0-26-12-26-26 0-14 12-25 26-25 14 0 25 11 25 25z"/>
-    </symbol>
-    <symbol id="utouch-icon-arrow-left" viewBox="0 0 512 512">
-        <path d="m477 235l13 0c12 0 22 9 22 21 0 12-10 21-22 21l-13 0c-12 0-22-9-22-21 0-12 10-21 22-21z m-171 0l71 0c11 0 21 9 21 21 0 12-10 21-21 21l-71 0c-12 0-21-9-21-21 0-12 9-21 21-21z m-236 0l136 0c12 0 21 9 21 21 0 12-9 21-21 21l-136 0c-12 0-21-9-21-21 0-12 9-21 21-21z"/>
-    </symbol>
-
-    <symbol id="utouch-icon-arrow-left-1" viewBox="0 0 512 512">
-        <path d="m7 239c1-2 2-3 4-3l92-94c9-9 23-9 32 0 9 9 9 24 0 33l-79 81 80 81c9 9 9 24 0 33-5 5-11 7-17 7-5 0-11-2-16-7l-92-94c-2-1-3-2-4-3-5-5-7-11-7-17 0-6 2-13 7-17z m470-4l13 0c12 0 22 9 22 21 0 12-10 21-22 21l-13 0c-12 0-22-9-22-21 0-12 10-21 22-21z m-171 0l71 0c11 0 21 9 21 21 0 12-10 21-21 21l-71 0c-12 0-21-9-21-21 0-12 9-21 21-21z m-236 0l136 0c12 0 21 9 21 21 0 12-9 21-21 21l-136 0c-12 0-21-9-21-21 0-12 9-21 21-21z"/>
-    </symbol>
-
-    <symbol id="utouch-icon-arrow-left1" viewBox="0 0 512 512">
-        <path d="m7 239c1-2 2-3 4-3l92-94c9-9 23-9 32 0 9 9 9 24 0 33l-79 81 80 81c9 9 9 24 0 33-5 5-11 7-17 7-5 0-11-2-16-7l-92-94c-2-1-3-2-4-3-5-5-7-11-7-17 0-6 2-13 7-17z"/>
-    </symbol>
-
-    <symbol id="utouch-icon-arrow-right" viewBox="0 0 512 512">
-        <path d="m505 239c-1-2-2-3-4-3l-92-94c-9-9-23-9-32 0-9 9-9 24 0 33l79 81-79 81c-9 9-9 24 0 33 4 5 10 7 16 7 6 0 11-2 16-7l92-94c2-1 3-2 4-3 5-5 7-11 7-17 0-6-2-13-7-17z m-483-4l13 0c12 0 22 9 22 21 0 12-10 21-22 21l-13 0c-12 0-22-9-22-21 0-12 10-21 22-21z m113 0l71 0c12 0 21 9 21 21 0 12-9 21-21 21l-71 0c-11 0-21-9-21-21 0-12 10-21 21-21z m171 0l136 0c12 0 21 9 21 21 0 12-9 21-21 21l-136 0c-12 0-21-9-21-21 0-12 9-21 21-21z"/>
-    </symbol>
-
-    <symbol id="utouch-icon-arrow-right-1" viewBox="0 0 512 512">
-        <path d="m22 235l13 0c12 0 22 9 22 21 0 12-10 21-22 21l-13 0c-12 0-22-9-22-21 0-12 10-21 22-21z m113 0l71 0c12 0 21 9 21 21 0 12-9 21-21 21l-71 0c-11 0-21-9-21-21 0-12 10-21 21-21z m171 0l136 0c12 0 21 9 21 21 0 12-9 21-21 21l-136 0c-12 0-21-9-21-21 0-12 9-21 21-21z"/>
-    </symbol>
-
-    <symbol id="utouch-icon-arrow-right1" viewBox="0 0 512 512">
-        <path d="m505 239c-1-2-2-3-4-3l-92-94c-9-9-23-9-32 0-9 9-9 24 0 33l79 81-79 81c-9 9-9 24 0 33 4 5 10 7 16 7 6 0 11-2 16-7l92-94c2-1 3-2 4-3 5-5 7-11 7-17 0-6-2-13-7-17z"/>
-    </symbol>
-
-</svg>
-
-<!-- ... end Used SVG-icons -->
-
-
-<script src="js/js/crum-mega-menu.js"></script>
-<script src="js/js/swiper.jquery.min.js"></script>
-<script src="js/js/theme-plugins.js"></script>
-<script src="js/js/jquery.typeahead.min.js"></script>
-<script src="js/js/velocity.min.js"></script>
-<script src="js/js/main.js"></script>
-<script src="js/js/form-actions.js"></script>
-<script src="js/js/theme-plugins.js"></script>
-<script src="js/js/main.js"></script>
-
-
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none"; 
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1} 
+  x[slideIndex-1].style.display = "block"; 
+  setTimeout(carousel, 1000); 
+}
+</script> -->
+ 
 </body>
 
 </html>

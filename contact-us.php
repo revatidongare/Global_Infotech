@@ -109,7 +109,6 @@
 			</div>
         </main>
 
-  <?php include 'includes/subscribe.php'; ?>
 
         <?php include 'includes/footer.php'; ?>
     </div>

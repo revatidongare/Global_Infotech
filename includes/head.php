@@ -22,11 +22,11 @@
     <link rel="stylesheet" href="libs/slider-range/css/jslider.css">
     <link rel="stylesheet" href="libs/font-cs/cs.css">
 
-<link rel="stylesheet" type="text/css" href="css/blocks.css">
+<!-- <link rel="stylesheet" type="text/css" href="css/blocks.css"> -->
 <!-- <link rel="stylesheet" type="text/css" href="css/theme-styles.css"> -->
-<link rel="stylesheet" type="text/css" href="css/widgets.css">
+<!-- <link rel="stylesheet" type="text/css" href="css/widgets.css">
 <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
-<link rel="stylesheet" type="text/css" href="css/ion.rangeSlider.css">
+<link rel="stylesheet" type="text/css" href="css/ion.rangeSlider.css"> -->
 <!-- <link rel="stylesheet" type="text/css" href="css/sb-admin-2.css"> -->
     <!-- Template CSS -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
