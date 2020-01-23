@@ -65,7 +65,7 @@
                             </div>
 
                             <div id="review">
-                                <form method="post" action="includes/back.php" class="new-review-form">
+                                <form method="post" action="#" class="new-review-form">
                                     <fieldset class="spr-form-contact">
                                         <div class="spr-form-contact-name">
                                             <input class="spr-form-input spr-form-input-text form-control" value="" name="name" placeholder="Name" required>
