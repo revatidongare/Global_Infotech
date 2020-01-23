@@ -154,7 +154,7 @@
                                         </div>
 
                                         <div class="modal-body fadeInDownBig">
-                                            <img src="img/certi/certi_3.jpg" alt="" class="w-100">
+                                            <img src="img/certi/certi3.jpeg" alt="" class="w-100">
                                         </div>
                                     </div>
                                 </div>
@@ -194,7 +194,7 @@
                                         </div>
 
                                         <div class="modal-body fadeInDownBig">
-                                            <img src="img/certi/certi_4.jpg" alt="" class="w-100">
+                                            <img src="img/certi/certi4.jpeg" alt="" class="w-100">
                                         </div>
                                     </div>
                                 </div>
