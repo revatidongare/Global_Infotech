@@ -43,7 +43,7 @@
 </div>
 <div class="col-lg-4">
 <!-- Start Video Area Section -->
-<section class="video-main-area video" style="background: url(img/mscit.jpg); ">
+<section class="video-main-area video">
 
 	<div class="container">
 
