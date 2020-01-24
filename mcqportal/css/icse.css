@@ -1,0 +1,11 @@
+ .wrapper{
+        background: linear-gradient(to right, #006ccb 0%, #4099ff 60%, #81c9ff 100%);
+      }
+      .wrapper{
+            position: relative;
+            top: 0!important;
+            height: 100vh;
+      }
+      .body{
+        padding-top: 0rem!important;
+      }
