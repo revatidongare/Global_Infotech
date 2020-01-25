@@ -349,7 +349,7 @@
                             </div>
                         </div>
                         
-<div class="row m-top text-center">
+                        <div class="row m-top text-center">
                             <div class=" col-lg-6 col-sm-6">
                                 <div class="item clearfix">
                                     <div class="item-img">

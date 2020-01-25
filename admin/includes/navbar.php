@@ -5,7 +5,7 @@
             <i class="fa fa-bars colortheme"></i>
           </button>
 
-           <a class="btn btn-link rounded-circle mr-3 barsshow colortheme" href="manage_products.php">
+           <a class="btn btn-link rounded-circle mr-3 barsshow colortheme" href="index.php">
             Home
           </a>
           <a class="btn btn-link rounded-circle mr-3 barsshow colortheme" >Registered Users</a>
@@ -27,7 +27,7 @@
 
             <!-- Nav Item - User Information -->
             <li class="nav-item">
-              <a class="nav-link" href="manage_products.php">
+              <a class="nav-link" href="index.php">
                 <span class="mr-2 d-lg-inline text-gray-600 small">ADMIN</span>
               </a>
             </li>

@@ -25,7 +25,8 @@
       </style>
   </head>
 <?php
-        $chapter_id = 1;
+        $chapter_id =$_GET['p'];
+        
         $query = "SELECT `subject_id`, `name`,`number` FROM `chapter_master` WHERE `id` = '$chapter_id'";
         $result = mysqli_query($con, $query);
         $row = mysqli_fetch_array($result);

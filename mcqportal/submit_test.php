@@ -104,7 +104,8 @@
                                 $remark = 2;
                                 // echo $ival;
 
-                                for($i = 0 ; $i <= $ival ; $i++){
+                              for($i = 0 ; $i <= $ival ; $i++){
+
                                   if(isset($_POST["question_$i"])) {
                                     # code...
                                     $std_ans = $_POST["question_$i"];
@@ -130,9 +131,8 @@
                                   else{
                                     $remark = 0;
                                   }
+
                                   $tot++;
-
-
 
                                   $q = "INSERT INTO `answers`(`question_id`, `user`, `student_answer`, `actual_answer`, `remark`) VALUES ('$question_id', '$user_id', '$std_ans', '$answer', '$remark' )";
                                   $out = mysqli_query($con, $q);
@@ -156,6 +156,7 @@
                                     )";
                                     $out3 = mysqli_query($con, $q3);
                                     $i = 1;
+                                    
                                     while($row = mysqli_fetch_array($out3)){
                                       $question_id = $row['question_id'];
                                       $q4 = "SELECT * FROM `mcq_test` WHERE `question_id` = '$question_id'";

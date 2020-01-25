@@ -10,13 +10,13 @@ if(isset($_POST['login'])){
   $stmt=$conn->prepare($q);
   $stmt->execute([$email,$password]);
   $row = $stmt->fetch();
-	  $id = $row['user_id'];
+	 // $id = $row['user_id'];
       $name = $row['name'];
   $conn=null;
   if ($row) {
-     session_start();
+     //session_start();
     
-     $_SESSION['user_id'] = $id;
+     //$_SESSION['user_id'] = $id;
 	  // if($_SESSION['user_id'] == 0){
 		 //  header('location: ../kveller/manage_products.php');
 	  // }else{
@@ -28,14 +28,14 @@ if(isset($_POST['login'])){
         header('location: ../admin/index.php');
       # code...
     }else{
-    header('location: ../index.php?q='.md5(0));
+        header('location: ../index.php?q='.md5(0));
    
     }
 
   }
   else{
    
-   header('location: ../user-login.php?p=102');
+   header('location: ../login.php?p=102');
    //echo '<script>window.location= "../index.php" </script>'; 
   }
 }

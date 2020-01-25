@@ -4,7 +4,7 @@
     $dbname='mcqportal';
 	
 
-$conn = new PDO('mysql:host=localhost;dbname= mcqportal', $user, $pass);
+$conn = new PDO('mysql:host=localhost;dbname=mcqportal', $user, $pass);
 	if (!$conn) {
 		die("Connection failed: " . $conn->connect_error);
 	}

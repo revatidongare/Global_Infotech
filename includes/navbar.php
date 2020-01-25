@@ -121,23 +121,18 @@
                                             </li>
 
                                             <li class="dropdown">
-                                                <a href="exam.php">Exam
+                                                <a >Exam
                                                     <i class="fa fa-angle-down d-xs-none"></i>
                                                 </a>  
                                                 <div class="dropdown-menu">
                                                     <ul>
                                                         <li>
-                                                            <a href="">Demo</a>
+                                                            <a href="test_demo.php">Demo</a>
                                                         </li>
                                                         <li>
-                                                            <a href="">Final Exam</a>
+                                                            <a href="test_final.php">Final Exam</a>
                                                         </li>
-                                                        <!-- <li>
-                                                            <a href="">Tally</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href=""></a>
-                                                        </li> -->
+                                                       
                                                     </ul>
                                                 </div>
                                             </li>
@@ -189,7 +184,7 @@
         
         <!-- Modal body -->
         <div class="modal-body">
-                <form name="checkout" method="post" class="form-checkout text-center" action="" enctype="multipart/form-data" style=" padding-left: 2rem; padding-right: 2rem; padding-bottom: 1rem; padding-top: 1rem;">
+                <form name="checkout" method="post" class="form-checkout text-center" action="includes/session.php" enctype="multipart/form-data" style=" padding-left: 2rem; padding-right: 2rem; padding-bottom: 1rem; padding-top: 1rem;">
          <div class="billing-fields">
           <div class="form-input">
            <div class="form-row">
@@ -212,7 +207,7 @@
             </span>
 
            </div >
-           <button type="submit" name="register" class="btn-submit btn button-main m-1 border square font-weight-bolder" style="background-color: rgb(0, 86, 100); color: white;">Login</button>
+           <button type="submit" name="login" class="btn-submit btn button-main m-1 border square font-weight-bolder" style="background-color: rgb(0, 86, 100); color: white;">Login</button>
 
            <!-- <button type="submit" name="login" style="background-color: rgb(0, 86, 100); color: white; " class="btn-submit btn button-main m-1 border square font-weight-bolder ">LogIn</button> -->
           </div>
@@ -240,7 +235,7 @@
         
         <!-- Modal body -->
         <div class="modal-body">
-         <form name="checkout" method="post" class="form-checkout text-center" action="" enctype="multipart/form-data" style="padding-left: 2rem; padding-right: 2rem; padding-bottom: 1rem; padding-top: 1rem;">
+         <form name="checkout" method="post" class="form-checkout text-center" action="includes/back.php" enctype="multipart/form-data" style="padding-left: 2rem; padding-right: 2rem; padding-bottom: 1rem; padding-top: 1rem;">
                                 <div class="billing-fields">
                                     <div class="form-input">
                                         <div class="form-row">

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <?php include 'includes/head.php'; ?>
+<title>Placements</title>
 
 <body class="home-3">
     <div class="all">
@@ -14,19 +15,6 @@
                             <h1 class="text-center">Placements</h1>
                         </div>
 
-                        <!-- <div class="breadcrumbs-container text-center">
-                            <ul class="breadcrumbs primary-font">
-                                <li>
-                                    <a href="#">
-                                        <span>Home</span>
-                                    </a>
-                                </li>
-                                <li class="breadcrumb-sep">/</li>
-                                <li>
-                                    <span>About Us</span>
-                                </li>
-                            </ul>
-                        </div> -->
                     </div>
                 </div>
             </div>
