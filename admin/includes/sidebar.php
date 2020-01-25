@@ -11,7 +11,7 @@
 
  	<!-- Nav Item - Dashboard -->
     <li class="nav-item">
-    	<a class="nav-link" href="manage_products.php">
+    	<a class="nav-link" href="manage_test.php">
     		<span class="font-weight-bolder m-1">Manage Test</span></a>
     </li>
    <!--  <li class="nav-item">
