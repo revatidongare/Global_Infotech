@@ -707,8 +707,8 @@ pre code {
 .col-xl-auto {
 	position: relative;
 	width: 100%;
-	padding-right: .75rem;
-	padding-left: .75rem
+	/*padding-right: .75rem;
+	padding-left: .75rem*/
 }
 
 .col {

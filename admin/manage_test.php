@@ -22,18 +22,28 @@
         document.getElementById("location1").style.display = "block";
         document.getElementById("location2").style.display = "none";
         document.getElementById("location3").style.display = "none";
+        document.getElementById("location4").style.display = "none";
         
       }else if(location == 2){
 
         document.getElementById("location1").style.display = "none";
         document.getElementById("location2").style.display = "block";
         document.getElementById("location3").style.display = "none";
+        document.getElementById("location4").style.display = "none";
         
       }else if(location == 3){
 
         document.getElementById("location1").style.display = "none";
         document.getElementById("location2").style.display = "none";
         document.getElementById("location3").style.display = "block";
+        document.getElementById("location4").style.display = "none";
+        
+      }else if(location == 4){
+
+        document.getElementById("location1").style.display = "none";
+        document.getElementById("location2").style.display = "none";
+        document.getElementById("location3").style.display = "none";
+        document.getElementById("location4").style.display = "block";
         
       }
     }
@@ -52,6 +62,14 @@
 		.hh:hover {
 			background-color: rgba(0, 128, 128, 1);
 			color: #fff;
+		}
+		.col-6{
+			padding-right: 1rem;
+			 padding-left: 1rem;
+		}
+		.col-12{
+			padding-right: 1rem;
+			 padding-left: 1rem;
 		}
 
 	</style>
@@ -85,35 +103,37 @@
 									<option value="2">question</option>
 								</select></p>
 						</div>
-						<div class="col-xl-2 col-md-2 mb-4 ">
-							<a href="#" class="btn btn-theme-outline" data-toggle="modal" data-target="#add_subject">+ Add Subject</a>
-						</div>
-						<div class="col-xl-2 col-md-2 mb-4 ">
-							<a href="#" class="btn btn-theme-outline" data-toggle="modal" data-target="#add_question">+ Add Question</a>
-						</div>
+						
 					</div> -->
 					 <div class="site-section site-section-sm">
         <div class="container">
-          <div class="row">
-            <div class="col-md-6 col-lg-6 mb-6 mx-auto">
+          <div class="row text-center">
+            <div class="col-md-3 col-lg-3 mb-3 mx-auto">
               <form action="#">
                 <div class="row form-group">
                   <div class="col-md-12 mb-2 mb-md-0">
                     <label class="font-weight-bold" for="fullname">Select subject to view a question </label>
                     <select name="" id="mySelect" class="form-control myformcontrol">
                        <option value="0">Select subject</option>
-                        <option value="1">C</option>
-                        <option value="2">C++</option>
-                        <option value="3">JAVA</option>
+                       <option value="1">Subject Table</option>
+                        <option value="2">Questions Of C</option>
+                        <option value="3">Questions Of C++</option>
+                        <option value="4">Questions Of JAVA</option>
                         
                     </select>
                   </div>
                 </div>
               </form>
             </div>
-            <div class="col-md-3 col-lg-3 mb-3 mb-md-0 mx-auto text-center">
-              <button type="button" value="Send Message" class="btn btn-primary btn-color text-white pill px-4 py-2 conferencebutton" onclick="getLocation()" >View Table</button>
+            <div class="col-md-3 col-lg-3 mb-3 mb-md-0 mx-auto ">
+              <button type="button" style="background-color: rgb(0,99,120); color: white;" value="Send Message" class="btn btn-color pill px-4 py-2 conferencebutton" onclick="getLocation()" >View Table</button>
             </div>
+           <!--  <div class="col-md-3 col-lg-3 mb-3 ">
+							<a href="#" class="btn btn-theme-outline" data-toggle="modal" data-target="#add_subject">+ Add Subject</a>
+						</div> -->
+						<div class="col-md-3 col-lg-3 mb-3 ">
+							<a href="#" class="btn btn-theme-outline" data-toggle="modal" data-target="#add_question">+ Add Question</a>
+						</div>
           </div>
         </div>
       </div>
@@ -210,7 +230,6 @@
 							</div>
 						</div>
 						
-
 						<div class="row mt-3" id="location2" style="display: none;" >
 							<div class="col-xl-12 col-md-10 mb-4 mx-auto">
 								<div class="card shadow mb-4">
@@ -228,7 +247,7 @@
 												</thead>
 												<tbody>
 													<?php     
-						                             $query = "SELECT * FROM `question_master` WHERE `deleted` = 0";
+						                             $query = "SELECT * FROM `mcq_test` WHERE `chapter_id`= 1";
 						                             include 'config.php';
 						                             $stmt=$conn->prepare($query);
 						                             $stmt->execute();
@@ -241,7 +260,7 @@
 
 													<tr>
 														<td><?php $question_id++ ; echo $question_id;?></td>
-														<td><?php echo $question['name']; ?></td>
+														<td><?php echo $question['question']; ?></td>
 														<td class="text-center"><button class="btn btn-secondary" name="view" id="view" data-toggle="modal" data-target="#view_question" onclick="viewquestion(<?php echo $question['question_id']; ?>)">View</button></td>
 
 														<td class="text-center"><button class="btn btn-theme" name="update" id="update" data-toggle="modal" data-target="#update_question" onclick="questionUpdate(<?php echo $question['question_id']; ?>)">Update</button></td>
@@ -255,8 +274,7 @@
 								</div>
 							</div>
 						</div>
-
-						<div class="row mt-3" id="location3" style="display: none;">
+						<div class="row mt-3" id="location3" style="display: none;" >
 							<div class="col-xl-12 col-md-10 mb-4 mx-auto">
 								<div class="card shadow mb-4">
 									<div class="card-body">
@@ -265,30 +283,32 @@
 												<thead>
 													<tr>
 														<th class="font-weight-bolder">ID</th>
-														<th class="font-weight-bolder">Subject Name</th>
+														<th class="font-weight-bolder">Question</th>
+														<th class="font-weight-bolder text-center">View</th>
 														<th class="font-weight-bolder text-center">Update</th>
 														<th class="font-weight-bolder text-center">Delete</th>
 													</tr>
 												</thead>
 												<tbody>
-													<?php 
-								                       $query = "SELECT * FROM `Subject_master` WHERE 1";
-								                       include 'config.php';
-								                       $stmt=$conn->prepare($query);
-								                       $stmt->execute();
-								                       $result=$stmt->fetchAll();
-								                       $conn=null;
-								                       $Subject_id=0;
-								                            
-								                       foreach($result as $Subject){
-								                            ?>
+													<?php     
+						                             $query = "SELECT * FROM `mcq_test` WHERE `chapter_id`= 2";
+						                             include 'config.php';
+						                             $stmt=$conn->prepare($query);
+						                             $stmt->execute();
+						                             $result=$stmt->fetchAll();
+						                             $conn=null;
+						                             $question_id=0;
+						                                  
+						                             foreach($result as $question){
+						                        ?>
 
 													<tr>
-														<td><?php $Subject_id++; echo $Subject_id;?></td>
-														<td><?php echo $Subject['name']; ?></td>
-														
-														<td class="text-center"><button class="btn btn-theme" name="update" id="update" data-toggle="modal" data-target="#update_Subject" onclick="sendUpdate(<?php echo $Subject['Subject_id']; ?>)">Update</button></td>
-														<td class="text-center"><a class="btn btn-danger" href="delete.php?q=<?php echo $Subject['Subject_id'];?>&table_name=Subject_master">Delete</a></td>
+														<td><?php $question_id++ ; echo $question_id;?></td>
+														<td><?php echo $question['question']; ?></td>
+														<td class="text-center"><button class="btn btn-secondary" name="view" id="view" data-toggle="modal" data-target="#view_question" onclick="viewquestion(<?php echo $question['question_id']; ?>)">View</button></td>
+
+														<td class="text-center"><button class="btn btn-theme" name="update" id="update" data-toggle="modal" data-target="#update_question" onclick="questionUpdate(<?php echo $question['question_id']; ?>)">Update</button></td>
+														<td class="text-center"><a class="btn btn-danger" href="delete.php?q=<?php echo $question['question_id'];?>&table_name=question_master">Delete</a></td>
 													</tr>
 													<?php } ?>
 												</tbody>
@@ -297,9 +317,51 @@
 									</div>
 								</div>
 							</div>
-						</div> 
-					
+						</div>
+						<div class="row mt-3" id="location4" style="display: none;" >
+							<div class="col-xl-12 col-md-10 mb-4 mx-auto">
+								<div class="card shadow mb-4">
+									<div class="card-body">
+										<div class="table-responsive">
+											<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+												<thead>
+													<tr>
+														<th class="font-weight-bolder">ID</th>
+														<th class="font-weight-bolder">Question</th>
+														<th class="font-weight-bolder text-center">View</th>
+														<th class="font-weight-bolder text-center">Update</th>
+														<th class="font-weight-bolder text-center">Delete</th>
+													</tr>
+												</thead>
+												<tbody>
+													<?php     
+						                             $query = "SELECT * FROM `mcq_test` WHERE `chapter_id`= 3";
+						                             include 'config.php';
+						                             $stmt=$conn->prepare($query);
+						                             $stmt->execute();
+						                             $result=$stmt->fetchAll();
+						                             $conn=null;
+						                             $question_id=0;
+						                                  
+						                             foreach($result as $question){
+						                        ?>
 
+													<tr>
+														<td><?php $question_id++ ; echo $question_id;?></td>
+														<td><?php echo $question['question']; ?></td>
+														<td class="text-center"><button class="btn btn-secondary" name="view" id="view" data-toggle="modal" data-target="#view_question" onclick="viewquestion(<?php echo $question['question_id']; ?>)">View</button></td>
+
+														<td class="text-center"><button class="btn btn-theme" name="update" id="update" data-toggle="modal" data-target="#update_question" onclick="questionUpdate(<?php echo $question['question_id']; ?>)">Update</button></td>
+														<td class="text-center"><a class="btn btn-danger" href="delete.php?q=<?php echo $question['question_id'];?>&table_name=question_master">Delete</a></td>
+													</tr>
+													<?php } ?>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					<!-- Single Item -->
 				</div>
 				<!-- /.container-fluid -->
@@ -465,7 +527,7 @@
 									<input type="text" name="vdescription" class="form-control" id="voption4" readonly>
 								</div>
 
-								<div class="col-12">
+								<div class="col-12" >
 									<b> <label for="name">Answer</label></b>
 									<input type="text" name="vdescription" class="form-control" id="vanswer" readonly>
 								</div>
@@ -520,27 +582,31 @@
 				</div>
 				<form action="back.php" method="post" enctype="multipart/form-data">
 					<div class="modal-body">
-						<div class="row" style="text-align: left;line-height:3rem;">
-							<div class="col-6">
-								<b><label for="name">question name</label></b>
+						<div class="row container" style="text-align:center;">
+							<div class="col-md-6 mb-3 mb-md-0 mx-auto">
+								<b><label for="name">Question</label></b>
 								<input type="text" name="pname" class="form-control" id="pname" placeholder="Enter question name">
 								<input type="hidden" name="question_id" id="question_id">
 							</div>
-							<div class="col-6">
-								<b> <label for="name">Price</label></b>
-								<input type="text" name="price" class="form-control" id="price" placeholder="Enter Price">
+							<div class="col-md-6" style="padding-right: 1rem; padding-left: 1rem;">
+								<b> <label for="name">Opetion 1</label></b>
+								<input type="text" name="Opetion1" class="form-control" id="opetion1" placeholder="Enter Opetion 1">
 							</div>
-							<div class="col-6">
-								<b><label for="name">SKU</label></b>
-								<input type="text" name="SKU" class="form-control" id="SKU" placeholder="Enter SKU">
+							<div class="col-md-6" style="padding-right: 1rem; padding-left: 1rem;">
+								<b><label for="name">Opetion 2</label></b>
+								<input type="text" name="Opetion2" class="form-control" id="opetion2" placeholder="Enter Opetion 2">
 							</div>
-							<div class="col-6">
-								<b><label for="name">Expiry Date</label></b>
-								<input type="text" name="expiry_date" class="form-control" id="expiry_date" placeholder="Enter Expiry Date">
+							<div class="col-6" style="padding-right: 1rem; padding-left: 1rem;">
+								<b><label for="name">Opetion 3</label></b>
+								<input type="text" name="Opetion3" class="form-control" id="opetion3" placeholder="Opetion 3">
 							</div>
-							<div class="col-6">
-								<b> <label for="name">Descrption</label></b>
-								<input type="text" name="description" class="form-control" id="description" placeholder="Enter Descrption about question">
+							<div class="col-6" style="padding-right: 1rem; padding-left: 1rem;">
+								<b> <label for="name">Opetion 4</label></b>
+								<input type="text" name="Opetion1" class="form-control" id="opetion4" placeholder="Enter Opetion 4">
+							</div>
+							<div class="col-6" style="padding-right: 1rem; padding-left: 1rem;">
+								<b> <label for="name">Answer</label></b>
+								<input type="text" name="answer" class="form-control" id="answer" placeholder="Enter answer">
 							</div>
 
 						</div>
@@ -628,27 +694,28 @@
 				},
 				success: function(result) {
 					var data = JSON.parse(result)
-					$("#vname").val(data['name'])
+					$("#vquestion").val(data['name'])
 					$("#vquestion_id").val(data['question_id'])
-					$("#vprice").val(data['price'])
-					$("#vSKU").val(data['SKU'])
-					$("#vdescription").val(data['description'])
-                    $("#vexpiry_date").val(data['expiry_date'])					
-					var vimage1 = "../img/questions/" + data['image1'];
-					$("#vimage1").attr('src', vimage1);
-				    $("#vimage1").attr('alt', "image not found");
-                    var vimage2 = "../img/questions/" + data['image2'];
-                    $("#vimage2").attr('src', vimage2);
-                    $("#vimage2").attr('alt', "image not found");
-                    var vimage3 = "../img/questions/" + data['image3'];
-                    $("#vimage3").attr('src', vimage3);
-                    $("#vimage3").attr('alt', "image not found");
-                    var vimage4 = "../img/questions/" + data['image4'];
-                    $("#vimage4").attr('src', vimage4);
-                    $("#vimage4").attr('alt', "image not found");
-                    var vimage5 = "../img/questions/" + data['image5'];
-                    $("#vimage5").attr('src', vimage5);
-                    $("#vimage5").attr('alt', "image not found");
+					$("#voption1").val(data['option1'])
+					$("#voption2").val(data['option2'])
+					$("#voption3").val(data['option3'])
+                    $("#voption4").val(data['option4'])	
+                    $("#vanswer").val(data['answer'])					
+					// var vimage1 = "../img/questions/" + data['image1'];
+					// $("#vimage1").attr('src', vimage1);
+				 //    $("#vimage1").attr('alt', "image not found");
+     //                var vimage2 = "../img/questions/" + data['image2'];
+     //                $("#vimage2").attr('src', vimage2);
+     //                $("#vimage2").attr('alt', "image not found");
+     //                var vimage3 = "../img/questions/" + data['image3'];
+     //                $("#vimage3").attr('src', vimage3);
+     //                $("#vimage3").attr('alt', "image not found");
+     //                var vimage4 = "../img/questions/" + data['image4'];
+     //                $("#vimage4").attr('src', vimage4);
+     //                $("#vimage4").attr('alt', "image not found");
+     //                var vimage5 = "../img/questions/" + data['image5'];
+     //                $("#vimage5").attr('src', vimage5);
+     //                $("#vimage5").attr('alt', "image not found");
 					
 				}
 			});
