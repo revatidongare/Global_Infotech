@@ -79,22 +79,22 @@ Equip our students with pertinent know-how of market trends and build confidence
             <div class="oars-store sm-text-center pd-top-bottom">
                 <div class="container-full">
                     <div class="row">
-                        <!-- <div class="col-lg-6 col-md-6">
+                        <!-- <div class="col-lg-4 col-md-4">
                             <div class="item-img img-left">
                                 <a href="#" title="">
                                     <img class="img-fluid" src="img/intro-banner2.png" alt="img">
                                 </a>
                             </div>
-                        </div>
- -->
-                        <div class="col-lg-12 col-md-12">
+                        </div> -->
+<div class="col-lg-1 col-md-1"></div>
+                        <div class="col-lg-9 col-md-9">
                             <div class="title clearfix">
                                 <div class="page-title color">
                                     <!-- <h3 class="title-main">Core Features</h3> -->
                                     <div class="title-icon text-left" >
                                       <center>  <h2 class="title-h2">Our Founder's Message</h2></center>
                                     </div>
-                                    <center><p style="margin: 0px;" class="description" align="justify">The Future belongs to those who prepare for it today" - Malcolm X (keep this line as heading and bold with big font size) I am delighted to share with you the swell of emotions and heartfelt warmth as we complete around 25years of our journey. On january 25 1996, when we embarked on this mission of shaping the young professionals, we had set a modest goal of training, facilitating and leading the youth on the path of ascendance in professional careers. Their trust is our wealth, their achievements are our glory and their enlightenment is our Nirvana! We are conscious our responsibility and accountibility to deliver competency based multidisciplinary learning programmes to equip the youth to meet the present and future challenges. As technology attempts to deliver disruptive growth, the young professionals need to be well versed in dynamic learning processes to sustain professional success. This involves sharpening the pedagogy while mainting academic rigor and relevance to dominate the market forces. At our Lonavala centre we are blessed with a passionate student-teacher-parent association, combine striving for enlightened learning ethos. As we share the journey in the future, we rededicate ourseleves to uphold the trust reposed in us by our stakeholders.</p></center>
+                                    <center><p style="margin-left: 6rem; color: black;"  align="justify" >The Future belongs to those who prepare for it today" - Malcolm X (keep this line as heading and bold with big font size) I am delighted to share with you the swell of emotions and heartfelt warmth as we complete around 25years of our journey. On january 25 1996, when we embarked on this mission of shaping the young professionals, we had set a modest goal of training, facilitating and leading the youth on the path of ascendance in professional careers. Their trust is our wealth, their achievements are our glory and their enlightenment is our Nirvana! We are conscious our responsibility and accountibility to deliver competency based multidisciplinary learning programmes to equip the youth to meet the present and future challenges. As technology attempts to deliver disruptive growth, the young professionals need to be well versed in dynamic learning processes to sustain professional success. This involves sharpening the pedagogy while mainting academic rigor and relevance to dominate the market forces. At our Lonavala centre we are blessed with a passionate student-teacher-parent association, combine striving for enlightened learning ethos. As we share the journey in the future, we rededicate ourseleves to uphold the trust reposed in us by our stakeholders.</p></center>
                                 </div>
 
                                 

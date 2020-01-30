@@ -2735,7 +2735,10 @@ textarea:hover, textarea:focus {
   .home-3 .best-store .group .home-core-group .core-item .core-caption-group .core-caption {
     margin-bottom: 0; }
 .home-3 .oars-store {
-  background: url("../img/abt.jpg") no-repeat; }
+  /*opacity: 0.5;*/
+  background: url("../img/abt.jpg") no-repeat;
+
+   }
   .home-3 .oars-store .img-left:hover img {
     transform: scale(1.1); }
   .home-3 .oars-store .img-left img {
@@ -3982,8 +3985,8 @@ textarea:hover, textarea:focus {
     content: '\e919'; }
 
 .page-title-breadcrumbs {
-  padding-top: 150px !important;
-  padding-bottom: 150px !important;
+  padding-top: 90px !important;
+  padding-bottom: 90px !important;
   background-image: url("../img/breadcrump.jpg") !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
