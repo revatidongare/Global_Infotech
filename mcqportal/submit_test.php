@@ -1,4 +1,14 @@
-  <!-- <?php include 'variables.php'; ?> -->
+ <?php
+    
+    if (isset($_GET['p'])) {
+
+          $user_id =$_GET['p'];
+
+        }else{
+          header('location:index.php');
+        }
+
+  ?> 
 <!doctype html>
 <html lang="en">
   <head>
@@ -35,14 +45,13 @@
         //include 'session.php';
         
         $chapter_id = $_POST['chapter_id'];
-        $query = "SELECT `subject_id`, `name`,`number` FROM `chapter_master` WHERE `id` = '$chapter_id'";
-        $result = mysqli_query($con, $query);
-        $row = mysqli_fetch_array($result);
-        $subject_id = $row['subject_id'];
-        $chapter_name = $row['name'];
-        $number = $row['number'];
-
-        $query = "SELECT `name`,`image` FROM `subject_master` WHERE `id` = '$subject_id'";
+        // $query = "SELECT `subject_id`, `name` FROM `chapter_master` WHERE `id` = '$chapter_id'";
+        // $result = mysqli_query($con, $query);
+        // $row = mysqli_fetch_array($result);
+        // $subject_id = $row['subject_id'];
+        // $chapter_name = $row['name'];
+       
+        $query = "SELECT `name`,`image` FROM `subject_master` WHERE `id` = '$chapter_id'";
         $result = mysqli_query($con, $query);
         $row = mysqli_fetch_array($result);
         $subject_name = $row['name'];
@@ -74,7 +83,7 @@
 
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding: 10px;">
                            <div class="mycardtitle text-center">
-                                 <h2><b><span style="color: white;"><?php echo $number; ?>.</span></b> <b style="color: white;"><?php echo $chapter_name; ?></b></h2>
+                                <!--  <h2><b style="color: white;"><?php echo $chapter_name; ?></b></h2> -->
                                  <h6 style="color: white;">Congrats!!You have completed your test.</h6>
                               </div>
                         </div>
@@ -99,7 +108,7 @@
 
                           <?php
 
-                                 $user_id = 1;
+                                 //$user_id = 1;
                                 $ival = $_POST['ival'];
                                 $remark = 2;
                                 // echo $ival;
@@ -163,7 +172,6 @@
                                       $out4 = mysqli_query($con, $q4);
                                       $row2 = mysqli_fetch_array($out4);
                                       ?>
-
 
                                       <?php
                                       if($row['remark'] == 1){

@@ -9,7 +9,7 @@
 <html lang="en">
 
 <head>
-  <title> Admin - Manage Slider</title>
+  <title> Admin - Manage Subject</title>
   <?php include 'includes/head.php';?>
 </head>
 
@@ -37,7 +37,7 @@
           <!-- Page Heading -->
           <div class="row mt-3">
             <div class="col-xl-2 col-md-8 mb-4 mx-auto">
-              <p class="colortheme" style="letter-spacing: 3px;">MANAGE SLIDER</p>
+              <p class="colortheme" style="letter-spacing: 3px;">MANAGE Subject</p>
 
                  </div>
                     <!-- <div class="col-xl-2 col-md-2 mb-4 ">
@@ -156,13 +156,13 @@
       <i class="fas fa-angle-up"></i>
     </a>
 
-  <!-- Add Slider modal-->
+  <!-- Add Subject modal-->
 <!-- 
    <div class="modal fade" id="add_product" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document" style="max-width: 1000px; margin:10px auto;">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel"><b>Add New Slider</b></h5>
+            <h5 class="modal-title" id="exampleModalLabel"><b>Add New Subject</b></h5>
             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">×</span>
             </button>
@@ -181,27 +181,27 @@
               </div>
               
              <div class="col-12">
-                <b><label for="name">Slider Image</label></b>
+                <b><label for="name">Subject Image</label></b>
                 <input type="file" name="image" class="form-control">
             </div>
                          
         </div>
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <button type="submit" class="btn btn-theme" name="add_slider">+ Add Slider</button>
+            <button type="submit" class="btn btn-theme" name="add_Subject">+ Add Subject</button>
           </div>
            </form>
         </div>
       </div>
     </div>
  -->
-    <!-- UPDATE SLIDER modal-->
+    <!-- UPDATE Subject modal-->
 
-   <div class="modal fade" id="update_slider" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+   <div class="modal fade" id="update_Subject" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document" style="max-width: 1000px; margin:10px auto;">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel"><b>Update Slider</b></h5>
+            <h5 class="modal-title" id="exampleModalLabel"><b>Update Subject</b></h5>
             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">×</span>
             </button>
@@ -220,15 +220,15 @@
               </div>
               
              <div class="col-12">
-                <b><label for="name">Slider Image</label></b>
+                <b><label for="name">Subject Image</label></b>
                 <input type="file" name="image" id="image" class="form-control">
-                 <input type="hidden" name="slider_id" id="slider_id">
+                 <input type="hidden" name="Subject_id" id="Subject_id">
             </div>
                          
         </div>
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <button type="submit" class="btn btn-theme" name="update_slidername">Update Slider</button>
+            <button type="submit" class="btn btn-theme" name="update_Subjectname">Update Subject</button>
           </div>
            </form>
         </div>
@@ -243,11 +243,11 @@
       $.ajax({
         url: "back.php",
         method: "POST",
-        data: { id:id, update: "update_slider" },
+        data: { id:id, update: "update_Subject" },
         success: function(result) {
           var data = JSON.parse(result)
           $("#title").val(data['title'])
-          $("#slider_id").val(data['slider_id'])
+          $("#Subject_id").val(data['Subject_id'])
           $("#description").val(data['description'])
           $("#image").val(data['image'])
        

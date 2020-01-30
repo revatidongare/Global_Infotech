@@ -6,6 +6,7 @@
 	*/
 	if(isset($_POST['add_category'])){
 		include 'config.php';
+		$name = $_POST['qu'];
 		$name = $_POST['name'];
 				
 		$query = "INSERT INTO `category_master`(`name`) VALUES ('$name')";
@@ -199,12 +200,12 @@
 	//For View Code....
 	if (isset($_POST['view'])) {
 		
-		if ($_POST['view'] == 'view_product') {
+		if ($_POST['view'] == 'view_question') {
 				include 'config.php';
 			if(isset($_POST['id']))
 				{
 					$id = $_POST['id'];
-					$query = "SELECT * FROM `product_master` WHERE `product_id` = $id";
+					$query = "SELECT * FROM `mcq_test` WHERE `question_id` = $id";
 					 $stmt=$conn->prepare($query);
 			         $stmt->execute();
 			         $row=$stmt->fetch();
@@ -215,113 +216,30 @@
 		}
 	}
 
-	// For  UPDATE Feaching code from Category table and product table code...
-	if(isset($_POST['update'])){
+	// update question
 
-		if ($_POST['update'] == 'update_product') {
-				include 'config.php';
+	if (isset($_POST['update_question'])) {
+		include 'config.php';
+		$id = $_POST['question_id'];
+		$chapter_id =$_POST['chapter_id'];
+		$question = $_POST['question'];
+		$option1 = $_POST['option1'];
+		$option2 = $_POST['option2'];
+		$option3 = $_POST['option3'];
+		$option4 = $_POST['option4'];
+		$answer = $_POST['answer'];
 
-				if(isset($_POST['id']))
-				{
-					$id = $_POST['id'];
-					$query = "SELECT * FROM `product_master` WHERE `product_id` = $id";
-					 $stmt=$conn->prepare($query);
-			         $stmt->execute();
-			         $row=$stmt->fetch();
-	                 $conn=null;
-					
-					echo json_encode($row);
+		 $query = "UPDATE `mcq_test` SET `chapter_id`='$chapter_id',`question`='$question' ,`option1`='$option1',`option2`='$option1',`option3`='$option3',`option4`='$option4',`answer`='$answer' WHERE `question_id`='$id'";	
+				 $stmt=$conn->prepare($query);
+				 $res=$stmt->execute();
+				  $conn=null;
+				if($res){
+					header('location:manage_test.php?q=update1010');
+						}
+				else{
+					header('location:manage_test.php?q=3');
 				}
-				
-		}
-
-		if ($_POST['update'] == 'image_update') {
-				include 'config.php';
-
-				if(isset($_POST['id']))
-				{
-					$id = $_POST['id'];
-					$query = "SELECT * FROM `product_master` WHERE `product_id` = $id";
-					 $stmt=$conn->prepare($query);
-			         $stmt->execute();
-			         $row=$stmt->fetch();
-	                 $conn=null;
-					
-					echo json_encode($row);
-				}
-				
-		}
-
-		if ($_POST['update'] == 'update_gift') {
-				include 'config.php';
-
-				if(isset($_POST['id']))
-				{
-					$id = $_POST['id'];
-					$query = "SELECT * FROM `gift_product` WHERE `product_id` = $id";
-					 $stmt=$conn->prepare($query);
-			         $stmt->execute();
-			         $row=$stmt->fetch();
-	                 $conn=null;
-					
-					echo json_encode($row);
-				}
-				
-		}
-
-		if($_POST['update'] == 'update_slider') {
-				include 'config.php';
-
-				if(isset($_POST['id']))
-				{
-					$id = $_POST['id'];
-					$query = "SELECT * FROM `slider` WHERE `slider_id` = $id";
-					 $stmt=$conn->prepare($query);
-			         $stmt->execute();
-			         $row=$stmt->fetch();
-	                 $conn=null;
-					
-					echo json_encode($row);
-				}
-				
-		}
-
-		if ($_POST['update'] == 'update_offer') {
-				include 'config.php';
-
-				if(isset($_POST['id']))
-				{
-					$id = $_POST['id'];
-					$query = "SELECT * FROM `offer` WHERE `offer_id` = $id";
-					 $stmt=$conn->prepare($query);
-			         $stmt->execute();
-			         $row=$stmt->fetch();
-	                 $conn=null;
-					
-					echo json_encode($row);
-				}
-				
-		}
-
-		if($_POST['update'] == 'update_category'){
-				include 'config.php';
-				
-				if(isset($_POST['id']))
-				{
-					$id = $_POST['id'];
-					$query = "SELECT * FROM `category_master` WHERE `category_id` = $id";
-					 $stmt=$conn->prepare($query);
-			         $stmt->execute();
-			         $row=$stmt->fetch();
-	                 $conn=null;
-					
-					echo json_encode($row);
-				}
-				
-		}
 	}
-	
-
 
   ?>
 

@@ -17,11 +17,6 @@
                                             </a>
                                         </li>
                                         
-                                        <!-- <li class="social-linkedIn">
-                                            <a class="gsf-link" title="LinkedIn" href="#">
-                                                <i class="fa fa-linkedin"></i>
-                                            </a>
-                                        </li> -->
                                         <li class="social-vimeo">
                                             <a class="gsf-link" title="instagram" href="https://www.instagram.com/global_infotech_98/">
                                                 <i class="fa fa-instagram"></i>
@@ -40,26 +35,7 @@
                             <div class="col-md-6 col-sm-12 social-container">
                                 <div class="top-header-right float-right">
                                     <ul class="top-menu d-flex">
-                                        <!-- <li class="currency-group d-flex dropdown">
-                                            <div class="icon-word d-flex align-items-center dropdown-toggle">
-                                                <i class="fa fa-globe" aria-hidden="true"></i>
-                                                <a href="#">Language</a>
-                                            </div>
-                                            <ul class="currencies dropdown-menu text-left">
-                                                <li class="currency-USD active">
-                                                    <a href="#">USD</a>
-                                                    <input type="hidden" value="USD">
-                                                </li>
-                                                <li class="currency-GBP">
-                                                    <a href="#">GBP</a>
-                                                    <input type="hidden" value="GBP">
-                                                </li>
-                                                <li class="currency-EUR">
-                                                    <a href="#">EUR</a>
-                                                    <input type="hidden" value="EUR">
-                                                </li>
-                                            </ul>
-                                        </li> -->
+                                      
                                         <li class="toolbar-customer login-account">
                                             <a data-toggle="modal" data-target="#myModalForLogin">
                                                 <i class="fa fa-lock" aria-hidden="true"></i>Login
@@ -172,7 +148,7 @@
                 </div>
             </div>
 
-            <div class="modal" id="myModalForLogin">
+  <div class="modal" id="myModalForLogin">
     <div class="modal-dialog">
       <div class="modal-content">
       

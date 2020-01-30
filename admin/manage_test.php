@@ -22,28 +22,18 @@
         document.getElementById("location1").style.display = "block";
         document.getElementById("location2").style.display = "none";
         document.getElementById("location3").style.display = "none";
-        document.getElementById("location4").style.display = "none";
-        
+                
       }else if(location == 2){
 
         document.getElementById("location1").style.display = "none";
         document.getElementById("location2").style.display = "block";
         document.getElementById("location3").style.display = "none";
-        document.getElementById("location4").style.display = "none";
         
       }else if(location == 3){
 
         document.getElementById("location1").style.display = "none";
         document.getElementById("location2").style.display = "none";
         document.getElementById("location3").style.display = "block";
-        document.getElementById("location4").style.display = "none";
-        
-      }else if(location == 4){
-
-        document.getElementById("location1").style.display = "none";
-        document.getElementById("location2").style.display = "none";
-        document.getElementById("location3").style.display = "none";
-        document.getElementById("location4").style.display = "block";
         
       }
     }
@@ -114,11 +104,10 @@
                   <div class="col-md-12 mb-2 mb-md-0">
                     <label class="font-weight-bold" for="fullname">Select subject to view a question </label>
                     <select name="" id="mySelect" class="form-control myformcontrol">
-                       <option value="0">Select subject</option>
-                       <option value="1">Subject Table</option>
-                        <option value="2">Questions Of C</option>
-                        <option value="3">Questions Of C++</option>
-                        <option value="4">Questions Of JAVA</option>
+                       	<option value="0">Select subject</option>
+                        <option value="1">Questions Of C</option>
+                        <option value="2">Questions Of C++</option>
+                        <option value="3">Questions Of JAVA</option>
                         
                     </select>
                   </div>
@@ -184,53 +173,8 @@
 					<?php
                     }
                   }
-                ?>
-
-						
-						<div class="row mt-3" id="location1">
-							<div class="col-xl-12 col-md-10 mb-4 mx-auto">
-								<div class="card shadow mb-4">
-									<div class="card-body">
-										<div class="table-responsive">
-											<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-												<thead>
-													<tr>
-														<th class="font-weight-bolder">ID</th>
-														<th class="font-weight-bolder">Subject Name</th>
-														<th class="font-weight-bolder text-center">Update</th>
-														<th class="font-weight-bolder text-center">Delete</th>
-													</tr>
-												</thead>
-												<tbody>
-													<?php 
-								                       $query = "SELECT * FROM `Subject_master` WHERE 1";
-								                       include 'config.php';
-								                       $stmt=$conn->prepare($query);
-								                       $stmt->execute();
-								                       $result=$stmt->fetchAll();
-								                       $conn=null;
-								                       $Subject_id=0;
-								                            
-								                       foreach($result as $Subject){
-								                            ?>
-
-													<tr>
-														<td><?php $Subject_id++; echo $Subject_id;?></td>
-														<td><?php echo $Subject['name']; ?></td>
-														
-														<td class="text-center"><button class="btn btn-theme" name="update" id="update" data-toggle="modal" data-target="#update_Subject" onclick="sendUpdate(<?php echo $Subject['Subject_id']; ?>)">Update</button></td>
-														<td class="text-center"><a class="btn btn-danger" href="delete.php?q=<?php echo $Subject['Subject_id'];?>&table_name=Subject_master">Delete</a></td>
-													</tr>
-													<?php } ?>
-												</tbody>
-											</table>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						
-						<div class="row mt-3" id="location2" style="display: none;" >
+                ?>						
+						<div class="row mt-3" id="location1" >
 							<div class="col-xl-12 col-md-10 mb-4 mx-auto">
 								<div class="card shadow mb-4">
 									<div class="card-body">
@@ -263,7 +207,7 @@
 														<td><?php echo $question['question']; ?></td>
 														<td class="text-center"><button class="btn btn-secondary" name="view" id="view" data-toggle="modal" data-target="#view_question" onclick="viewquestion(<?php echo $question['question_id']; ?>)">View</button></td>
 
-														<td class="text-center"><button class="btn btn-theme" name="update" id="update" data-toggle="modal" data-target="#update_question" onclick="questionUpdate(<?php echo $question['question_id']; ?>)">Update</button></td>
+														<td class="text-center"><button class="btn btn-theme" name="update" id="update" data-toggle="modal" data-target="#update_question" onclick="viewquestion(<?php echo $question['question_id']; ?>)">Update</button></td>
 														<td class="text-center"><a class="btn btn-danger" href="delete.php?q=<?php echo $question['question_id'];?>&table_name=question_master">Delete</a></td>
 													</tr>
 													<?php } ?>
@@ -274,7 +218,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="row mt-3" id="location3" style="display: none;" >
+						<div class="row mt-3" id="location2" style="display: none;" >
 							<div class="col-xl-12 col-md-10 mb-4 mx-auto">
 								<div class="card shadow mb-4">
 									<div class="card-body">
@@ -307,7 +251,7 @@
 														<td><?php echo $question['question']; ?></td>
 														<td class="text-center"><button class="btn btn-secondary" name="view" id="view" data-toggle="modal" data-target="#view_question" onclick="viewquestion(<?php echo $question['question_id']; ?>)">View</button></td>
 
-														<td class="text-center"><button class="btn btn-theme" name="update" id="update" data-toggle="modal" data-target="#update_question" onclick="questionUpdate(<?php echo $question['question_id']; ?>)">Update</button></td>
+														<td class="text-center"><button class="btn btn-theme" name="update" id="update" data-toggle="modal" data-target="#update_question" onclick="viewquestion(<?php echo $question['question_id']; ?>)">Update</button></td>
 														<td class="text-center"><a class="btn btn-danger" href="delete.php?q=<?php echo $question['question_id'];?>&table_name=question_master">Delete</a></td>
 													</tr>
 													<?php } ?>
@@ -318,7 +262,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="row mt-3" id="location4" style="display: none;" >
+						<div class="row mt-3" id="location3" style="display: none;" >
 							<div class="col-xl-12 col-md-10 mb-4 mx-auto">
 								<div class="card shadow mb-4">
 									<div class="card-body">
@@ -351,7 +295,7 @@
 														<td><?php echo $question['question']; ?></td>
 														<td class="text-center"><button class="btn btn-secondary" name="view" id="view" data-toggle="modal" data-target="#view_question" onclick="viewquestion(<?php echo $question['question_id']; ?>)">View</button></td>
 
-														<td class="text-center"><button class="btn btn-theme" name="update" id="update" data-toggle="modal" data-target="#update_question" onclick="questionUpdate(<?php echo $question['question_id']; ?>)">Update</button></td>
+														<td class="text-center"><button class="btn btn-theme" name="update" id="update" data-toggle="modal" data-target="#update_question" onclick="viewquestion(<?php echo $question['question_id']; ?>)">Update</button></td>
 														<td class="text-center"><a class="btn btn-danger" href="delete.php?q=<?php echo $question['question_id'];?>&table_name=question_master">Delete</a></td>
 													</tr>
 													<?php } ?>
@@ -437,7 +381,7 @@
 							</div>
 							<div class="col-6">
 								<b> <label for="name">Subject Name</label></b>
-								<select name="Subject" class="form-control" id="branch">
+								<select name="chapter" class="form-control" id="branch">
 									<option value="" selected>Choose any..</option>
 									<?php 
                                $query = "SELECT * FROM `Subject_master`";
@@ -457,23 +401,23 @@
 							</div>
 							<div class="col-6">
 								<b> <label for="name">option 1</label></b>
-								<input type="text" name="option1" class="form-control" id="title" placeholder="Enter Price">
+								<input type="text" name="option1" class="form-control" placeholder="Enter Price">
 							</div>
 							<div class="col-6">
 								<b><label for="name">option 2</label></b>
-								<input type="text" name="option2" class="form-control" id="title" placeholder="Enter SKU">
+								<input type="text" name="option2" class="form-control" placeholder="Enter SKU">
 							</div>
 							<div class="col-6">
 								<b><label for="name">option 3</label></b>
-								<input type="text" name="option3" class="form-control" id="title" placeholder="Enter Expiry Date">
+								<input type="text" name="option3" class="form-control" placeholder="Enter Expiry Date">
 							</div>
 							<div class="col-6">
 								<b> <label for="name">option 4</label></b>
-								<input type="text" name="option4" class="form-control" id="title" placeholder="Enter Descrption about question">
+								<input type="text" name="option4" class="form-control" placeholder="Enter Descrption about question">
 							</div>
 							<div class="col-6">
 								<b> <label for="name">answer</label></b>
-								<input type="text" name="answer" class="form-control" id="title" placeholder="Enter Descrption about question">
+								<input type="text" name="answer" class="form-control" placeholder="Enter Descrption about question">
 							</div>
 							
 						</div>
@@ -505,7 +449,7 @@
 							
 								<div class="col-12">
 									<b><label for="name">Question </label></b>
-									<input type="text" class="form-control" id="vquestion" readonly>
+									<input type="text" name="vquestion" class="form-control" id="vquestion" readonly>
 
 								</div>
 								<div class="col-6">
@@ -544,7 +488,7 @@
 	</div>
 
 	<!-- update Subject module -->
-	<div class="modal fade" id="update_Subject" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<!-- <div class="modal fade" id="update_Subject" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -568,7 +512,7 @@
 				</form>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<!-- update question module -->
 	<div class="modal fade" id="update_question" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -585,35 +529,36 @@
 						<div class="row container" style="text-align:center;">
 							<div class="col-md-6 mb-3 mb-md-0 mx-auto">
 								<b><label for="name">Question</label></b>
-								<input type="text" name="pname" class="form-control" id="pname" placeholder="Enter question name">
+								<input type="text" name="question" class="form-control" id="upquestion" >
 								<input type="hidden" name="question_id" id="question_id">
+								<input type="hidden" name="chapter_id" id="chapter_id">
 							</div>
 							<div class="col-md-6" style="padding-right: 1rem; padding-left: 1rem;">
-								<b> <label for="name">Opetion 1</label></b>
-								<input type="text" name="Opetion1" class="form-control" id="opetion1" placeholder="Enter Opetion 1">
+								<b> <label for="name">Option 1</label></b>
+								<input type="text" name="option1" class="form-control" id="upoption1" placeholder="Enter option 1">
 							</div>
 							<div class="col-md-6" style="padding-right: 1rem; padding-left: 1rem;">
-								<b><label for="name">Opetion 2</label></b>
-								<input type="text" name="Opetion2" class="form-control" id="opetion2" placeholder="Enter Opetion 2">
+								<b><label for="name">option 2</label></b>
+								<input type="text" name="option2" class="form-control" id="upoption2" placeholder="Enter option 2">
 							</div>
 							<div class="col-6" style="padding-right: 1rem; padding-left: 1rem;">
-								<b><label for="name">Opetion 3</label></b>
-								<input type="text" name="Opetion3" class="form-control" id="opetion3" placeholder="Opetion 3">
+								<b><label for="name">option 3</label></b>
+								<input type="text" name="option3" class="form-control" id="upoption3" placeholder="option 3">
 							</div>
 							<div class="col-6" style="padding-right: 1rem; padding-left: 1rem;">
-								<b> <label for="name">Opetion 4</label></b>
-								<input type="text" name="Opetion1" class="form-control" id="opetion4" placeholder="Enter Opetion 4">
+								<b> <label for="name">option 4</label></b>
+								<input type="text" name="option4" class="form-control" id="upoption4" placeholder="Enter option 4">
 							</div>
 							<div class="col-6" style="padding-right: 1rem; padding-left: 1rem;">
 								<b> <label for="name">Answer</label></b>
-								<input type="text" name="answer" class="form-control" id="answer" placeholder="Enter answer">
+								<input type="text" name="answer" class="form-control" id="upanswer" placeholder="Enter answer">
 							</div>
 
 						</div>
 					</div>
 					<div class="modal-footer">
 						<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-						<button type="submit" class="btn btn-theme" name="update_questionname">+ update question</button>
+						<button type="submit" class="btn btn-theme" name="update_question">+ update question</button>
 					</div>
 				</form>
 			</div>
@@ -639,51 +584,6 @@
 			});
 		}
 
-
-		function questionUpdate(id) {
-			$.ajax({
-				url: "back.php",
-				method: "POST",
-				data: {
-					id: id,
-					update: "update_question"
-				},
-				success: function(result) {
-					var data = JSON.parse(result)
-					$("#pname").val(data['name'])
-					$("#question_id").val(data['question_id'])
-					$("#price").val(data['price'])
-					$("#SKU").val(data['SKU'])
-					$("#description").val(data['description'])
-					$("#expiry_date").val(data['expiry_date'])
-					$("#image1_id").val(data['image1'])
-					$("#image2_id").val(data['image2'])
-					$("#image3_id").val(data['image3'])
-					$("#image4_id").val(data['image4'])
-					$("#image5_id").val(data['image5'])
-				}
-			});
-		}
-
-		function imageUpdate(id) {
-			$.ajax({
-				url: "back.php",
-				method: "POST",
-				data: {
-					id: id,
-					update: "image_update"
-				},
-				success: function(result) {
-					var data = JSON.parse(result)
-					$("#image1_id").val(data['question_id'])
-					$("#image2_id").val(data['question_id'])
-					$("#image3_id").val(data['question_id'])
-					$("#image4_id").val(data['question_id'])
-					$("#image5_id").val(data['question_id'])
-				}
-			});
-		}
-
 		function viewquestion(id) {
 			$.ajax({
 				url: "back.php",
@@ -694,29 +594,24 @@
 				},
 				success: function(result) {
 					var data = JSON.parse(result)
-					$("#vquestion").val(data['name'])
+					$("#vquestion").val(data['question'])
 					$("#vquestion_id").val(data['question_id'])
 					$("#voption1").val(data['option1'])
 					$("#voption2").val(data['option2'])
 					$("#voption3").val(data['option3'])
                     $("#voption4").val(data['option4'])	
-                    $("#vanswer").val(data['answer'])					
-					// var vimage1 = "../img/questions/" + data['image1'];
-					// $("#vimage1").attr('src', vimage1);
-				 //    $("#vimage1").attr('alt', "image not found");
-     //                var vimage2 = "../img/questions/" + data['image2'];
-     //                $("#vimage2").attr('src', vimage2);
-     //                $("#vimage2").attr('alt', "image not found");
-     //                var vimage3 = "../img/questions/" + data['image3'];
-     //                $("#vimage3").attr('src', vimage3);
-     //                $("#vimage3").attr('alt', "image not found");
-     //                var vimage4 = "../img/questions/" + data['image4'];
-     //                $("#vimage4").attr('src', vimage4);
-     //                $("#vimage4").attr('alt', "image not found");
-     //                var vimage5 = "../img/questions/" + data['image5'];
-     //                $("#vimage5").attr('src', vimage5);
-     //                $("#vimage5").attr('alt', "image not found");
+                    $("#vanswer").val(data['answer'])
+                    
+                    $("#upquestion").val(data['question'])
+					$("#question_id").val(data['question_id'])
+					$("#chapter_id").val(data['chapter_id'])
+					$("#upoption1").val(data['option1'])
+					$("#upoption2").val(data['option2'])
+					$("#upoption3").val(data['option3'])
+					$("#upoption4").val(data['option4'])
+					$("#upanswer").val(data['answer'])
 					
+
 				}
 			});
 		}

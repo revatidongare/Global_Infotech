@@ -12,13 +12,12 @@
  	<!-- Nav Item - Dashboard -->
     <li class="nav-item">
     	<a class="nav-link" href="manage_test.php">
-    		<span class="font-weight-bolder m-1">Manage Test</span></a>
+    		<span class="font-weight-bolder m-1">Manage Test questions</span></a>
     </li>
-   <!--  <li class="nav-item">
-    <a class="nav-link" href="manage_gifts.php">
-      <span class="font-weight-bolder m-1">Manage Gifts Products</span></a>
-    </li> -->
-    
+    <li class="nav-item">
+      <a class="nav-link" href="manage_subject.php">
+        <span class="font-weight-bolder m-1">Manage Subject</span></a>
+    </li>
      <li class="nav-item">
     <a class="nav-link" href="subscribed_user.php">
       <span class="font-weight-bolder m-1">Users</span></a>
