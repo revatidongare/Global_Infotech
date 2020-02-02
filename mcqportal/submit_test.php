@@ -1,14 +1,21 @@
- <?php
-    
-    if (isset($_GET['p'])) {
+<?php
+  session_start();
 
-          $user_id =$_GET['p'];
-
-        }else{
-          header('location:index.php');
-        }
-
+  if(isset($_SESSION['demo'])) {
+          
+          $type=0;
+          $user_id =$_SESSION['demo'];
+  }
+  elseif(isset($_SESSION['final'])) {
+          
+          $type=1;
+          $user_id =$_SESSION['final'];
+    }
+  else{
+      header('location:../index.php');
+    } 
   ?> 
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -44,14 +51,14 @@
 
         //include 'session.php';
         
-        $chapter_id = $_POST['chapter_id'];
-        // $query = "SELECT `subject_id`, `name` FROM `chapter_master` WHERE `id` = '$chapter_id'";
+        $subject_id = $_POST['subject_id'];
+        // $query = "SELECT `subject_id`, `name` FROM `chapter_master` WHERE `id` = '$subject_id'";
         // $result = mysqli_query($con, $query);
         // $row = mysqli_fetch_array($result);
         // $subject_id = $row['subject_id'];
         // $chapter_name = $row['name'];
        
-        $query = "SELECT `name`,`image` FROM `subject_master` WHERE `id` = '$chapter_id'";
+        $query = "SELECT `name`,`image` FROM `subject_master` WHERE `id` = '$subject_id'";
         $result = mysqli_query($con, $query);
         $row = mysqli_fetch_array($result);
         $subject_name = $row['name'];
@@ -126,7 +133,7 @@
 
 
 
-                                  $w = "SELECT * FROM `mcq_test` WHERE `question_id` = '$question_id'";
+                                  $w = "SELECT * FROM `mcq_test` WHERE `question_id` = '$question_id' AND `test_type`='$type'";
                                   $rest = mysqli_query($con, $w);
                                   $r = mysqli_fetch_array($rest);
                                   $answer = $r['answer'];
@@ -155,20 +162,20 @@
 
 
 
-                                  $q2 = "INSERT INTO `student_mcq_test`(`chapter_id`, `user_id`,`scored`,`total`) VALUES ('$chapter_id', '$user_id','$scored','$tot')";
+                                  $q2 = "INSERT INTO `student_mcq_test`(`subject_id`, `user_id`,`scored`,`total`) VALUES ('$subject_id', '$user_id','$scored','$tot')";
                                   $out2 = mysqli_query($con, $q2);
                                   //var_dump($out2);
 
                                   if($out2){
                                     $q3 = "SELECT * FROM `answers` WHERE `user` = '$user_id' AND `question_id` IN (
-                                      SELECT `question_id` FROM `mcq_test` WHERE `chapter_id` = '$chapter_id'
+                                      SELECT `question_id` FROM `mcq_test` WHERE `subject_id` = '$subject_id'
                                     )";
                                     $out3 = mysqli_query($con, $q3);
                                     $i = 1;
                                     
                                     while($row = mysqli_fetch_array($out3)){
                                       $question_id = $row['question_id'];
-                                      $q4 = "SELECT * FROM `mcq_test` WHERE `question_id` = '$question_id'";
+                                      $q4 = "SELECT * FROM `mcq_test` WHERE `question_id` = '$question_id' AND `test_type`='$type'";
                                       $out4 = mysqli_query($con, $q4);
                                       $row2 = mysqli_fetch_array($out4);
                                       ?>
@@ -240,3 +247,10 @@
 
 </body>
 </html>
+<?php
+  //session_start();
+  session_unset();
+  session_destroy();
+  //header('location:../index.php');
+
+?>

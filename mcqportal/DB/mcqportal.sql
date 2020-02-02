@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 30, 2020 at 10:00 PM
+-- Generation Time: Feb 02, 2020 at 06:46 AM
 -- Server version: 10.1.10-MariaDB
 -- PHP Version: 7.0.2
 
@@ -40,7 +40,80 @@ CREATE TABLE `answers` (
 --
 
 INSERT INTO `answers` (`id`, `question_id`, `user`, `student_answer`, `actual_answer`, `remark`) VALUES
-(158, 8, 12, 3, 3, 1);
+(158, 8, 12, 3, 3, 1),
+(159, 8, 13, 0, 3, 0),
+(160, 8, 13, 0, 3, 0),
+(161, 8, 13, 0, 3, 0),
+(162, 8, 13, 2, 3, 0),
+(163, 8, 13, 1, 3, 0),
+(164, 8, 13, 1, 3, 0),
+(165, 8, 13, 1, 3, 0),
+(166, 8, 13, 2, 3, 0),
+(167, 8, 13, 2, 3, 0),
+(168, 2, 13, 1, 2, 0),
+(169, 3, 13, 2, 2, 1),
+(170, 6, 13, 4, 4, 1),
+(171, 7, 13, 1, 1, 1),
+(172, 8, 13, 2, 3, 0),
+(173, 10, 1, 2, 2, 1),
+(174, 10, 1, 2, 2, 1),
+(175, 10, 1, 2, 2, 1),
+(176, 8, 13, 2, 3, 0),
+(177, 0, 1, 0, 0, 1),
+(178, 0, 1, 0, 0, 1),
+(179, 0, 1, 0, 0, 1),
+(180, 10, 1, 2, 2, 1),
+(181, 10, 1, 1, 2, 0),
+(182, 8, 13, 2, 3, 0),
+(183, 10, 8, 2, 2, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `final_test`
+--
+
+CREATE TABLE `final_test` (
+  `test_id` int(50) NOT NULL,
+  `school` varchar(500) NOT NULL,
+  `name` varchar(500) NOT NULL,
+  `email` varchar(500) NOT NULL,
+  `phone` varchar(20) NOT NULL,
+  `subject_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `final_test`
+--
+
+INSERT INTO `final_test` (`test_id`, `school`, `name`, `email`, `phone`, `subject_id`) VALUES
+(1, 'SIT', 'Akshay kurhekar', 'akshay.kurhekar1014662@gmail.com', '+919552259961', 0),
+(2, 'SIT', 'Akshay kurhekar', 'akshay.kurhekar1014662@gmail.com', '+919552259961', 0),
+(3, 'SIT', 'Akshay kurhekar', 'akshay.kurhekar1014662@gmail.com', '+919552259961', 0),
+(4, 'SIT', 'Akshay kurhekar', 'akshay.kurhekar1014662@gmail.com', '+919552259961', 0),
+(5, 'SIT', 'Akshay kurhekar', 'akshay.kurhekar1014662@gmail.com', '+919552259961', 0),
+(6, 'SIT', 'Akshay kurhekar', 'akshay.kurhekar1014662@gmail.com', '+919552259961', 0),
+(7, 'SIT', 'Akshay kurhekar', 'akshay.kurhekar1014662@gmail.com', '09552259961', 0),
+(8, 'SIT', 'ram', 'jksgd@jh.com', '4896453685484', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `key_table`
+--
+
+CREATE TABLE `key_table` (
+  `key_id` int(50) NOT NULL,
+  `test_key` varchar(500) NOT NULL,
+  `school` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `key_table`
+--
+
+INSERT INTO `key_table` (`key_id`, `test_key`, `school`) VALUES
+(1, '1234', 'SIT');
 
 -- --------------------------------------------------------
 
@@ -50,26 +123,28 @@ INSERT INTO `answers` (`id`, `question_id`, `user`, `student_answer`, `actual_an
 
 CREATE TABLE `mcq_test` (
   `question_id` int(11) NOT NULL,
-  `chapter_id` int(11) NOT NULL,
+  `subject_id` int(11) NOT NULL,
   `question` text NOT NULL,
   `option1` text NOT NULL,
   `option2` text NOT NULL,
   `option3` text NOT NULL,
   `option4` text NOT NULL,
-  `answer` int(11) NOT NULL
+  `answer` int(11) NOT NULL,
+  `test_type` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `mcq_test`
 --
 
-INSERT INTO `mcq_test` (`question_id`, `chapter_id`, `question`, `option1`, `option2`, `option3`, `option4`, `answer`) VALUES
-(2, 1, 'Which instrument is used to measure depth of ocean ?\r\n', 'Galvanometer\r\n', 'Fluxmeter\r\n', 'Endoscope\r\n', 'Fathometer\r\n', 2),
-(3, 1, 'Name of the instrument to measure atomspheric pressure ?\r\n', 'Barometer\r\n', 'Barograph\r\n', 'Bolometer\r\n', 'Callipers\r\n', 2),
-(6, 1, 'Which planet is close to earth?', 'Mercury', 'Jupiter', 'Neptune', 'Venus', 4),
-(7, 1, 'Who is strongest?', 'Thor', 'Iron-Man', 'Hulk', 'Thanos', 1),
-(8, 2, 'question of c++', 'option 1', 'option 2', 'option 3', 'option 4', 3),
-(9, 3, 'question of java ti so simple', 'option 1', 'option 1', 'option 3', 'option 4', 1);
+INSERT INTO `mcq_test` (`question_id`, `subject_id`, `question`, `option1`, `option2`, `option3`, `option4`, `answer`, `test_type`) VALUES
+(2, 1, 'Which instrument is used to measure depth of ocean ?\r\n', 'Galvanometer\r\n', 'Fluxmeter\r\n', 'Endoscope\r\n', 'Fathometer\r\n', 2, 0),
+(3, 1, 'Name of the instrument to measure atomspheric pressure ?\r\n', 'Barometer\r\n', 'Barograph\r\n', 'Bolometer\r\n', 'Callipers\r\n', 2, 0),
+(6, 1, 'Which planet is close to earth?', 'Mercury', 'Jupiter', 'Neptune', 'Venus', 4, 0),
+(7, 1, 'Who is strongest?', 'Thor', 'Iron-Man', 'Hulk', 'Thanos', 1, 0),
+(8, 2, 'question of c++', 'option 1', 'option 2', 'option 3', 'option 4', 3, 0),
+(9, 3, 'question of java ti so simple', 'option 1', 'option 1', 'option 3', 'option 4', 1, 0),
+(10, 1, 'this is final test quetion', '1', '2', '3', '3', 2, 1);
 
 -- --------------------------------------------------------
 
@@ -90,7 +165,20 @@ CREATE TABLE `student_data` (
 --
 
 INSERT INTO `student_data` (`student_id`, `name`, `phone`, `email`, `school`) VALUES
-(12, 'aksahy', '1234567890', 'akshay@akshay.com', 'Sit');
+(12, 'aksahy', '1234567890', 'akshay@akshay.com', 'Sit'),
+(13, 'Akshay kurhekar', '0955225996', 'akshay.kurhekar1014662@gmail.com', 'SIT'),
+(14, 'Akshay kurhekar', '0955225996', 'akshay.kurhekar1014662@gmail.com', 'SIT'),
+(15, 'Akshay kurhekar', '24', 'akshay.kurhekar1014662@gmail.com', 'Indo public school'),
+(16, 'Akshay kurhekar', '2474', 'akshay.kurhekar1014662@gmail.com', 'Indo public school'),
+(17, 'Akshay kurhekar', '2474', 'akshay.kurhekar1014662@gmail.com', 'Indo public school'),
+(18, 'fvrgvcfsdcccef', '145156', 'akshay.kurhekar1014662@gmail.com', 'Indo public school'),
+(19, 'fvrgvcfsdcccef', '145156', 'akshay.kurhekar1014662@gmail.com', 'Indo public school'),
+(20, 'Akshay kurhekar', '65146851', 'akshay.kurhekar1014662@gmail.com', 'Indo public school'),
+(21, 'Akshay kurhekar', '5687465321', 'akshay.kurhekar1014662@gmail.com', 'Indo public school'),
+(22, 'Akshay kurhekar', '09552259961', 'akshay.kurhekar1014662@gmail.com', 'Indo public school'),
+(23, 'Akshay kurhekar', '09552259961', 'akshay.kurhekar1014662@gmail.com', 'Indo public school'),
+(24, 'Akshay kurhekar', '09552259961', 'akshay.kurhekar1014662@gmail.com', 'Indo public school'),
+(25, 'Akshay kurhekar', '09552259961', 'akshay.kurhekar1014662@gmail.com', 'Indo public school');
 
 -- --------------------------------------------------------
 
@@ -100,7 +188,7 @@ INSERT INTO `student_data` (`student_id`, `name`, `phone`, `email`, `school`) VA
 
 CREATE TABLE `student_mcq_test` (
   `id` int(11) NOT NULL,
-  `chapter_id` int(11) NOT NULL,
+  `subject_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `scored` varchar(255) NOT NULL,
   `total` varchar(255) NOT NULL
@@ -110,7 +198,7 @@ CREATE TABLE `student_mcq_test` (
 -- Dumping data for table `student_mcq_test`
 --
 
-INSERT INTO `student_mcq_test` (`id`, `chapter_id`, `user_id`, `scored`, `total`) VALUES
+INSERT INTO `student_mcq_test` (`id`, `subject_id`, `user_id`, `scored`, `total`) VALUES
 (2, 1, 1, '2', '4'),
 (3, 1, 3, '2', '4'),
 (4, 3, 3, '1', '1'),
@@ -134,7 +222,25 @@ INSERT INTO `student_mcq_test` (`id`, `chapter_id`, `user_id`, `scored`, `total`
 (41, 3, 9, '0', '1'),
 (42, 1, 10, '3', '4'),
 (43, 1, 11, '0', '4'),
-(44, 2, 12, '1', '1');
+(44, 2, 12, '1', '1'),
+(45, 0, 13, '0', '1'),
+(46, 2, 13, '0', '1'),
+(47, 2, 13, '0', '1'),
+(48, 2, 13, '0', '1'),
+(49, 2, 13, '0', '1'),
+(50, 1, 13, '3', '4'),
+(51, 2, 13, '0', '1'),
+(52, 1, 1, '1', '1'),
+(53, 1, 1, '1', '1'),
+(54, 1, 1, '1', '1'),
+(55, 2, 13, '0', '1'),
+(56, 2, 1, '1', '1'),
+(57, 2, 1, '1', '1'),
+(58, 3, 1, '1', '1'),
+(59, 1, 1, '1', '1'),
+(60, 1, 1, '0', '1'),
+(61, 2, 13, '0', '1'),
+(62, 1, 8, '1', '1');
 
 -- --------------------------------------------------------
 
@@ -189,6 +295,18 @@ ALTER TABLE `answers`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `final_test`
+--
+ALTER TABLE `final_test`
+  ADD PRIMARY KEY (`test_id`);
+
+--
+-- Indexes for table `key_table`
+--
+ALTER TABLE `key_table`
+  ADD PRIMARY KEY (`key_id`);
+
+--
 -- Indexes for table `mcq_test`
 --
 ALTER TABLE `mcq_test`
@@ -226,22 +344,32 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `answers`
 --
 ALTER TABLE `answers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=159;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=184;
+--
+-- AUTO_INCREMENT for table `final_test`
+--
+ALTER TABLE `final_test`
+  MODIFY `test_id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+--
+-- AUTO_INCREMENT for table `key_table`
+--
+ALTER TABLE `key_table`
+  MODIFY `key_id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `mcq_test`
 --
 ALTER TABLE `mcq_test`
-  MODIFY `question_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `question_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `student_data`
 --
 ALTER TABLE `student_data`
-  MODIFY `student_id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `student_id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 --
 -- AUTO_INCREMENT for table `student_mcq_test`
 --
 ALTER TABLE `student_mcq_test`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
 --
 -- AUTO_INCREMENT for table `subject_master`
 --

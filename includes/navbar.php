@@ -42,8 +42,8 @@
                                             </a>
                                         </li>
                                         <li class="toolbar-customer log-out" >
-                                            <a data-toggle="modal" data-target="#myModalForRegister">
-                                                <i class="fa fa-unlock" aria-hidden="true"></i>Register
+                                            <a href="test_final.php">
+                                                <i class="fa fa-unlock" aria-hidden="true"></i>Final Test
                                             </a>
                                         </li>
                                     </ul>
@@ -97,10 +97,10 @@
                                             </li>
 
                                             <li class="dropdown">
-                                                <a >Exam
-                                                    <i class="fa fa-angle-down d-xs-none"></i>
+                                                <a data-toggle="modal" data-target="#demo_test">Demo Test
+                                                   <!--  <i class="fa fa-angle-down d-xs-none"></i> -->
                                                 </a>  
-                                                <div class="dropdown-menu">
+                                               <!--  <div class="dropdown-menu">
                                                     <ul>
                                                         <li>
                                                             <a href="test_demo.php">Demo</a>
@@ -110,7 +110,7 @@
                                                         </li>
                                                        
                                                     </ul>
-                                                </div>
+                                                </div> -->
                                             </li>
 
                                             <li>
@@ -199,13 +199,14 @@
       </div>
     </div>
   </div>
-   <div class="modal" id="myModalForRegister">
+  
+  <div class="modal" id="demo_test">
     <div class="modal-dialog">
       <div class="modal-content">
       
         <!-- Modal Header -->
         <div class="modal-header">
-          <h4 class="modal-title">Register</h4>
+          <h4 class="modal-title">Demo Test</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         
@@ -214,6 +215,35 @@
          <form name="checkout" method="post" class="form-checkout text-center" action="includes/back.php" enctype="multipart/form-data" style="padding-left: 2rem; padding-right: 2rem; padding-bottom: 1rem; padding-top: 1rem;">
                                 <div class="billing-fields">
                                     <div class="form-input">
+                                        <div class="form-row">
+                                            <b> <label for="name">Subject Name</label></b>
+                                            <select name="subject_id" class="form-control" id="branch">
+                                            <option value="" selected>Choose any..</option>
+                                            <?php 
+                                            $query = "SELECT * FROM `subject_master`";
+                                            include 'config.php';
+                                            $stmt=$conn->prepare($query);
+                                            $stmt->execute();
+                                            $result=$stmt->fetchAll();
+                                            $conn=null;
+
+                                            foreach ($result as $branch_row) {
+                                            ?>
+                                            <option value="<?php echo $branch_row['id'];?>" style="color: black;"><?php echo $branch_row['name'];?></option>
+                                            <?php 
+                                            } 
+                                            ?>
+                                            </select>
+                                        </div>
+                                        <div class="form-row">
+                                            <p>School / College Name
+                                                <abbr class="required" title="required">*</abbr>
+                                            </p>
+                                            <span class="input-wrapper w-100">
+                                                <input type="text" name="school" class="input-text spr-form-input" required>
+                                                <!-- <input type="hidden" name="subject_id" value="<?php echo(1) ?> " class="input-text spr-form-input"> -->
+                                            </span>
+                                        </div>
                                         <div class="form-row">
                                             <p>Full name&nbsp;
                                                 <abbr class="required" title="required">*</abbr>
@@ -240,16 +270,8 @@
                                          <input type="email" name="email" class="input-text spr-form-input" placeholder="Email" required>
                                          </span>
                                        </div>
-
-                                        <div class="form-row">
-                                            <p>Password&nbsp;
-                                                <abbr class="required" title="required">*</abbr>
-                                            </p>
-                                            <span class="input-wrapper w-100">
-                                                <input type="password" name="password" class="input-text spr-form-input" required>
-                                            </span>
-                                        </div>
-                                         <button type="submit" name="register" class="btn-submit btn button-main m-1 border square font-weight-bolder" style="background-color: rgb(0, 86, 100); color: white;">Register</button>
+                                        
+                                         <button type="submit" name="demo_test" class="btn-submit btn button-main m-1 border square font-weight-bolder" style="background-color: rgb(0, 86, 100); color: white;">Start Test</button>
                                         
                                     </div>
                                 </div>
@@ -265,5 +287,5 @@
         
       </div>
     </div>
-  </div>
+</div>
         </header>

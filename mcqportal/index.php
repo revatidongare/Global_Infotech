@@ -1,15 +1,21 @@
 <?php
-    
-    if (isset($_GET['p']) && isset($_GET['q'])) {
+  session_start();
 
-          $chapter_id =$_GET['p'];
-          $user_id =$_GET['q'];
-
-        }else{
-          header('location:../index.php');
-        }
-
-
+  if(isset($_SESSION['demo']) && isset($_GET['p'])){
+          
+          $type=0;
+          $subject_id =$_GET['p'];
+          $user_id =$_SESSION['demo'];
+  }
+  elseif(isset($_SESSION['final']) && isset($_GET['p'])) {
+          
+          $type=1;
+          $subject_id =$_GET['p'];
+          $user_id =$_SESSION['final'];
+    }
+  else{
+      header('location:../index.php');
+    } 
   ?> 
 <!doctype html>
 <html lang="en">
@@ -37,15 +43,15 @@
       </style>
   </head>
 <?php
-        // $chapter_id =$_GET['p'];
+        // $subject_id =$_GET['p'];
         
-        // $query = "SELECT `subject_id`, `name` FROM `chapter_master` WHERE `id` = '$chapter_id'";
+        // $query = "SELECT `subject_id`, `name` FROM `chapter_master` WHERE `id` = '$subject_id'";
         // $result = mysqli_query($con, $query);
         // $row = mysqli_fetch_array($result);
         // $subject_id = $row['subject_id'];
         // $chapter_name = $row['name'];
         
-        $query = "SELECT `name`,`image` FROM `subject_master` WHERE `id` = '$chapter_id'";
+        $query = "SELECT `name`,`image` FROM `subject_master` WHERE `id` = '$subject_id'";
         $result = mysqli_query($con, $query);
         $row = mysqli_fetch_array($result);
         $subject_name = $row['name'];
@@ -80,7 +86,7 @@
                    <div class="row animated bounceInUp slowest mt-5" style="background-color: white;box-shadow: 0px 5px 20px 0px rgb(0,0,0,0.3);">
                         <?php
 
-                          $q = "SELECT * FROM `mcq_test` WHERE `chapter_id` = '$chapter_id'";
+                          $q = "SELECT * FROM `mcq_test` WHERE `subject_id` = '$subject_id' AND `test_type`= $type ";
                           $res = mysqli_query($con, $q);
                           $i = 0;
 
@@ -88,7 +94,7 @@
                         ?>
                        <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 mx-auto card-image2" style="padding: 20px;background-image: url(images/<?php echo $subject_image;?>);">
                           <form method="post" name="quiz" id="quiz_form" action="submit_test.php?p=<?php echo $user_id ?>" >
-                            <input type="hidden" name="chapter_id" value="<?php echo $chapter_id; ?>">
+                            <input type="hidden" name="subject_id" value="<?php echo $subject_id; ?>">
                             <div class="quiz-container" style="color: #3C4858;">
                               <div id="quiz">
                                 <?php while($row = mysqli_fetch_array($res)){ ?>
