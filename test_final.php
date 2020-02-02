@@ -1,3 +1,11 @@
+<?php 
+    
+    if (isset($_GET['f'])) {
+            if($_GET['f'] == 101){
+            echo '<script> alert(" This test is taken try another..")</script>';
+            }        
+    }
+ ?>
 <!DOCTYPE html>
 <html lang="zxx">
 <?php include 'includes/head.php'; ?>

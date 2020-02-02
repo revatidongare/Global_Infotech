@@ -1,31 +1,22 @@
 <?php
-	/*
-	*
-	* OPERATION FOR Adding Category
-	*
-	*/
-	if(isset($_POST['add_category'])){
+	
+	if(isset($_POST['add_key'])){
 		include 'config.php';
-		$name = $_POST['qu'];
-		$name = $_POST['name'];
+		$school = $_POST['school'];
+		$test_key = $_POST['test_key'];
 				
-		$query = "INSERT INTO `category_master`(`name`) VALUES ('$name')";
+		$query = "INSERT INTO `key_table`(`test_key`,`school`) VALUES ('$test_key','$school')";
 		 $stmt=$conn->prepare($query);
          $stmt->execute();
 		if($stmt){
-			header('location:manage_products.php?q=1');
+			header('location:test_key.php?q=1');
 		}
 		else{
-			header('location:location:manage_products.php?q=3');
+			header('location:test_key.php?q=3');
 		}
 	}
-	/*
-	*
-	* OPERATION FOR Adding Product
-	*
-	*/
 	
-	if(isset($_POST['add_product'])){
+	elseif(isset($_POST['add_product'])){
 		include 'config.php';
 		$name = $_POST['name'];
 		$price= $_POST['price'];
@@ -198,7 +189,7 @@
 	}
 	
 	//For View Code....
-	if (isset($_POST['view'])) {
+	elseif (isset($_POST['view'])) {
 		
 		if ($_POST['view'] == 'view_question') {
 				include 'config.php';
@@ -215,10 +206,25 @@
 				}
 		}
 	}
-
+	elseif (isset($_POST['update'])) {
+		
+		if ($_POST['update'] == 'key') {
+				include 'config.php';
+			if(isset($_POST['id']))
+				{
+					$id = $_POST['id'];
+					$query = "SELECT * FROM `key_table` WHERE `key_id` = $id ";
+					 $stmt=$conn->prepare($query);
+			         $stmt->execute();
+			         $row=$stmt->fetch();
+	                 $conn=null;
+					
+					echo json_encode($row);
+				}
+		}
+	}
 	// update question
-
-	if (isset($_POST['update_question'])) {
+	elseif (isset($_POST['update_question'])) {
 		include 'config.php';
 		$id = $_POST['question_id'];
 		$chapter_id =$_POST['chapter_id'];
@@ -239,6 +245,27 @@
 				else{
 					header('location:manage_test.php?q=3');
 				}
+	}
+	elseif (isset($_POST['update_key'])) {
+		include 'config.php';
+		$id = $_POST['key_id'];
+		$school =$_POST['school'];
+		$test_key = $_POST['test_key'];
+		
+		 $query = "UPDATE `key_table` SET `test_key`='$test_key',`school`='$school' WHERE `key_id`='$id'";	
+				 $stmt=$conn->prepare($query);
+				 $res=$stmt->execute();
+				  $conn=null;
+				if($res){
+					header('location:test_key.php?q=update1010');
+						}
+				else{
+					header('location:test_key.php?q=3');
+				}
+	}
+
+	else{
+			header('location:index.php?q=3');
 	}
 
   ?>

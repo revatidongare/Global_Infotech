@@ -5,7 +5,7 @@ if(isset($_POST['login'])){
   $email = $_POST['email'];
   $password = md5($_POST['password']);
 	
-  $q = "SELECT * FROM `user` WHERE `email` = ? AND `password` = ?";
+  $q = "SELECT * FROM `admin` WHERE `email` = ? AND `password` = ?";
   include 'config.php';
   $stmt=$conn->prepare($q);
   $stmt->execute([$email,$password]);

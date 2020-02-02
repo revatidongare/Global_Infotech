@@ -1,6 +1,6 @@
 <?php
   session_start();
-
+  $type=0;
   if(!isset($_SESSION['admin'])){
     header('location:../index.php');
   }
@@ -191,7 +191,7 @@
 												</thead>
 												<tbody>
 													<?php     
-						                             $query = "SELECT * FROM `mcq_test` WHERE `chapter_id`= 1";
+						                             $query = "SELECT * FROM `mcq_test` WHERE `subject_id`= 1 AND `test_type`='$type'";
 						                             include 'config.php';
 						                             $stmt=$conn->prepare($query);
 						                             $stmt->execute();
@@ -235,7 +235,7 @@
 												</thead>
 												<tbody>
 													<?php     
-						                             $query = "SELECT * FROM `mcq_test` WHERE `chapter_id`= 2";
+						                             $query = "SELECT * FROM `mcq_test` WHERE `subject_id`= 2 AND `test_type`='$type'";
 						                             include 'config.php';
 						                             $stmt=$conn->prepare($query);
 						                             $stmt->execute();
@@ -279,7 +279,7 @@
 												</thead>
 												<tbody>
 													<?php     
-						                             $query = "SELECT * FROM `mcq_test` WHERE `chapter_id`= 3";
+						                             $query = "SELECT * FROM `mcq_test` WHERE `subject_id`= 3 AND `test_type`='$type'";
 						                             include 'config.php';
 						                             $stmt=$conn->prepare($query);
 						                             $stmt->execute();
@@ -531,7 +531,7 @@
 								<b><label for="name">Question</label></b>
 								<input type="text" name="question" class="form-control" id="upquestion" >
 								<input type="hidden" name="question_id" id="question_id">
-								<input type="hidden" name="chapter_id" id="chapter_id">
+								<input type="hidden" name="subject_id" id="subject_id">
 							</div>
 							<div class="col-md-6" style="padding-right: 1rem; padding-left: 1rem;">
 								<b> <label for="name">Option 1</label></b>
@@ -604,7 +604,7 @@
                     
                     $("#upquestion").val(data['question'])
 					$("#question_id").val(data['question_id'])
-					$("#chapter_id").val(data['chapter_id'])
+					$("#subject_id").val(data['subject_id'])
 					$("#upoption1").val(data['option1'])
 					$("#upoption2").val(data['option2'])
 					$("#upoption3").val(data['option3'])

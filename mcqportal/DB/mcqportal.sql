@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 02, 2020 at 06:46 AM
+-- Generation Time: Feb 02, 2020 at 12:12 PM
 -- Server version: 10.1.10-MariaDB
 -- PHP Version: 7.0.2
 
@@ -19,6 +19,27 @@ SET time_zone = "+00:00";
 --
 -- Database: `mcqportal`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `user_id` int(50) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `phone` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`user_id`, `name`, `email`, `password`, `phone`) VALUES
+(1, 'Akshay kurhekar', 'akshay.kurhekar1014662@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', '09552259961');
 
 -- --------------------------------------------------------
 
@@ -65,7 +86,12 @@ INSERT INTO `answers` (`id`, `question_id`, `user`, `student_answer`, `actual_an
 (180, 10, 1, 2, 2, 1),
 (181, 10, 1, 1, 2, 0),
 (182, 8, 13, 2, 3, 0),
-(183, 10, 8, 2, 2, 1);
+(183, 10, 8, 2, 2, 1),
+(184, 10, 9, 2, 2, 1),
+(185, 2, 26, 2, 2, 1),
+(186, 3, 26, 2, 2, 1),
+(187, 6, 26, 4, 4, 1),
+(188, 7, 26, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -87,14 +113,8 @@ CREATE TABLE `final_test` (
 --
 
 INSERT INTO `final_test` (`test_id`, `school`, `name`, `email`, `phone`, `subject_id`) VALUES
-(1, 'SIT', 'Akshay kurhekar', 'akshay.kurhekar1014662@gmail.com', '+919552259961', 0),
-(2, 'SIT', 'Akshay kurhekar', 'akshay.kurhekar1014662@gmail.com', '+919552259961', 0),
-(3, 'SIT', 'Akshay kurhekar', 'akshay.kurhekar1014662@gmail.com', '+919552259961', 0),
-(4, 'SIT', 'Akshay kurhekar', 'akshay.kurhekar1014662@gmail.com', '+919552259961', 0),
-(5, 'SIT', 'Akshay kurhekar', 'akshay.kurhekar1014662@gmail.com', '+919552259961', 0),
-(6, 'SIT', 'Akshay kurhekar', 'akshay.kurhekar1014662@gmail.com', '+919552259961', 0),
-(7, 'SIT', 'Akshay kurhekar', 'akshay.kurhekar1014662@gmail.com', '09552259961', 0),
-(8, 'SIT', 'ram', 'jksgd@jh.com', '4896453685484', 0);
+(2, 'SIT', 'Akshay kurhekar', 'akshay.kurhekar1014662@gmail.com', '+919552259961', 1),
+(9, 'SIT', 'sham', 'sham@gmail.com', '12346', 1);
 
 -- --------------------------------------------------------
 
@@ -178,7 +198,8 @@ INSERT INTO `student_data` (`student_id`, `name`, `phone`, `email`, `school`) VA
 (22, 'Akshay kurhekar', '09552259961', 'akshay.kurhekar1014662@gmail.com', 'Indo public school'),
 (23, 'Akshay kurhekar', '09552259961', 'akshay.kurhekar1014662@gmail.com', 'Indo public school'),
 (24, 'Akshay kurhekar', '09552259961', 'akshay.kurhekar1014662@gmail.com', 'Indo public school'),
-(25, 'Akshay kurhekar', '09552259961', 'akshay.kurhekar1014662@gmail.com', 'Indo public school');
+(25, 'Akshay kurhekar', '09552259961', 'akshay.kurhekar1014662@gmail.com', 'Indo public school'),
+(26, 'sham', '1234665', 'sham@gmail.com', 'sppu');
 
 -- --------------------------------------------------------
 
@@ -240,7 +261,9 @@ INSERT INTO `student_mcq_test` (`id`, `subject_id`, `user_id`, `scored`, `total`
 (59, 1, 1, '1', '1'),
 (60, 1, 1, '0', '1'),
 (61, 2, 13, '0', '1'),
-(62, 1, 8, '1', '1');
+(62, 1, 8, '1', '1'),
+(63, 1, 9, '1', '1'),
+(64, 1, 26, '4', '4');
 
 -- --------------------------------------------------------
 
@@ -263,30 +286,15 @@ INSERT INTO `subject_master` (`id`, `name`, `image`) VALUES
 (2, 'C++', '1550326712.png'),
 (3, 'JAVA', '1550326731.png');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `user`
---
-
-CREATE TABLE `user` (
-  `user_id` int(50) NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `phone` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`user_id`, `name`, `email`, `password`, `phone`) VALUES
-(1, 'Akshay kurhekar', 'akshay.kurhekar1014662@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', '09552259961');
-
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`user_id`);
 
 --
 -- Indexes for table `answers`
@@ -331,30 +339,29 @@ ALTER TABLE `subject_master`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`user_id`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `user_id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
 -- AUTO_INCREMENT for table `answers`
 --
 ALTER TABLE `answers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=184;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=189;
 --
 -- AUTO_INCREMENT for table `final_test`
 --
 ALTER TABLE `final_test`
-  MODIFY `test_id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `test_id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `key_table`
 --
 ALTER TABLE `key_table`
-  MODIFY `key_id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `key_id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `mcq_test`
 --
@@ -364,22 +371,17 @@ ALTER TABLE `mcq_test`
 -- AUTO_INCREMENT for table `student_data`
 --
 ALTER TABLE `student_data`
-  MODIFY `student_id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `student_id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 --
 -- AUTO_INCREMENT for table `student_mcq_test`
 --
 ALTER TABLE `student_mcq_test`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 --
 -- AUTO_INCREMENT for table `subject_master`
 --
 ALTER TABLE `subject_master`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
---
--- AUTO_INCREMENT for table `user`
---
-ALTER TABLE `user`
-  MODIFY `user_id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
