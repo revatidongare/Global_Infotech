@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 02, 2020 at 12:12 PM
+-- Generation Time: Feb 02, 2020 at 08:35 PM
 -- Server version: 10.1.10-MariaDB
 -- PHP Version: 7.0.2
 
@@ -91,7 +91,12 @@ INSERT INTO `answers` (`id`, `question_id`, `user`, `student_answer`, `actual_an
 (185, 2, 26, 2, 2, 1),
 (186, 3, 26, 2, 2, 1),
 (187, 6, 26, 4, 4, 1),
-(188, 7, 26, 1, 1, 1);
+(188, 7, 26, 1, 1, 1),
+(189, 2, 13, 2, 2, 1),
+(190, 3, 13, 2, 2, 1),
+(191, 6, 13, 4, 4, 1),
+(192, 7, 13, 1, 1, 1),
+(193, 10, 10, 2, 2, 1);
 
 -- --------------------------------------------------------
 
@@ -114,7 +119,8 @@ CREATE TABLE `final_test` (
 
 INSERT INTO `final_test` (`test_id`, `school`, `name`, `email`, `phone`, `subject_id`) VALUES
 (2, 'SIT', 'Akshay kurhekar', 'akshay.kurhekar1014662@gmail.com', '+919552259961', 1),
-(9, 'SIT', 'sham', 'sham@gmail.com', '12346', 1);
+(9, 'SIT', 'sham', 'sham@gmail.com', '12346', 1),
+(10, 'SIT', 'test', 'test@gmail.com', '1234567890', 1);
 
 -- --------------------------------------------------------
 
@@ -133,7 +139,8 @@ CREATE TABLE `key_table` (
 --
 
 INSERT INTO `key_table` (`key_id`, `test_key`, `school`) VALUES
-(1, '1234', 'SIT');
+(1, '1234', 'SIT'),
+(3, '4444', 'Indo public school');
 
 -- --------------------------------------------------------
 
@@ -164,7 +171,9 @@ INSERT INTO `mcq_test` (`question_id`, `subject_id`, `question`, `option1`, `opt
 (7, 1, 'Who is strongest?', 'Thor', 'Iron-Man', 'Hulk', 'Thanos', 1, 0),
 (8, 2, 'question of c++', 'option 1', 'option 2', 'option 3', 'option 4', 3, 0),
 (9, 3, 'question of java ti so simple', 'option 1', 'option 1', 'option 3', 'option 4', 1, 0),
-(10, 1, 'this is final test quetion', '1', '2', '3', '3', 2, 1);
+(10, 1, 'this is final test quetion', '1', '2', '3', '3', 2, 1),
+(11, 2, 'this is final test quetion of c++', 'c', 'c++', 'java', 'python', 2, 1),
+(12, 3, 'java question', 'java', 'bskdjhv', 'vkjhv', 'kjhv', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -199,7 +208,8 @@ INSERT INTO `student_data` (`student_id`, `name`, `phone`, `email`, `school`) VA
 (23, 'Akshay kurhekar', '09552259961', 'akshay.kurhekar1014662@gmail.com', 'Indo public school'),
 (24, 'Akshay kurhekar', '09552259961', 'akshay.kurhekar1014662@gmail.com', 'Indo public school'),
 (25, 'Akshay kurhekar', '09552259961', 'akshay.kurhekar1014662@gmail.com', 'Indo public school'),
-(26, 'sham', '1234665', 'sham@gmail.com', 'sppu');
+(26, 'sham', '1234665', 'sham@gmail.com', 'sppu'),
+(27, 'test', '123456923', 'akshay.kurhekar1014662@gmail.com', 'Indo public school');
 
 -- --------------------------------------------------------
 
@@ -263,7 +273,9 @@ INSERT INTO `student_mcq_test` (`id`, `subject_id`, `user_id`, `scored`, `total`
 (61, 2, 13, '0', '1'),
 (62, 1, 8, '1', '1'),
 (63, 1, 9, '1', '1'),
-(64, 1, 26, '4', '4');
+(64, 1, 26, '4', '4'),
+(65, 1, 13, '4', '4'),
+(66, 1, 10, '1', '1');
 
 -- --------------------------------------------------------
 
@@ -351,32 +363,32 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `answers`
 --
 ALTER TABLE `answers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=189;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=194;
 --
 -- AUTO_INCREMENT for table `final_test`
 --
 ALTER TABLE `final_test`
-  MODIFY `test_id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `test_id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `key_table`
 --
 ALTER TABLE `key_table`
-  MODIFY `key_id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `key_id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `mcq_test`
 --
 ALTER TABLE `mcq_test`
-  MODIFY `question_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `question_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `student_data`
 --
 ALTER TABLE `student_data`
-  MODIFY `student_id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `student_id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 --
 -- AUTO_INCREMENT for table `student_mcq_test`
 --
 ALTER TABLE `student_mcq_test`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
 --
 -- AUTO_INCREMENT for table `subject_master`
 --

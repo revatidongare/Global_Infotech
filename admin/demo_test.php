@@ -252,7 +252,7 @@
 														<td class="text-center"><button class="btn btn-secondary" name="view" id="view" data-toggle="modal" data-target="#view_question" onclick="viewquestion(<?php echo $question['question_id']; ?>)">View</button></td>
 
 														<td class="text-center"><button class="btn btn-theme" name="update" id="update" data-toggle="modal" data-target="#update_question" onclick="viewquestion(<?php echo $question['question_id']; ?>)">Update</button></td>
-														<td class="text-center"><a class="btn btn-danger" href="delete.php?q=<?php echo $question['question_id'];?>&table_name=question_master">Delete</a></td>
+														<td class="text-center"><a class="btn btn-danger" href="delete.php?q=<?php echo $question['question_id'];?>&table_name=demo_question">Delete</a></td>
 													</tr>
 													<?php } ?>
 												</tbody>
@@ -328,38 +328,6 @@
 		<i class="fas fa-angle-up"></i>
 	</a>
 
-
-	<!-- Add Subject modal -->
-	<div class="modal fade" id="add_subject" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel"><b>Add New Subject</b></h5>
-					<button class="close" type="button" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">×</span>
-					</button>
-				</div>
-				<form action="back.php" method="post" enctype="multipart/form-data">
-					<div class="modal-body">
-						<div class="form-row">
-							<input type="text" name="name" class="form-control" id="title" placeholder="Enter Subject name">
-						</div>
-						<div class="col-6">
-								<b><label for="name">Main Image</label></b>
-								<input type="file" name="image" class="form-control" value="choose image">
-						</div>
-
-					</div>
-					<div class="modal-footer">
-						<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-						<button type="submit" class="btn btn-theme" name="add_Subject">+ Add Subject</button>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-
-
 	<!-- Add question modal-->
 
 	<div class="modal fade" id="add_question" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -381,8 +349,8 @@
 							</div>
 							<div class="col-6">
 								<b> <label for="name">Subject Name</label></b>
-								<select name="chapter" class="form-control" id="branch">
-									<option value="" selected>Choose any..</option>
+								<select name="subject_id" class="form-control" id="branch">
+									<option value="" selected>Select Subject</option>
 									<?php 
                                $query = "SELECT * FROM `Subject_master`";
                                include 'config.php';
@@ -393,31 +361,32 @@
 
                       foreach ($result as $branch_row) {
                    ?>
-									<option value="<?php echo $branch_row['Subject_id'];?>" style="color: black;"><?php echo $branch_row['name'];?></option>
+									<option value="<?php echo $branch_row['id'];?>" style="color: black;"><?php echo $branch_row['name'];?></option>
 									<?php 
                       } 
                   ?>
 								</select>
 							</div>
+							<input type="hidden" name="test_type" class="form-control" value="<?php echo $type;?>">
 							<div class="col-6">
 								<b> <label for="name">option 1</label></b>
-								<input type="text" name="option1" class="form-control" placeholder="Enter Price">
+								<input type="text" name="option1" class="form-control" placeholder="Enter option 1">
 							</div>
 							<div class="col-6">
 								<b><label for="name">option 2</label></b>
-								<input type="text" name="option2" class="form-control" placeholder="Enter SKU">
+								<input type="text" name="option2" class="form-control" placeholder="Enter option 2">
 							</div>
 							<div class="col-6">
 								<b><label for="name">option 3</label></b>
-								<input type="text" name="option3" class="form-control" placeholder="Enter Expiry Date">
+								<input type="text" name="option3" class="form-control" placeholder="Enter option 3">
 							</div>
 							<div class="col-6">
 								<b> <label for="name">option 4</label></b>
-								<input type="text" name="option4" class="form-control" placeholder="Enter Descrption about question">
+								<input type="text" name="option4" class="form-control" placeholder="Enter option 4">
 							</div>
 							<div class="col-6">
 								<b> <label for="name">answer</label></b>
-								<input type="text" name="answer" class="form-control" placeholder="Enter Descrption about question">
+								<input type="text" name="answer" class="form-control" placeholder="Enter Answer option number">
 							</div>
 							
 						</div>
@@ -486,33 +455,6 @@
 			</div>
 		</div>
 	</div>
-
-	<!-- update Subject module -->
-	<!-- <div class="modal fade" id="update_Subject" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel"><b>Update Subject</b></h5>
-					<button class="close" type="button" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">×</span>
-					</button>
-				</div>
-				<form action="back.php" method="post" enctype="multipart/form-data">
-					<div class="modal-body">
-						<div class="form-row">
-							<input type="text" name="name" class="form-control" id="name" placeholder="Enter Subject name" required>
-							<input type="hidden" name="Subject_id" id="Subject_id">
-						</div>
-
-					</div>
-					<div class="modal-footer">
-						<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-						<button type="submit" class="btn btn-theme" name="update_Subjectname">+ Update Subject</button>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div> -->
 
 	<!-- update question module -->
 	<div class="modal fade" id="update_question" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
