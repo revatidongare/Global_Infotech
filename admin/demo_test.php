@@ -40,6 +40,15 @@
 
   </script>
 
+  <style type="text/css" media="screen">
+  	
+  	.padding{
+  		padding-right: 1rem;
+  		 padding-left: 1rem;
+  	}
+
+  </style>
+
 </head>
 
 <body id="page-top">
@@ -95,15 +104,18 @@
 						</div>
 						
 					</div> -->
-					 <div class="site-section site-section-sm">
+	 <div class="site-section site-section-sm">
         <div class="container">
           <div class="row text-center">
-            <div class="col-md-3 col-lg-3 mb-3 mx-auto">
+            <div class="col-md-6 col-lg-6 mb-6 mx-auto">
               <form action="#">
                 <div class="row form-group">
-                  <div class="col-md-12 mb-2 mb-md-0">
-                    <label class="font-weight-bold" for="fullname">Select subject to view a question </label>
-                    <select name="" id="mySelect" class="form-control myformcontrol">
+                  <div class="col-md-6 col-lg-6 mb-6 mx-auto">
+                    <label class="font-weight-bold" for="fullname">Select Table</label>
+                    
+                  </div>
+                  <div class="col-md-6 col-lg-6 mb-6 mx-auto">
+                  	<select name="" id="mySelect" onchange="getLocation()" class="form-control myformcontrol">
                        	<option value="0">Select subject</option>
                         <option value="1">Questions Of C</option>
                         <option value="2">Questions Of C++</option>
@@ -114,13 +126,13 @@
                 </div>
               </form>
             </div>
-            <div class="col-md-3 col-lg-3 mb-3 mb-md-0 mx-auto ">
+           <!--  <div class="col-md-3 col-lg-3 mb-3 mb-md-0 mx-auto ">
               <button type="button" style="background-color: rgb(0,99,120); color: white;" value="Send Message" class="btn btn-color pill px-4 py-2 conferencebutton" onclick="getLocation()" >View Table</button>
-            </div>
+            </div> -->
            <!--  <div class="col-md-3 col-lg-3 mb-3 ">
 							<a href="#" class="btn btn-theme-outline" data-toggle="modal" data-target="#add_subject">+ Add Subject</a>
 						</div> -->
-						<div class="col-md-3 col-lg-3 mb-3 ">
+						<div class="col-md-6 col-lg-6 mb-6 text-right ">
 							<a href="#" class="btn btn-theme-outline" data-toggle="modal" data-target="#add_question">+ Add Question</a>
 						</div>
           </div>
@@ -191,7 +203,7 @@
 												</thead>
 												<tbody>
 													<?php     
-						                             $query = "SELECT * FROM `mcq_test` WHERE `subject_id`= 1 AND `test_type`='$type'";
+						                             $query = "SELECT * FROM `question` WHERE `subject_id`= 1 AND `test_type`='$type'";
 						                             include 'config.php';
 						                             $stmt=$conn->prepare($query);
 						                             $stmt->execute();
@@ -235,7 +247,7 @@
 												</thead>
 												<tbody>
 													<?php     
-						                             $query = "SELECT * FROM `mcq_test` WHERE `subject_id`= 2 AND `test_type`='$type'";
+						                             $query = "SELECT * FROM `question` WHERE `subject_id`= 2 AND `test_type`='$type'";
 						                             include 'config.php';
 						                             $stmt=$conn->prepare($query);
 						                             $stmt->execute();
@@ -279,7 +291,7 @@
 												</thead>
 												<tbody>
 													<?php     
-						                             $query = "SELECT * FROM `mcq_test` WHERE `subject_id`= 3 AND `test_type`='$type'";
+						                             $query = "SELECT * FROM `question` WHERE `subject_id`= 3 AND `test_type`='$type'";
 						                             include 'config.php';
 						                             $stmt=$conn->prepare($query);
 						                             $stmt->execute();
@@ -468,30 +480,31 @@
 				</div>
 				<form action="back.php" method="post" enctype="multipart/form-data">
 					<div class="modal-body">
-						<div class="row container" style="text-align:center;">
-							<div class="col-md-6 mb-3 mb-md-0 mx-auto">
+						<div class="row container" style="text-align:left;">
+							<div class="col-md-12 mb-3 mb-md-0 mx-auto padding">
 								<b><label for="name">Question</label></b>
 								<input type="text" name="question" class="form-control" id="upquestion" >
 								<input type="hidden" name="question_id" id="question_id">
 								<input type="hidden" name="subject_id" id="subject_id">
+								<input type="hidden" name="test_type" value="<?php echo $type; ?>" >
 							</div>
-							<div class="col-md-6" style="padding-right: 1rem; padding-left: 1rem;">
+							<div class="col-md-6 padding" >
 								<b> <label for="name">Option 1</label></b>
 								<input type="text" name="option1" class="form-control" id="upoption1" placeholder="Enter option 1">
 							</div>
-							<div class="col-md-6" style="padding-right: 1rem; padding-left: 1rem;">
+							<div class="col-md-6 padding" >
 								<b><label for="name">option 2</label></b>
 								<input type="text" name="option2" class="form-control" id="upoption2" placeholder="Enter option 2">
 							</div>
-							<div class="col-6" style="padding-right: 1rem; padding-left: 1rem;">
+							<div class="col-6 padding" >
 								<b><label for="name">option 3</label></b>
 								<input type="text" name="option3" class="form-control" id="upoption3" placeholder="option 3">
 							</div>
-							<div class="col-6" style="padding-right: 1rem; padding-left: 1rem;">
+							<div class="col-6 padding" >
 								<b> <label for="name">option 4</label></b>
 								<input type="text" name="option4" class="form-control" id="upoption4" placeholder="Enter option 4">
 							</div>
-							<div class="col-6" style="padding-right: 1rem; padding-left: 1rem;">
+							<div class="col-12 padding" >
 								<b> <label for="name">Answer</label></b>
 								<input type="text" name="answer" class="form-control" id="upanswer" placeholder="Enter answer">
 							</div>

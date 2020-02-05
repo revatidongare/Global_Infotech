@@ -133,7 +133,7 @@
 
 
 
-                                  $w = "SELECT * FROM `mcq_test` WHERE `question_id` = '$question_id' AND `test_type`='$type'";
+                                  $w = "SELECT * FROM `question` WHERE `question_id` = '$question_id' AND `test_type`='$type'";
                                   $rest = mysqli_query($con, $w);
                                   $r = mysqli_fetch_array($rest);
                                   $answer = $r['answer'];
@@ -168,14 +168,14 @@
 
                                   if($out2){
                                     $q3 = "SELECT * FROM `answers` WHERE `user` = '$user_id' AND `question_id` IN (
-                                      SELECT `question_id` FROM `mcq_test` WHERE `subject_id` = '$subject_id'
+                                      SELECT `question_id` FROM `question` WHERE `subject_id` = '$subject_id'
                                     )";
                                     $out3 = mysqli_query($con, $q3);
                                     $i = 1;
                                     
                                     while($row = mysqli_fetch_array($out3)){
                                       $question_id = $row['question_id'];
-                                      $q4 = "SELECT * FROM `mcq_test` WHERE `question_id` = '$question_id' AND `test_type`='$type'";
+                                      $q4 = "SELECT * FROM `question` WHERE `question_id` = '$question_id' AND `test_type`='$type'";
                                       $out4 = mysqli_query($con, $q4);
                                       $row2 = mysqli_fetch_array($out4);
                                       ?>

@@ -8,7 +8,7 @@
            <a class="btn btn-link rounded-circle mr-3 barsshow colortheme" href="index.php">
             Home
           </a>
-          <a class="btn btn-link rounded-circle mr-3 barsshow colortheme" >Registered Users</a>
+         <!--  <a class="btn btn-link rounded-circle mr-3 barsshow colortheme" >Registered Users</a>
           <span style="color:black; font-style:bold;"><?php 
            $q = "SELECT COUNT(`email`) AS `count` FROM `user`";
             include 'config.php';
@@ -18,7 +18,7 @@
             echo $row['count'];
             $conn=null;
            ?>
-          </span>
+          </span> -->
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">  
             

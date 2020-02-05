@@ -5,6 +5,11 @@
             echo '<script> alert(" This test is taken try another..")</script>';
             }        
     }
+    if (isset($_GET['q'])) {
+            if($_GET['q'] == 1){
+            echo '<script> alert(" Invalid Test Key..")</script>';
+            }        
+    }
  ?>
 <!DOCTYPE html>
 <html lang="zxx">
@@ -113,7 +118,7 @@
 
 
                                     <div class="submit">
-                                        <button class="add-to-cart" type="submit" name="final_test">
+                                        <button class="add-to-cart" type="submit" name="final_student_data">
                                             <span class="btn view button-main">Submit Now</span>
                                         </button>
                                     </div>

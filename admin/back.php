@@ -26,7 +26,7 @@
 		$answer = $_POST['answer'];
 		$test_type = $_POST['test_type'];
 				
-		$query = "INSERT INTO `mcq_test`(`subject_id`, `question`, `option1`, `option2`, `option3`, `option4`, `answer`, `test_type`) VALUES ('$subject_id', '$question', '$option1', '$option2','$option3','$option4','$answer','$test_type')";
+		$query = "INSERT INTO `question`(`subject_id`, `question`, `option1`, `option2`, `option3`, `option4`, `answer`, `test_type`) VALUES ('$subject_id', '$question', '$option1', '$option2','$option3','$option4','$answer','$test_type')";
 		 $stmt=$conn->prepare($query);
          $stmt->execute();
 
@@ -61,7 +61,7 @@
 			if(isset($_POST['id']))
 				{
 					$id = $_POST['id'];
-					$query = "SELECT * FROM `mcq_test` WHERE `question_id` = $id";
+					$query = "SELECT * FROM `question` WHERE `question_id` = $id";
 					 $stmt=$conn->prepare($query);
 			         $stmt->execute();
 			         $row=$stmt->fetch();
@@ -92,24 +92,38 @@
 	elseif (isset($_POST['update_question'])) {
 		include 'config.php';
 		$id = $_POST['question_id'];
-		$chapter_id =$_POST['chapter_id'];
+		$subject_id =$_POST['subject_id'];
 		$question = $_POST['question'];
 		$option1 = $_POST['option1'];
 		$option2 = $_POST['option2'];
 		$option3 = $_POST['option3'];
 		$option4 = $_POST['option4'];
 		$answer = $_POST['answer'];
+		$test_type = $_POST['test_type'];
 
-		 $query = "UPDATE `mcq_test` SET `chapter_id`='$chapter_id',`question`='$question' ,`option1`='$option1',`option2`='$option1',`option3`='$option3',`option4`='$option4',`answer`='$answer' WHERE `question_id`='$id'";	
+		 $query = "UPDATE `question` SET `subject_id`='$subject_id',`question`='$question' ,`option1`='$option1',`option2`='$option1',`option3`='$option3',`option4`='$option4',`answer`='$answer',`test_type`= '$test_type' WHERE `question_id`='$id'";	
 				 $stmt=$conn->prepare($query);
 				 $res=$stmt->execute();
 				  $conn=null;
-				if($res){
-					header('location:manage_test.php?q=update1010');
-						}
-				else{
-					header('location:manage_test.php?q=3');
-				}
+		if($res){
+
+			if($test_type == 1){
+			
+			header('location:final_test.php?q=1');
+			}
+			elseif($test_type == 0){
+			
+			header('location:demo_test.php?q=1');
+			}
+			else{
+				header('location:index.php?q=3');
+			}
+
+		}
+		else{
+		
+			header('location:demo_test.php?q=3');
+		}
 	}
 	elseif (isset($_POST['update_key'])) {
 		include 'config.php';

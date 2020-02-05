@@ -86,7 +86,7 @@
                    <div class="row animated bounceInUp slowest mt-5" style="background-color: white;box-shadow: 0px 5px 20px 0px rgb(0,0,0,0.3);">
                         <?php
 
-                          $q = "SELECT * FROM `mcq_test` WHERE `subject_id` = '$subject_id' AND `test_type`= $type ";
+                          $q = "SELECT * FROM `question` WHERE `subject_id` = '$subject_id' AND `test_type`= $type ";
                           $res = mysqli_query($con, $q);
                           $i = 0;
 
