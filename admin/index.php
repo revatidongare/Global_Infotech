@@ -9,7 +9,7 @@
 <html lang="en">
 
 <head>
-  <title>Augmented Foods - Dashboard</title>
+  <title>Global InfoTech - Dashboard</title>
   <?php include 'includes/head.php';?>
 </head>
 
