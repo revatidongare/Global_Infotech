@@ -218,7 +218,7 @@
 	<!-- Add key modal-->
 
 	<div class="modal fade" id="add_key" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document" style="max-width: 1000px; margin:10px auto;">
+		<div class="modal-dialog" role="document" style=" margin:10px auto;">
 			<div class="modal-content">
 				<div class="modal-header">
 					<h5 class="modal-title" id="exampleModalLabel"><b>Add New key</b></h5>

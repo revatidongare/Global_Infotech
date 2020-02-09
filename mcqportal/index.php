@@ -43,19 +43,12 @@
       </style>
   </head>
 <?php
-        // $subject_id =$_GET['p'];
-        
-        // $query = "SELECT `subject_id`, `name` FROM `chapter_master` WHERE `id` = '$subject_id'";
-        // $result = mysqli_query($con, $query);
-        // $row = mysqli_fetch_array($result);
-        // $subject_id = $row['subject_id'];
-        // $chapter_name = $row['name'];
-        
+                
         $query = "SELECT `name`,`image` FROM `subject_master` WHERE `id` = '$subject_id'";
         $result = mysqli_query($con, $query);
         $row = mysqli_fetch_array($result);
         $subject_name = $row['name'];
-        $subject_image = $row['image'];
+        // $subject_image = $row['image'];
 ?>
   <body>
 
@@ -64,7 +57,7 @@
           <!-- subject name -->
             <div class="text-center subjecttitle animatedParent animateOnce row">
                <div class=" animated bounceInDown col-10">
-                  <img class="subjecttitleimg img-responsive" src="images/<?php echo $subject_image;?>">
+                  <!-- <img class="subjecttitleimg img-responsive" src="images/<?php echo $subject_image;?>"> -->
                   <?php echo $subject_name; ?>
                 </div>
                  <div id="display" class="text-right col-2" style="font-size:2rem;font-weight: 700;color: #ffffff;" ></div>
@@ -76,13 +69,7 @@
           <!-- All Content Starts From Here -->
             <div class="subjectcontainer">
                <div class="container animatedParent animateOnce">
-                 <!--  <div class="row animated bounceInUp slowest" style="background: linear-gradient(60deg, #29b6f6, #0288d1)!important;padding: 10px;box-shadow: 0px 5px 20px 0px rgb(0,0,0,0.3);">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding: 10px;">
-                           <div class="mycardtitle text-center">
-                                 <h2><b style="color: white;"><?php echo $chapter_name; ?></b></h2>
-                              </div>
-                        </div>
-                  </div> -->
+                 
                    <div class="row animated bounceInUp slowest mt-5" style="background-color: white;box-shadow: 0px 5px 20px 0px rgb(0,0,0,0.3);">
                         <?php
 
@@ -92,7 +79,7 @@
 
 
                         ?>
-                       <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 mx-auto card-image2" style="padding: 20px;background-image: url(images/<?php echo $subject_image;?>);">
+                       <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 mx-auto card-image2" style="padding: 20px;">
                           <form method="post" name="quiz" id="quiz_form" action="submit_test.php?p=<?php echo $user_id ?>" >
                             <input type="hidden" name="subject_id" value="<?php echo $subject_id; ?>">
                             <div class="quiz-container" style="color: #3C4858;">

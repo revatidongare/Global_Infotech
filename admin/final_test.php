@@ -12,7 +12,7 @@
 	<title> Admin - Manage Test</title>
 	<?php include 'includes/head.php';?>
 
-	<script>
+	<!-- <script>
     function getLocation() {
       var obj = document.getElementById("mySelect");
       var location = obj.options[obj.selectedIndex].value;
@@ -38,7 +38,7 @@
       }
     }
 
-  </script>
+  </script> -->
 
 </head>
 
@@ -99,28 +99,49 @@
         <div class="container">
           <div class="row text-center">
             <div class="col-md-6 col-lg-6 mb-6 mx-auto">
-              <form action="#">
+              <form action="back.php" method="post">
                 <div class="row form-group">
-                  <div class="col-md-6 col-lg-6 mb-6">
+                 <!--  <div class="col-md-6 col-lg-6 mb-6">
                     <label class="font-weight-bold" for="fullname">Select Table</label>
                     
-                  </div>
+                  </div> -->
                   <div class="col-md-6 col-lg-6 mb-6 mx-auto">
-                  	<select name="" id="mySelect" onchange="getLocation()" class="form-control myformcontrol">
-                       	<option value="0">Select subject</option>
-                        <option value="1">Questions Of C</option>
-                        <option value="2">Questions Of C++</option>
-                        <option value="3">Questions Of JAVA</option>
-                        
-                    </select>
+                  <select name="subject_type" class="form-control" id="branch" required>
+                   
+									<option value="" style="color: black;" selected>
+										<?php 
+                  if(isset($_GET['subject_name'])){
+                    $value = $_GET['subject_name'];
+
+                    	echo $value ;
+                   
+                }else{ ?> Select table <?php } ?> </option>
+								<option value="<?php echo 101;?>" style="color: black;">All Questions</option>	
+							<?php 
+                               $query = "SELECT * FROM `subject_master`";
+                               include 'config.php';
+                               $stmt=$conn->prepare($query);
+                               $stmt->execute();
+                               $result=$stmt->fetchAll();
+                               $conn=null;
+
+                      foreach ($result as $branch_row) {
+                   ?>
+									<option value="<?php echo $branch_row['id'];?>" style="color: black;"><?php echo $branch_row['name']; ?></option>
+									
+									<?php 
+                      } 
+                  ?>
+								</select>	
                   </div>
+                   <div class="col-6 text-left">
+                   <input type="submit" name="select_subject" class="btn btn-theme-outline" value="Submit">
+                    </div>
                 </div>
               </form>
             </div>
     
-           <!--  <div class="col-md-3 col-lg-3 mb-3 mb-md-0 mx-auto ">
-              <button type="button" style="background-color: rgb(0,99,120); color: white;" value="Send Message" class="btn btn-color pill px-4 py-2 conferencebutton" onclick="getLocation()" >View Table</button>
-            </div> -->
+           
            <!--  <div class="col-md-3 col-lg-3 mb-3 ">
 							<a href="#" class="btn btn-theme-outline" data-toggle="modal" data-target="#add_subject">+ Add Subject</a>
 						</div> -->
@@ -178,7 +199,7 @@
                     }
                   }
                 ?>						
-						<div class="row mt-3" id="location1" >
+						<div class="row mt-3" >
 							<div class="col-xl-12 col-md-10 mb-4 mx-auto">
 								<div class="card shadow mb-4">
 									<div class="card-body">
@@ -195,7 +216,12 @@
 												</thead>
 												<tbody>
 													<?php     
-						                             $query = "SELECT * FROM `question` WHERE `subject_id`= 1 AND `test_type`='$type'";
+														if (isset($_GET['subject'])) {
+
+															$subject_id = $_GET['subject'];
+															
+															if ($subject_id == 101) {
+																$query = "SELECT * FROM `question` WHERE `test_type`='$type'";
 						                             include 'config.php';
 						                             $stmt=$conn->prepare($query);
 						                             $stmt->execute();
@@ -214,32 +240,9 @@
 														<td class="text-center"><button class="btn btn-theme" name="update" id="update" data-toggle="modal" data-target="#update_question" onclick="viewquestion(<?php echo $question['question_id']; ?>)">Update</button></td>
 														<td class="text-center"><a class="btn btn-danger" href="delete.php?q=<?php echo $question['question_id'];?>&table_name=question_master">Delete</a></td>
 													</tr>
-													<?php } ?>
-												</tbody>
-											</table>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="row mt-3" id="location2" style="display: none;" >
-							<div class="col-xl-12 col-md-10 mb-4 mx-auto">
-								<div class="card shadow mb-4">
-									<div class="card-body">
-										<div class="table-responsive">
-											<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-												<thead>
-													<tr>
-														<th class="font-weight-bolder">ID</th>
-														<th class="font-weight-bolder">Question</th>
-														<th class="font-weight-bolder text-center">View</th>
-														<th class="font-weight-bolder text-center">Update</th>
-														<th class="font-weight-bolder text-center">Delete</th>
-													</tr>
-												</thead>
-												<tbody>
-													<?php     
-						                             $query = "SELECT * FROM `question` WHERE `subject_id`= 2 AND `test_type`='$type'";
+													<?php }
+															}else{
+																$query = "SELECT * FROM `question` WHERE `subject_id`= '$subject_id' AND `test_type`='$type'";
 						                             include 'config.php';
 						                             $stmt=$conn->prepare($query);
 						                             $stmt->execute();
@@ -258,32 +261,12 @@
 														<td class="text-center"><button class="btn btn-theme" name="update" id="update" data-toggle="modal" data-target="#update_question" onclick="viewquestion(<?php echo $question['question_id']; ?>)">Update</button></td>
 														<td class="text-center"><a class="btn btn-danger" href="delete.php?q=<?php echo $question['question_id'];?>&table_name=question_master">Delete</a></td>
 													</tr>
-													<?php } ?>
-												</tbody>
-											</table>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="row mt-3" id="location3" style="display: none;" >
-							<div class="col-xl-12 col-md-10 mb-4 mx-auto">
-								<div class="card shadow mb-4">
-									<div class="card-body">
-										<div class="table-responsive">
-											<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-												<thead>
-													<tr>
-														<th class="font-weight-bolder">ID</th>
-														<th class="font-weight-bolder">Question</th>
-														<th class="font-weight-bolder text-center">View</th>
-														<th class="font-weight-bolder text-center">Update</th>
-														<th class="font-weight-bolder text-center">Delete</th>
-													</tr>
-												</thead>
-												<tbody>
-													<?php     
-						                             $query = "SELECT * FROM `question` WHERE `subject_id`= 3 AND `test_type`='$type'";
+													<?php }
+
+															}
+																													}
+														else{
+															$query = "SELECT * FROM `question` WHERE `test_type`='$type'";
 						                             include 'config.php';
 						                             $stmt=$conn->prepare($query);
 						                             $stmt->execute();
@@ -300,9 +283,11 @@
 														<td class="text-center"><button class="btn btn-secondary" name="view" id="view" data-toggle="modal" data-target="#view_question" onclick="viewquestion(<?php echo $question['question_id']; ?>)">View</button></td>
 
 														<td class="text-center"><button class="btn btn-theme" name="update" id="update" data-toggle="modal" data-target="#update_question" onclick="viewquestion(<?php echo $question['question_id']; ?>)">Update</button></td>
-														<td class="text-center"><a class="btn btn-danger" href="delete.php?q=<?php echo $question['question_id'];?>&table_name=final_question">Delete</a></td>
+														<td class="text-center"><a class="btn btn-danger" href="delete.php?q=<?php echo $question['question_id'];?>&table_name=question_master">Delete</a></td>
 													</tr>
-													<?php } ?>
+													<?php }
+														}
+						                              ?>
 												</tbody>
 											</table>
 										</div>
@@ -310,6 +295,7 @@
 								</div>
 							</div>
 						</div>
+						
 					<!-- Single Item -->
 				</div>
 				<!-- /.container-fluid -->
@@ -356,7 +342,7 @@
 								<select name="subject_id" class="form-control" id="branch">
 									<option value="" selected>Select Subject</option>
 									<?php 
-                               $query = "SELECT * FROM `Subject_master`";
+                               $query = "SELECT * FROM `subject_master`";
                                include 'config.php';
                                $stmt=$conn->prepare($query);
                                $stmt->execute();

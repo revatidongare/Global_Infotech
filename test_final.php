@@ -3,7 +3,7 @@
     if (isset($_GET['f'])) {
             if($_GET['f'] == 101){
             echo '<script> alert(" This test is taken try another..")</script>';
-            }        
+            }         
     }
     if (isset($_GET['q'])) {
             if($_GET['q'] == 1){

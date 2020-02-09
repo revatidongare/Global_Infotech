@@ -15,6 +15,20 @@
 			header('location:test_key.php?q=3');
 		}
 	}
+	elseif(isset($_POST['add_Subject'])){
+		include 'config.php';
+		$name = $_POST['name'];
+						
+		$query = "INSERT INTO `subject_master`(`name`) VALUES ('$name')";
+		 $stmt=$conn->prepare($query);
+         $stmt->execute();
+		if($stmt){
+			header('location:manage_subject.php?q=1');
+		}
+		else{
+			header('location:manage_subject.php?q=3');
+		}
+	}
 	elseif(isset($_POST['add_question'])){
 		include 'config.php';
 		$subject_id = $_POST['subject_id'];
@@ -87,6 +101,20 @@
 					echo json_encode($row);
 				}
 		}
+		elseif ($_POST['update'] == 'update_Subject') {
+				include 'config.php';
+			if(isset($_POST['id']))
+				{
+					$id = $_POST['id'];
+					$query = "SELECT * FROM `subject_master` WHERE `id` = $id ";
+					 $stmt=$conn->prepare($query);
+			         $stmt->execute();
+			         $row=$stmt->fetch();
+	                 $conn=null;
+					
+					echo json_encode($row);
+				}
+		}
 	}
 	// update question
 	elseif (isset($_POST['update_question'])) {
@@ -142,6 +170,44 @@
 					header('location:test_key.php?q=3');
 				}
 	}
+	elseif (isset($_POST['updatesubject'])) {
+		include 'config.php';
+		$id = $_POST['subject_id'];
+		$name =$_POST['name'];
+				
+		 $query = "UPDATE `subject_master` SET `name`='$name' WHERE `id`='$id'";	
+				 $stmt=$conn->prepare($query);
+				 $res=$stmt->execute();
+				  $conn=null;
+				if($res){
+					header('location:manage_subject.php?q=update1010');
+						}
+				else{
+					header('location:manage_subject.php?q=3');
+				}
+	}
+	elseif(isset($_POST['select_subject'])) {
+
+			include 'config.php';
+			
+					$id = $_POST['subject_type'];
+					
+		if ($row) {
+			header('location:final_test.php?p=101');
+		}else{
+					$query = "SELECT * FROM `subject_master` WHERE `id`='$id' ";
+					 $stmt=$conn->prepare($query);
+			         $stmt->execute();
+			         $row=$stmt->fetch();
+	                 $conn=null;
+		                 if ($row) {
+		                 $name =$row['name'];
+		                 header("location:final_test.php?subject=".$id ."&subject_name=".$name);
+		                 }else{
+		                 	header("location:final_test.php");
+		                 }	
+			}		
+	  }
 
 	else{
 			header('location:index.php?q=3');

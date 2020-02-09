@@ -62,7 +62,7 @@
         $result = mysqli_query($con, $query);
         $row = mysqli_fetch_array($result);
         $subject_name = $row['name'];
-        $subject_image = $row['image'];
+        // $subject_image = $row['image'];
 
 
 ?>
@@ -75,7 +75,7 @@
             <!-- subject name -->
             <div class="text-center subjecttitle animatedParent animateOnce">
                <div class=" animated bounceInDown">
-                  <img class="subjecttitleimg img-responsive" src="images/<?php echo $subject_image;?>">
+                  <!-- <img class="subjecttitleimg img-responsive" src="images/<?php echo $subject_image;?>"> -->
                   <?php echo $subject_name; ?>
                </div>
             </div>
@@ -110,7 +110,7 @@
 
                   </div>
                      <div class="row animated bounceInUp slowest mt-5" style="background-color: white;">
-                         <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 mx-auto card-image2" style="padding: 20px;background-image: url(images/<?php echo $subject_image;?>);">
+                         <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 mx-auto card-image2" style="padding: 20px;">
                           <h3 class="text-center text-primary"><b>Analyze your answers!</b></h3>
 
                           <?php

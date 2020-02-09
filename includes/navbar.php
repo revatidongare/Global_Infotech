@@ -96,22 +96,12 @@
                                                 <a href="certification.php">Certification</a>
                                             </li>
 
-                                            <li class="dropdown">
+                                            <!-- <li class="dropdown">
                                                 <a data-toggle="modal" data-target="#demo_test">Demo Test
-                                                   <!--  <i class="fa fa-angle-down d-xs-none"></i> -->
+                                                    <i class="fa fa-angle-down d-xs-none"></i>
                                                 </a>  
-                                               <!--  <div class="dropdown-menu">
-                                                    <ul>
-                                                        <li>
-                                                            <a href="test_demo.php">Demo</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="test_final.php">Final Exam</a>
-                                                        </li>
-                                                       
-                                                    </ul>
-                                                </div> -->
-                                            </li>
+                                               
+                                            </li> -->
 
                                             <li>
                                                 <a href="events.php">Events & Awards</a>

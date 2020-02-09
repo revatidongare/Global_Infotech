@@ -16,6 +16,23 @@
 			header('location:test_key.php?q=notdeleted');
 		}
 	}
+	elseif($table_name == "delete_subject"){
+	 	
+		$query1 = "DELETE FROM `subject_master` WHERE `id` = '$record_id'";
+		$stmt1=$conn->prepare($query1);
+        $stmt1->execute();
+
+        $query = "DELETE FROM `question` WHERE `subject_id` = '$record_id'";
+		$stmt=$conn->prepare($query);
+        $stmt->execute();
+        
+		if($stmt && $stmt1){
+			header('location:manage_subject.php?q=deleted');
+		}
+		else{
+			header('location:manage_subject.php?q=notdeleted');
+		}
+	}
 	elseif($table_name == "demo_question"){
 	 	
 		$query = "DELETE FROM `mcq_test` WHERE `question_id` = '$record_id'";
@@ -42,7 +59,7 @@
 	}
 
 	else{
-			header('location:index.php');
+			header('location:index.php?error');
 	}
 
  ?>

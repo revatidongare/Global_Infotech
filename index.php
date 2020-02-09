@@ -1,3 +1,12 @@
+<?php 
+                  if(isset($_GET['p'])){
+                    $value = $_GET['p'];
+
+                    if($value == 102){
+                        echo '<script> alert("Admin Login Fail... ");</script>';
+                    }
+                }
+?>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -147,9 +156,6 @@
                             </div>
                         </div>
 
-                        <!-- <div class="home-core-banner zoomIn animated text-center" data-animate="zoomIn" data-delay="200">
-                            <img class=" w-100" src="img/home3-intro.png" alt="">
-                        </div> -->
                     </div>
                 </div>
             </section>
@@ -160,24 +166,6 @@
                         <div class="inner">
                             <div class="row">
 
-                                <!-- <div class="col-lg-6 col-sm-12">
-                                    <div class="title item-content clearfix">
-                                        <div class=" page-title color">
-                                            
-                                            <div class="title-icon text-left">
-                                                <h2 class="title-h2 background-position-left">Our Popular Courses</h2>
-                                                <p class="description">Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras
-                                                    mattis consectetur purus sit amet fermentum. Lorem ipsum dolor sit amet,
-                                                    consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor
-                                                    fringilla. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-                                            </div>
-                                            <span>
-                                                <a href="#" class="btn view button-main">View more</a>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div> -->
- 
                     <div class="col-lg-3"></div>
                     <div class="col-lg-6 col-sm-12">
                         <center><h2>Our Popular Courses</h2></center>
@@ -203,28 +191,7 @@
   </a>
 </div>
 </div>
-                                <!-- <div class="col-lg-6 col-sm-12">
-                                    <div class="manufacturers-block">
-                                        <div class="block-content">
-                                            <center>
-                                            <h2 class="title-h2">Our Popular Courses</h2>
-                                        </center>
-                                            <ul class="deal-of-day-carousel">
-                                                <li>
-                                                    <img class="img-fluid mySlides" src="img/mscit.jpg" alt="img">
-                                                </li>
-                                                <li>
-                                                    <img class="img-fluid mySlides" src="img/webdesign.jpg" alt="img">
-                                                </li>
-                                                <li>
-                                                    <img class="img-fluid mySlides" src="img/lang.png" alt="img">
-                                                </li>
-                                               
-                                            </ul>
-                                        </div>
-                                        
-                            </div>
-                        </div> -->
+                                
                     </div>
                 </div>
             </section>

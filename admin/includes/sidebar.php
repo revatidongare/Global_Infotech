@@ -14,10 +14,10 @@
     	<a class="nav-link" href="final_test.php">
     		<span class="font-weight-bolder m-1">Final Test questions</span></a>
     </li>
-    <li class="nav-item">
+    <!-- <li class="nav-item">
         <a class="nav-link" href="demo_test.php">
             <span class="font-weight-bolder m-1">Demo Test questions</span></a>
-    </li>
+    </li> -->
     <li class="nav-item">
       <a class="nav-link" href="manage_subject.php">
         <span class="font-weight-bolder m-1">Manage Subject</span></a>
