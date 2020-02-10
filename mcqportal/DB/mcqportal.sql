@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 07, 2020 at 04:15 PM
+-- Generation Time: Feb 10, 2020 at 07:21 PM
 -- Server version: 10.1.10-MariaDB
 -- PHP Version: 7.0.2
 
@@ -39,7 +39,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`user_id`, `name`, `email`, `password`, `phone`) VALUES
-(1, 'admin', 'admin@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', '09552259961');
+(1, 'admin', 'admin@gmail.com', 'admin', '09552259961');
 
 -- --------------------------------------------------------
 
@@ -55,6 +55,19 @@ CREATE TABLE `answers` (
   `actual_answer` int(11) NOT NULL,
   `remark` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `answers`
+--
+
+INSERT INTO `answers` (`id`, `question_id`, `user`, `student_answer`, `actual_answer`, `remark`) VALUES
+(201, 11, 14, 2, 2, 1),
+(202, 10, 14, 0, 1, 0),
+(203, 10, 0, 0, 0, 1),
+(204, 12, 14, 1, 1, 1),
+(205, 11, 17, 0, 2, 0),
+(206, 13, 18, 2, 2, 1),
+(207, 12, 20, 0, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -85,6 +98,20 @@ CREATE TABLE `final_student_data` (
   `phone` varchar(20) NOT NULL,
   `subject_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `final_student_data`
+--
+
+INSERT INTO `final_student_data` (`test_id`, `school`, `name`, `email`, `phone`, `subject_id`) VALUES
+(13, 'Indo public school', 'ram', 'ram@ram.com', '13514865', 3),
+(14, 'SIT', 'Akshay kurhekar', 'akshay.kurhekar1014662@gmail.com', '09552259961', 2),
+(15, 'SIT', 'Akshay kurhekar', 'akshay.kurhekar1014662@gmail.com', '09552259961', 1),
+(16, 'Indo public school', 'Akshay kurhekar', 'akshay.kurhekar1014662@gmail.com', '09552259961', 3),
+(17, 'SIT', 'test5', 'test5@gmail.com', '09552259961', 2),
+(18, 'SIT', 'test', 'test@test.com', '953846513546', 5),
+(19, 'Indo public school', 'ram', 'ram@hg.com', '4684', 1),
+(20, 'Indo public school', 'abs', 'hjg@jhg.hg', '1358468', 3);
 
 -- --------------------------------------------------------
 
@@ -137,7 +164,8 @@ INSERT INTO `question` (`question_id`, `subject_id`, `question`, `option1`, `opt
 (9, 3, 'question of java ti so simple', 'option 1', 'option 1', 'option 3', 'option 4', 1, 0),
 (10, 1, 'this is final test quetion', 'C', 'C', 'C++', 'Python', 1, 1),
 (11, 2, 'this is final test quetion of c++', 'c', 'c++', 'java', 'python', 2, 1),
-(12, 3, 'java question', 'java', '.net', 'PHP', 'node js', 1, 1);
+(12, 3, 'java question', 'java', '.net', 'PHP', 'node js', 1, 1),
+(13, 5, 'test quetion', 'c', 'java', 'python', 'core java', 2, 1);
 
 -- --------------------------------------------------------
 
@@ -153,6 +181,19 @@ CREATE TABLE `student_mcq_test` (
   `total` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `student_mcq_test`
+--
+
+INSERT INTO `student_mcq_test` (`id`, `subject_id`, `user_id`, `scored`, `total`) VALUES
+(71, 2, 14, '1', '1'),
+(72, 1, 14, '0', '1'),
+(73, 1, 0, '1', '1'),
+(74, 3, 14, '1', '1'),
+(75, 2, 17, '0', '1'),
+(76, 5, 18, '1', '1'),
+(77, 3, 20, '0', '1');
+
 -- --------------------------------------------------------
 
 --
@@ -161,18 +202,18 @@ CREATE TABLE `student_mcq_test` (
 
 CREATE TABLE `subject_master` (
   `id` int(11) NOT NULL,
-  `name` varchar(256) NOT NULL,
-  `image` varchar(256) NOT NULL
+  `name` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `subject_master`
 --
 
-INSERT INTO `subject_master` (`id`, `name`, `image`) VALUES
-(1, 'C', '1550326702.png'),
-(2, 'C++', '1550326712.png'),
-(3, 'JAVA', '1550326731.png');
+INSERT INTO `subject_master` (`id`, `name`) VALUES
+(1, 'C'),
+(2, 'C++'),
+(3, 'JAVA'),
+(5, 'test');
 
 --
 -- Indexes for dumped tables
@@ -239,17 +280,17 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `answers`
 --
 ALTER TABLE `answers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=201;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=208;
 --
 -- AUTO_INCREMENT for table `demo_student_data`
 --
 ALTER TABLE `demo_student_data`
-  MODIFY `student_id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `student_id` int(50) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `final_student_data`
 --
 ALTER TABLE `final_student_data`
-  MODIFY `test_id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `test_id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT for table `key_table`
 --
@@ -259,17 +300,17 @@ ALTER TABLE `key_table`
 -- AUTO_INCREMENT for table `question`
 --
 ALTER TABLE `question`
-  MODIFY `question_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `question_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT for table `student_mcq_test`
 --
 ALTER TABLE `student_mcq_test`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
 --
 -- AUTO_INCREMENT for table `subject_master`
 --
 ALTER TABLE `subject_master`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
