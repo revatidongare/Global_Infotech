@@ -44,7 +44,7 @@
   </head>
 <?php
                 
-        $query = "SELECT `name`,`image` FROM `subject_master` WHERE `id` = '$subject_id'";
+        $query = "SELECT `name` FROM `subject_master` WHERE `id` = '$subject_id'";
         $result = mysqli_query($con, $query);
         $row = mysqli_fetch_array($result);
         $subject_name = $row['name'];
