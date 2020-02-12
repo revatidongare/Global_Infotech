@@ -21,12 +21,7 @@
 <html lang="en">
   <head>
     <title>MCQ PORTAL</title>
-    <?php
-        $con = mysqli_connect("localhost","root","","mcqportal");
-       // if(!isset($_SESSION['exam-started'])){
-       //   header('location: dashboard.php?exam=1');
-       // }
-       ?>
+   
     <!-- Include Head -->
       <?php include 'head.php'; ?>
       <!-- sound effect -->
@@ -43,10 +38,12 @@
       </style>
   </head>
 <?php
-                
+        include 'config.php';        
         $query = "SELECT `name` FROM `subject_master` WHERE `id` = '$subject_id'";
-        $result = mysqli_query($con, $query);
-        $row = mysqli_fetch_array($result);
+        $stmt=$conn->prepare($query);
+        $stmt->execute();
+        $row=$stmt->fetch();
+        $conn=null;
         $subject_name = $row['name'];
         // $subject_image = $row['image'];
 ?>
@@ -74,7 +71,11 @@
                         <?php
 
                           $q = "SELECT * FROM `question` WHERE `subject_id` = '$subject_id' AND `test_type`= $type ";
-                          $res = mysqli_query($con, $q);
+                           include 'config.php';
+                          $stmt=$conn->prepare($q);
+                          $stmt->execute();
+                          $res=$stmt->fetchALL();
+                          $conn=null;
                           $i = 0;
 
 
@@ -84,7 +85,7 @@
                             <input type="hidden" name="subject_id" value="<?php echo $subject_id; ?>">
                             <div class="quiz-container" style="color: #3C4858;">
                               <div id="quiz">
-                                <?php while($row = mysqli_fetch_array($res)){ ?>
+                                <?php foreach($res as $row){ ?>
                                 <div class="myslide slide <?php if($i == 0){ echo "active-slide"; }?>">
                                    <div class="questioncard"> <?php echo $row['question']; ?> </div>
                                    <div class="answers mt-3"> <label>

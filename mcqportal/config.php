@@ -3,7 +3,6 @@
 	$pass='';
     $dbname='mcqportal';
 	
-
  $conn = new PDO('mysql:host=localhost;dbname=mcqportal', $user, $pass);
     // $conn = new PDO('mysql:host=localhost;dbname=u762435158_global','u762435158_global','admin@123');
 	if (!$conn) {
