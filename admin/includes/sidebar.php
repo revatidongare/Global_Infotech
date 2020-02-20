@@ -11,31 +11,19 @@
 
  	<!-- Nav Item - Dashboard -->
     <li class="nav-item">
-    	<a class="nav-link" href="final_test.php">
-    		<span class="font-weight-bolder m-1">Final Test questions</span></a>
+      <a class="nav-link" href="test_key.php">
+        <span class="font-weight-bolder m-1">Manage Test Key</span></a>
     </li>
-    <!-- <li class="nav-item">
-        <a class="nav-link" href="demo_test.php">
-            <span class="font-weight-bolder m-1">Demo Test questions</span></a>
-    </li> -->
     <li class="nav-item">
       <a class="nav-link" href="manage_subject.php">
         <span class="font-weight-bolder m-1">Manage Subject</span></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="test_key.php">
-        <span class="font-weight-bolder m-1">Manage Test Key</span></a>
+    	<a class="nav-link" href="final_test.php">
+    		<span class="font-weight-bolder m-1">Final Test questions</span></a>
     </li>
-    <!--  <li class="nav-item">
-    <a class="nav-link" href="subscribed_user.php">
-      <span class="font-weight-bolder m-1">Users</span></a>
-    </li>
-
-    <li class="nav-item">
-    <a class="nav-link" href="recyclebin_gift.php">
-      <span class="font-weight-bolder m-1">Recycle Bin</span></a>
-    </li> -->
-   
+    
+           
     <li class="nav-item">
     	<a class="nav-link" href="logout.php">
     		<span class="font-weight-bolder m-1">Logout</span></a>
